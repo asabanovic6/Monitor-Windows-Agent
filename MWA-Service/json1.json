@@ -1,0 +1,10 @@
+[
+  {
+    "Computer_name": "DESKTOP-1",
+    "Keep_alive": 0.5
+  },
+  {
+    "Computer_name": "DESKTOP-2",
+    "Keep_alive": 0.1
+  }
+]

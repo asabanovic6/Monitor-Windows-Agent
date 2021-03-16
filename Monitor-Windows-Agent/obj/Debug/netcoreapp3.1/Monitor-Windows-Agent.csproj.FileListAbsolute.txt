@@ -1,0 +1,13 @@
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.exe
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.deps.json
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.runtimeconfig.json
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.runtimeconfig.dev.json
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.dll
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.pdb
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csprojAssemblyReference.cache
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.CoreCompileInputs.cache
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.AssemblyInfoInputs.cache
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.AssemblyInfo.cs
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.dll
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.pdb
+C:\Users\Amina\source\repos\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.genruntimeconfig.cache
