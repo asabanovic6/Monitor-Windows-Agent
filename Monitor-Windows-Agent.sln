@@ -7,6 +7,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monitor-Windows-Agent", "Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWA-Service", "MWA-Service\MWA-Service.csproj", "{960C1AE5-407F-46FD-9A4F-B9DB4DFE9A7C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Moduli", "Moduli", "{6533C050-FD25-48CC-8E84-141BE1536D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JASONParser", "JASONParser\JASONParser.csproj", "{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{EE5DD04A-4ED2-4F60-BD02-2849CCE1FD31}"
+	ProjectSection(SolutionItems) = preProject
+		config.json = config.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +30,16 @@ Global
 		{960C1AE5-407F-46FD-9A4F-B9DB4DFE9A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{960C1AE5-407F-46FD-9A4F-B9DB4DFE9A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{960C1AE5-407F-46FD-9A4F-B9DB4DFE9A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F068B141-8891-44FF-BCDB-E46328BA78DA}

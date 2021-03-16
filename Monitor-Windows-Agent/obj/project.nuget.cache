@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tDSTBBXDDNLihvnMmPCvrBu62b0MemsDHoAClidRE+k2NyA+eFj2ye9vBAR/DPeqC/RggPbDXUWeirNv4hKw+A==",
+  "dgSpecHash": "gPGnHli7f4Ngh/8ioz5EPzHTJ5w+XrXukMc1YG51kIKO05iBVa7jqcjZvp3ojYXfSnIZTJAiLcAs9G4ebDH/Tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Amina\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Amina\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
