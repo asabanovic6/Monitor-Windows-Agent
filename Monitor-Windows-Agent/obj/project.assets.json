@@ -19,6 +19,15 @@
         "runtime": {
           "bin/placeholder/JASONParser.dll": {}
         }
+      },
+      "PingServer/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/PingServer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PingServer.dll": {}
+        }
       }
     }
   },
@@ -58,12 +67,18 @@
       "type": "project",
       "path": "../JASONParser/JASONParser.csproj",
       "msbuildProject": "../JASONParser/JASONParser.csproj"
+    },
+    "PingServer/1.0.0": {
+      "type": "project",
+      "path": "../PingServer/PingServer.csproj",
+      "msbuildProject": "../PingServer/PingServer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "JASONParser >= 1.0.0",
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "PingServer >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -100,6 +115,9 @@
           "projectReferences": {
             "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
               "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+            },
+            "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+              "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
             }
           }
         }

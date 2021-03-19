@@ -9,7 +9,8 @@
       "Monitor-Windows-Agent/1.0.0": {
         "dependencies": {
           "JASONParser": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
+          "Newtonsoft.Json": "12.0.3",
+          "PingServer": "1.0.0"
         },
         "runtime": {
           "Monitor-Windows-Agent.dll": {}
@@ -26,6 +27,11 @@
       "JASONParser/1.0.0": {
         "runtime": {
           "JASONParser.dll": {}
+        }
+      },
+      "PingServer/1.0.0": {
+        "runtime": {
+          "PingServer.dll": {}
         }
       }
     }
@@ -44,6 +50,11 @@
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
     "JASONParser/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PingServer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using JASONParser;
-
+using PingServer;
 
 namespace Monitor_Windows_Agent
 {
@@ -25,7 +25,9 @@ namespace Monitor_Windows_Agent
             //ComputerInfo comp=  pars.ConfigParser();
             //String name = comp.name;
             //String result = JsonConvert.SerializeObject(comp);
-            String s = CreateJSON.getJSON();
+            //String s = CreateJSON.getJSON();
+            Ping p = new Ping();
+            p.connection();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

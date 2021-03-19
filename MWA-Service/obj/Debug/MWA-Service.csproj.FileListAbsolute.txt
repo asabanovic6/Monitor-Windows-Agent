@@ -23,3 +23,4 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-S
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.csproj.CoreCompileInputs.cache
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.exe
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.pdb
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.csprojAssemblyReference.cache

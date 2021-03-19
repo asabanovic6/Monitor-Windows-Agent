@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\JASONParser\JASONParser.csproj" />
+    <ProjectReference Include="..\PingServer\PingServer.csproj" />
   </ItemGroup>
 
 </Project>

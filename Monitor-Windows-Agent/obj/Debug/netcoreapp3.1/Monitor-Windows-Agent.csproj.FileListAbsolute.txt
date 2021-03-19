@@ -46,3 +46,5 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\D
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.pdb
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.genruntimeconfig.cache
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\PingServer.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\PingServer.pdb

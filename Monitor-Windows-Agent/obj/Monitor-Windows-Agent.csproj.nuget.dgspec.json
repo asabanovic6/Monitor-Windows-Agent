@@ -44,6 +44,9 @@
             "projectReferences": {
               "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
                 "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+              },
+              "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+                "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
               }
             }
           }
@@ -83,6 +86,16 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
+        "projectName": "PingServer",
+        "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+      },
+      "frameworks": {
+        "net472": {}
       }
     }
   }
