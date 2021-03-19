@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q82qQ+12o3odAFvfmqj1pqvQQmzSrG9af7ihFE1sFBzOBhvT5Xppr6hFoLl/N+irxH4hAqDZ+aC1+QL5zH3/uQ==",
+  "dgSpecHash": "dao8ClqI0qTDpeyHxcnyGXzJ1QlCy/qf6nakEqgLybGKsz+PeflwuGu0g7/P+/o7cTyv1PaqStcBhGBH7UWfDQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+  "projectFilePath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Amina\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Dalee\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

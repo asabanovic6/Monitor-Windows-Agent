@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "Monitor-Windows-Agent/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "12.0.3",
-          "JASONParser": "1.0.0.0"
+          "JASONParser": "1.0.0",
+          "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
           "Monitor-Windows-Agent.dll": {}
@@ -23,12 +23,9 @@
           }
         }
       },
-      "JASONParser/1.0.0.0": {
+      "JASONParser/1.0.0": {
         "runtime": {
-          "JASONParser.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "JASONParser.dll": {}
         }
       }
     }
@@ -46,8 +43,8 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
-    "JASONParser/1.0.0.0": {
-      "type": "reference",
+    "JASONParser/1.0.0": {
+      "type": "project",
       "serviceable": false,
       "sha512": ""
     }

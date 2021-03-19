@@ -15,3 +15,11 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.c
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.csproj.CoreCompileInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.exe
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.pdb
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\bin\Debug\MWA-Service.exe.config
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\bin\Debug\MWA-Service.exe
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\bin\Debug\MWA-Service.pdb
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA_Service.ProjectInstaller.resources
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.csproj.GenerateResource.cache
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.exe
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\MWA-Service\obj\Debug\MWA-Service.pdb

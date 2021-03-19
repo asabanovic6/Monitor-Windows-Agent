@@ -21,9 +21,11 @@ namespace Monitor_Windows_Agent
         [STAThread]
         static void Main()
         {
-           Parser pars = new Parser();
-          ComputerInfo comp=  pars.ConfigParser();
-           String name = comp.name;
+            //  Parser pars = new Parser();
+            //ComputerInfo comp=  pars.ConfigParser();
+            //String name = comp.name;
+            //String result = JsonConvert.SerializeObject(comp);
+            String s = CreateJSON.getJSON();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
