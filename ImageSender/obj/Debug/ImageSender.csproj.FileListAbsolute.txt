@@ -6,3 +6,5 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\Image
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CopyComplete
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Drawing.Common.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csprojAssemblyReference.cache

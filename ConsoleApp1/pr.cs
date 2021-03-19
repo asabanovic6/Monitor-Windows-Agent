@@ -15,6 +15,7 @@ namespace ConsoleApp1
             //  Console.WriteLine("Hello World!");
             ws.Connect().Wait();
             //image, bilo sta
+
             sendMessage("connected", "");
         }
 

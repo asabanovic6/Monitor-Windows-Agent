@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebSocketSharp;
+using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace ImageSender
 {
@@ -14,11 +17,26 @@ namespace ImageSender
         {
             ws = new WebSocket(url: "ws://109.237.36.76:25565", onMessage: OnMessage, onError: OnError);
             ws.Connect().Wait();
-            //image, bilo sta
-            sendMessage("info", "CAO CAO");
+            
+            using (Image image = Image.FromFile(@"../../../../pc.jpg"))
+            {
+
+                using (MemoryStream m = new MemoryStream())
+                {
+
+                    image.Save(m, image.RawFormat);
+                    byte[] imageBytes = m.ToArray();
+
+                    string base64String = Convert.ToBase64String(imageBytes);
+                    sendMessage("testImage", base64String);
+
+                }
+            }
+                //image, bilo sta
+               // sendMessage("info", "CAO CAO");
         }
 
-        private static Task OnError(ErrorEventArgs arg)
+        private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
             throw new NotImplementedException();
         }
