@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amina\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+      "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
       "projectName": "Monitor-Windows-Agent",
-      "projectPath": "C:\\Users\\Amina\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+      "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
       "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amina\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
+      "outputPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -7,3 +7,12 @@ C:\Users\Amina\source\repos\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONPar
 C:\Users\Amina\source\repos\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Amina\source\repos\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll
 C:\Users\Amina\source\repos\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CoreCompileInputs.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.pdb

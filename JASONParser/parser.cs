@@ -8,17 +8,9 @@ using Newtonsoft.Json;
 
 namespace JASONParser
 {
-    public class parser
+    public class Parser
     {
         
-           
-      
-        public class ComputerInfo
-        {
-            public String Computer_name { get; set; }
-            public decimal Keep_alive { get; set; }
-        }
-
         public  ComputerInfo ConfigParser()
         {
             var json = File.ReadAllText("../../../../config.json");

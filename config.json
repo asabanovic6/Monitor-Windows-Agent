@@ -1,5 +1,6 @@
 {
-  "Computer_name": "DESKTOP-1",
-  "Keep_alive": 0.5
+  "name": "DESKTOP-SCC",
+  "keep_alive": 0.5,
+  "location" :  "SARAJEVO-SCC"
 }
 
