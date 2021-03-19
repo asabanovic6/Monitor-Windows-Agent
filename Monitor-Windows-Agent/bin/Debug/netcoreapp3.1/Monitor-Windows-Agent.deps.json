@@ -10,7 +10,9 @@
         "dependencies": {
           "JASONParser": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
-          "PingServer": "1.0.0"
+          "PingServer": "1.0.0",
+          "JASONParser.Reference": "1.0.0.0",
+          "PingServer.Reference": "1.0.0.0"
         },
         "runtime": {
           "Monitor-Windows-Agent.dll": {}
@@ -24,14 +26,20 @@
           }
         }
       },
-      "JASONParser/1.0.0": {
+      "JASONParser.Reference/1.0.0.0": {
         "runtime": {
-          "JASONParser.dll": {}
+          "JASONParser.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
-      "PingServer/1.0.0": {
+      "PingServer.Reference/1.0.0.0": {
         "runtime": {
-          "PingServer.dll": {}
+          "PingServer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -49,13 +57,13 @@
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
     },
-    "JASONParser/1.0.0": {
-      "type": "project",
+    "JASONParser.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "PingServer/1.0.0": {
-      "type": "project",
+    "PingServer.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

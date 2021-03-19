@@ -36,6 +36,9 @@
     <Reference Include="JASONParser">
       <HintPath>..\JASONParser\bin\Debug\JASONParser.dll</HintPath>
     </Reference>
+    <Reference Include="PingServer">
+      <HintPath>..\PingServer\bin\Debug\PingServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />

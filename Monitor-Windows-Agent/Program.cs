@@ -21,13 +21,11 @@ namespace Monitor_Windows_Agent
         [STAThread]
         static void Main()
         {
-            //  Parser pars = new Parser();
-            //ComputerInfo comp=  pars.ConfigParser();
-            //String name = comp.name;
-            //String result = JsonConvert.SerializeObject(comp);
-            //String s = CreateJSON.getJSON();
+            //pozivamo metodu koja ce svako 0.5 sec da salje kreirani json objekat prema serveru 
+           
             Ping p = new Ping();
-            p.connection();
+            p.PostJsonAndKeepAplive();
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
