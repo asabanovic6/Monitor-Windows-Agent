@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using JASONParser;
 using PingServer;
-
+using ImageSender;
 namespace Monitor_Windows_Agent
 {
     static class Program
@@ -25,7 +25,8 @@ namespace Monitor_Windows_Agent
            
             Ping p = new Ping();
             p.PostJsonAndKeepAplive();
-
+            imageSender p1 = new imageSender();
+            p1.conn();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -50,3 +50,6 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\D
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\PingServer.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\PingServer.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\PingServer.pdb
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\websocket-sharp.clone.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.pdb

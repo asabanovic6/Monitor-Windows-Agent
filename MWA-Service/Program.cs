@@ -5,7 +5,7 @@ using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 using PingServer;
-
+using ImageSender;
 namespace MWA_Service
 {
     static class Program
@@ -22,6 +22,10 @@ namespace MWA_Service
             //pozivamo metodu koja ce svako 0.5 sec da salje kreirani json objekat prema serveru 
             Ping p = new Ping();
             p.PostJsonAndKeepAplive();
+
+            imageSender img = new imageSender();
+            img.conn();
+          
         }
     }
 }

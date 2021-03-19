@@ -1,6 +1,6 @@
 {
   "name": "DESKTOP-SCC",
-  "keep_alive": 0.5,
-  "location" :  "SARAJEVO-SCC"
+  "keepAlive": 5,
+  "location" :  "Sarajevo - SCC"
 }
 

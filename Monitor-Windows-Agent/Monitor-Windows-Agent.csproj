@@ -9,9 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="websocket-sharp.clone" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ImageSender\ImageSender.csproj" />
     <ProjectReference Include="..\JASONParser\JASONParser.csproj" />
     <ProjectReference Include="..\PingServer\PingServer.csproj" />
   </ItemGroup>

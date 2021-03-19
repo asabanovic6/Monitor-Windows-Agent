@@ -8,9 +8,11 @@
     ".NETCoreApp,Version=v3.1": {
       "Monitor-Windows-Agent/1.0.0": {
         "dependencies": {
+          "ImageSender": "1.0.0",
           "JASONParser": "1.0.0",
           "Newtonsoft.Json": "12.0.3",
           "PingServer": "1.0.0",
+          "websocket-sharp.clone": "3.0.0",
           "JASONParser.Reference": "1.0.0.0",
           "PingServer.Reference": "1.0.0.0"
         },
@@ -24,6 +26,19 @@
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.3.23909"
           }
+        }
+      },
+      "websocket-sharp.clone/3.0.0": {
+        "runtime": {
+          "lib/net45/websocket-sharp.clone.dll": {
+            "assemblyVersion": "1.0.2.39869",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      },
+      "ImageSender/1.0.0": {
+        "runtime": {
+          "ImageSender.dll": {}
         }
       },
       "JASONParser.Reference/1.0.0.0": {
@@ -56,6 +71,18 @@
       "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "websocket-sharp.clone/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SiBeN0rQsATg/HUjYXZhgmbTEUnOhqYQBf0/2pM0yqk8dPzpHiI8i4v6zdH/wrBzlZ2eYul+IlVQfxaX3WoA9Q==",
+      "path": "websocket-sharp.clone/3.0.0",
+      "hashPath": "websocket-sharp.clone.3.0.0.nupkg.sha512"
+    },
+    "ImageSender/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "JASONParser.Reference/1.0.0.0": {
       "type": "reference",

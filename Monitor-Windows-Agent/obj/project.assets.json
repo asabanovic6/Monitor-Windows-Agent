@@ -11,6 +11,24 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "websocket-sharp.clone/3.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/websocket-sharp.clone.dll": {}
+        },
+        "runtime": {
+          "lib/net45/websocket-sharp.clone.dll": {}
+        }
+      },
+      "ImageSender/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/ImageSender.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ImageSender.dll": {}
+        }
+      },
       "JASONParser/1.0.0": {
         "type": "project",
         "compile": {
@@ -63,6 +81,24 @@
         "packageIcon.png"
       ]
     },
+    "websocket-sharp.clone/3.0.0": {
+      "sha512": "SiBeN0rQsATg/HUjYXZhgmbTEUnOhqYQBf0/2pM0yqk8dPzpHiI8i4v6zdH/wrBzlZ2eYul+IlVQfxaX3WoA9Q==",
+      "type": "package",
+      "path": "websocket-sharp.clone/3.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/websocket-sharp.clone.dll",
+        "lib/net45/websocket-sharp.clone.xml",
+        "websocket-sharp.clone.3.0.0.nupkg.sha512",
+        "websocket-sharp.clone.nuspec"
+      ]
+    },
+    "ImageSender/1.0.0": {
+      "type": "project",
+      "path": "../ImageSender/ImageSender.csproj",
+      "msbuildProject": "../ImageSender/ImageSender.csproj"
+    },
     "JASONParser/1.0.0": {
       "type": "project",
       "path": "../JASONParser/JASONParser.csproj",
@@ -76,25 +112,32 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "ImageSender >= 1.0.0",
       "JASONParser >= 1.0.0",
       "Newtonsoft.Json >= 12.0.3",
-      "PingServer >= 1.0.0"
+      "PingServer >= 1.0.0",
+      "websocket-sharp.clone >= 3.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Amina\\.nuget\\packages\\": {}
+    "C:\\Users\\Dalee\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+      "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
       "projectName": "Monitor-Windows-Agent",
-      "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
-      "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
+      "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+      "packagesPath": "C:\\Users\\Dalee\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dalee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -106,12 +149,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-              "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+            "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+              "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
             },
-            "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-              "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+            "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+              "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+            },
+            "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+              "projectPath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
             }
           }
         }
@@ -124,10 +171,15 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "websocket-sharp.clone": {
+            "target": "Package",
+            "version": "[3.0.0, )"
           }
         },
         "imports": [
@@ -148,8 +200,20 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'websocket-sharp.clone 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "websocket-sharp.clone",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

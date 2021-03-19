@@ -1,0 +1,8 @@
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.pdb
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\websocket-sharp.clone.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\websocket-sharp.clone.xml
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CopyComplete
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.dll
+C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
