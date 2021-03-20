@@ -1,0 +1,15 @@
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\Service.exe
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\ImageSender.dll
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\JASONParser.dll
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\PingServer.dll
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\websocket-sharp.clone.dll
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\ImageSender.pdb
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\JASONParser.pdb
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\PingServer.pdb
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\websocket-sharp.clone.xml
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.xml
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
+C:\Users\Laptop\Desktop\Monitor-Windows-Agent\Service\obj\Debug\netcoreapp3.1\Service.csproj.CopyComplete

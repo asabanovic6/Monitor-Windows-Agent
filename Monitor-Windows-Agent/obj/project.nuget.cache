@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "8tZXhQTGdwzzrct4rDfKfYCKNthYD1Detqp2Rc7ydVhA7Dmm0n6tfWBfLqaMC42mL7b5u4WgA28N5/m90pwcDQ==",
+  "dgSpecHash": "2o6F3NzT8lNX/yvXnrOiX9lmqm7LyNhQI4SqI3krWv9RrzgdkuI1l2TvEqqXbZSrBz7PZ/530s09G26dvylifg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dalee\\Desktop\\SI_proj\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+  "projectFilePath": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Dalee\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\Dalee\\.nuget\\packages\\websocket-sharp.clone\\3.0.0\\websocket-sharp.clone.3.0.0.nupkg.sha512"
+    "C:\\Users\\Laptop\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Laptop\\.nuget\\packages\\websocket-sharp.clone\\3.0.0\\websocket-sharp.clone.3.0.0.nupkg.sha512"
   ],
   "logs": [
     {
