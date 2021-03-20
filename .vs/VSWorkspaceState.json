@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ClassLibrary1",
+    "\\Monitor-Windows-Agent",
+    "\\MWA-Service"
   ],
-  "SelectedNode": "\\Monitor-Windows-Agent.sln",
+  "SelectedNode": "\\Monitor-Windows-Agent\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }

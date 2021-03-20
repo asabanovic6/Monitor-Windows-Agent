@@ -20,8 +20,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingServer", "PingServer\Pi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSender", "ImageSender\ImageSender.csproj", "{37EBCFD7-214C-4A23-9B15-450F15ACC9CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{B186FB29-10F8-4166-96B7-8FE0B45548AD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,10 +46,6 @@ Global
 		{37EBCFD7-214C-4A23-9B15-450F15ACC9CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37EBCFD7-214C-4A23-9B15-450F15ACC9CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37EBCFD7-214C-4A23-9B15-450F15ACC9CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B186FB29-10F8-4166-96B7-8FE0B45548AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B186FB29-10F8-4166-96B7-8FE0B45548AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B186FB29-10F8-4166-96B7-8FE0B45548AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B186FB29-10F8-4166-96B7-8FE0B45548AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
