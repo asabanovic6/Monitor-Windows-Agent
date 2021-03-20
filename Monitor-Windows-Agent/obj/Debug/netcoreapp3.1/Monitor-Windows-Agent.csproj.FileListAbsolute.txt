@@ -53,3 +53,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\net
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\websocket-sharp.clone.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\websocket-sharp.clone.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.pdb

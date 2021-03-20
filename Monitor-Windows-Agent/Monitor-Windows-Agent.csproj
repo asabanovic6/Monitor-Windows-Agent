@@ -19,11 +19,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="ImageSender">
+      <HintPath>..\ImageSender\bin\Debug\ImageSender.dll</HintPath>
+    </Reference>
     <Reference Include="JASONParser">
-      <HintPath>..\PingServer\bin\Debug\JASONParser.dll</HintPath>
+      <HintPath>..\JASONParser\bin\Debug\JASONParser.dll</HintPath>
     </Reference>
     <Reference Include="PingServer">
       <HintPath>..\PingServer\bin\Debug\PingServer.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp.clone">
+      <HintPath>..\PingServer\bin\Debug\websocket-sharp.clone.dll</HintPath>
     </Reference>
   </ItemGroup>
 

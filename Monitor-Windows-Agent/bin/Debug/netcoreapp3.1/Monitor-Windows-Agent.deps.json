@@ -13,6 +13,7 @@
           "Newtonsoft.Json": "12.0.3",
           "PingServer": "1.0.0",
           "websocket-sharp.clone": "3.0.0",
+          "ImageSender.Reference": "1.0.0.0",
           "JASONParser.Reference": "1.0.0.0",
           "PingServer.Reference": "1.0.0.0"
         },
@@ -36,9 +37,12 @@
           }
         }
       },
-      "ImageSender/1.0.0": {
+      "ImageSender.Reference/1.0.0.0": {
         "runtime": {
-          "ImageSender.dll": {}
+          "ImageSender.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "JASONParser.Reference/1.0.0.0": {
@@ -79,8 +83,8 @@
       "path": "websocket-sharp.clone/3.0.0",
       "hashPath": "websocket-sharp.clone.3.0.0.nupkg.sha512"
     },
-    "ImageSender/1.0.0": {
-      "type": "project",
+    "ImageSender.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

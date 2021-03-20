@@ -11,7 +11,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.d
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CoreCompileInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll
@@ -28,3 +27,6 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\obj\Debug\JASON
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Json.Net.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache

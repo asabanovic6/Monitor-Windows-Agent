@@ -13,7 +13,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\PingServer.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\JASONParser.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csproj.CoreCompileInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csproj.CopyComplete
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.dll
@@ -22,3 +21,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\JASONParser.dl
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\PingServer\bin\Debug\websocket-sharp.clone.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\PingServer\bin\Debug\websocket-sharp.clone.xml
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\websocket-sharp.clone.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\websocket-sharp.clone.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache

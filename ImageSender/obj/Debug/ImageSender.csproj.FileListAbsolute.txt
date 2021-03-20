@@ -8,3 +8,17 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\Image
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Drawing.Common.dll
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csprojAssemblyReference.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Drawing.Common.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\websocket-sharp.clone.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\websocket-sharp.clone.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CoreCompileInputs.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CopyComplete
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\JASONParser.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\JASONParser.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csprojAssemblyReference.cache

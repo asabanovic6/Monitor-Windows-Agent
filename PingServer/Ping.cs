@@ -15,6 +15,7 @@ namespace PingServer
 {
     public class Ping
     {
+       // http://167.99.244.168:3000/liveStatus
         private static string uri = "http://167.99.244.168:3000/liveStatus";
       private static Parser pars = new Parser();
         private static int miliSec = (int) ( pars.ConfigParser().keepAlive*1000);
