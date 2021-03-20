@@ -70,7 +70,7 @@ namespace ImageSender
         private static void sendMessage(string message,string type)
         {
             comp = parser.ConfigParser();
-            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\"}");
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + "amina" + "\", \"location\":\"" + "sarajevo" + "\"}");
         }
     }
 }
