@@ -29,3 +29,4 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\webso
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
