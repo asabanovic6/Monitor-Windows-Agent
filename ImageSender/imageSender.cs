@@ -13,16 +13,11 @@ namespace ImageSender
         private static ComputerInfo comp = new ComputerInfo();
         private static Parser parser = new Parser();
 
-        // private String type; 
-
-
         public void conn()
         {
             ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
             ws.Connect().Wait();
             sendMessage("", "sendCredentials");
-
-
         }
 
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
@@ -39,12 +34,10 @@ namespace ImageSender
             }
 
             return Task.FromResult(0);
-
         }
+
         private static void sendScreen()
         {
-
-
             /* Bitmap captureBitmap = new Bitmap(1024, 768, PixelFormat.Format32bppArgb);
  
              Rectangle captureRectangle = Screen.AllScreens[0].Bounds;
@@ -67,6 +60,7 @@ namespace ImageSender
  
              }*/
         }
+
         private static void sendMessage(string message, string type)
         {
             comp = parser.ConfigParser();

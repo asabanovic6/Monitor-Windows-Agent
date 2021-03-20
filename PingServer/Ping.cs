@@ -15,9 +15,8 @@ namespace PingServer
 {
     public class Ping
     {
-       // http://167.99.244.168:3000/liveStatus
         private static string uri = "http://167.99.244.168:3000/liveStatus";
-      private static Parser pars = new Parser();
+        private static Parser pars = new Parser();
         private static int miliSec = (int) ( pars.ConfigParser().keepAlive*1000);
 
         //Ova metoda je jedina public i nju trebamo pozvati u Program.cs iz main-a 
@@ -30,6 +29,11 @@ namespace PingServer
             {
                 PostJson(uri, CreateJSON.getJSON());
             }, null, startTimeSpan, periodTimeSpan);
+        }
+
+        public void PostJsonAndKeepAliveForService()
+        {
+            PostJson(uri, CreateJSON.getJSON());
         }
 
         private static void PostJson(string uri, String postData)

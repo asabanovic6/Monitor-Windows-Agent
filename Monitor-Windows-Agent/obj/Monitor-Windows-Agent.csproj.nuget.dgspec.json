@@ -1,42 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {}
+    "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj",
         "projectName": "ImageSender",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+        "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj",
         "projectName": "JASONParser",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+        "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
+    "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
         "projectName": "Monitor-Windows-Agent",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
-        "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
+        "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+        "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,14 +47,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-                "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+              "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+                "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
               },
-              "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-                "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+              "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+                "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
               },
-              "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-                "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+              "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+                "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
               }
             }
           }
@@ -73,6 +71,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "websocket-sharp.clone": {
               "target": "Package",
@@ -97,16 +99,15 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
+        "projectUniqueName": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
         "projectName": "PingServer",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+        "projectPath": "C:\\Users\\benja\\source\\repos\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
       },
       "frameworks": {
         "net472": {}
