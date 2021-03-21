@@ -66,3 +66,11 @@ C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSende
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CopyComplete
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.dll
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Security.Permissions.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Security.Permissions.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\System.Security.Principal.Windows.xml

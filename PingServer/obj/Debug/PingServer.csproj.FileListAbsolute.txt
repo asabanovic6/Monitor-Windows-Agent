@@ -66,3 +66,11 @@ C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csproj.CopyComplete
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.dll
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Security.Permissions.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Security.Permissions.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\System.Security.Principal.Windows.xml

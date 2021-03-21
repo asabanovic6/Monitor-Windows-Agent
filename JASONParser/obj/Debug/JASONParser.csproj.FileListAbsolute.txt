@@ -29,7 +29,6 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\webso
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
 C:\Users\benja\source\repos\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.dll
 C:\Users\benja\source\repos\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.pdb
 C:\Users\benja\source\repos\Monitor-Windows-Agent\JASONParser\bin\Debug\Json.Net.dll
@@ -70,3 +69,12 @@ C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParse
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll
 C:\Users\Dalee\Desktop\SI\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Permissions.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Permissions.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
