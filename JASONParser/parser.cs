@@ -17,8 +17,6 @@ namespace JASONParser
 
             var item = JsonConvert.DeserializeObject<ComputerInfo>(json);
 
-            Console.WriteLine(item);
-
             return item;
         }
 
