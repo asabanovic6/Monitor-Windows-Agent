@@ -7,6 +7,8 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace ImageSender
 {
@@ -15,11 +17,13 @@ namespace ImageSender
         static WebSocket ws;
         private static ComputerInfo comp = new ComputerInfo();
         private static Parser parser = new Parser();
+        private static JToken result;
 
         public void conn()
         {
-             // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
-            ws = new WebSocket(url: "ws://109.237.36.76:25565", onMessage: OnMessage, onError: OnError);
+            // vs = ws://109.237.36.76:25565
+            // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
+            ws = new WebSocket(url: parser.ConfigParser().webSocketUrl, onMessage: OnMessage, onError: OnError);
             ws.Connect().Wait();
 
             sendMessage("sendCredentials", "" );
@@ -33,15 +37,15 @@ namespace ImageSender
         private static Task OnMessage(MessageEventArgs messageEventArgs)
         {
             string text = messageEventArgs.Text.ReadToEnd();
-            if (text.Contains("cd"))
-            {
-                sendMessage("command_result", "radi");
-            }
-            else if (text == "getScreenshot") sendScreenshot();
-           else if (text != "Connected")
-            {
-                sendMessage("command_result", "Komanda ne postoji");
-            }
+             result = JsonConvert.DeserializeObject<JToken>(text);
+
+            if (result["type"].Value<String>() == "command") sendMessage("command_result", "radi");
+            else if (result["type"].Value<String>() == "ping") sendMessage("pong", "");
+            else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
+            else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>());
+            else if (result["type"].Value<String>() != "Connected") sendMessage("command_result", "Komanda ne postoji");
+           
+            
             return Task.FromResult(0);
         }
 
@@ -74,7 +78,25 @@ namespace ImageSender
         private static void sendMessage(string type, string message)
         {
             comp = parser.ConfigParser();
-            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\"}");
+  
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\"}");
+        }
+
+        private static void sendFile (String path)
+        {
+            String abspath = comp.path + "\\" + path;
+            byte[] bytes = System.IO.File.ReadAllBytes(abspath);
+            string base64String = Convert.ToBase64String(bytes);
+            
+            ws.Send ("{ \"type\":\"" + "sendFile" + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"fileName\":\"" + path + "\"}");
+            }
+
+     private static void getFile(String base64String)
+        {    
+          
+            Byte[] bytes = Convert.FromBase64String(base64String);
+            File.WriteAllBytes(comp.logs, bytes);
+            //ovdje trebam vratiti ws ono sto njima treba 
         }
 
     }

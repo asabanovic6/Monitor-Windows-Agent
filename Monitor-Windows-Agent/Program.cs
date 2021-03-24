@@ -22,10 +22,10 @@ namespace Monitor_Windows_Agent
         {
             //pozivamo metodu koja ce svako 0.5 sec da salje kreirani json objekat prema serveru 
            
-            Ping p = new Ping();
-            p.PostJsonAndKeepAplive();
-            imageSender p1 = new imageSender();
-            p1.conn();
+          //  Ping p = new Ping();
+           // p.PostJsonAndKeepAplive();
+             imageSender p1 = new imageSender();
+             p1.conn();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
