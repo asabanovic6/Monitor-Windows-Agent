@@ -19,7 +19,7 @@ namespace ImageSender
         public void conn()
         {
              // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
-            ws = new WebSocket(url: "ws://109.237.36.76:25565", onMessage: OnMessage, onError: OnError);
+            ws = new WebSocket(url: parser.ConfigParser().webSocketUrl, onMessage: OnMessage, onError: OnError);
             ws.Connect().Wait();
 
             sendMessage("sendCredentials", "" );

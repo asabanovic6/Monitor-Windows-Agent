@@ -15,8 +15,8 @@ namespace PingServer
 {
     public class Ping
     {
-        private static string uri = "http://167.99.244.168:3000/liveStatus";
         private static Parser pars = new Parser();
+        private static string uri = pars.ConfigParser().pingUri;
         private static int miliSec = (int) ( pars.ConfigParser().keepAlive*1000);
 
         //Ova metoda je jedina public i nju trebamo pozvati u Program.cs iz main-a 
