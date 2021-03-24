@@ -1838,19 +1838,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Laptop\\.nuget\\packages\\": {}
+    "C:\\Users\\amelp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+      "projectUniqueName": "C:\\Users\\amelp\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
       "projectName": "MonitorWindowsService",
-      "projectPath": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
-      "packagesPath": "C:\\Users\\Laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
+      "projectPath": "C:\\Users\\amelp\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+      "packagesPath": "C:\\Users\\amelp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amelp\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amelp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1862,15 +1862,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-              "projectPath": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+            "C:\\Users\\amelp\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+              "projectPath": "C:\\Users\\amelp\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
             },
-            "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-              "projectPath": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+            "C:\\Users\\amelp\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+              "projectPath": "C:\\Users\\amelp\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
             },
-            "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-              "projectPath": "C:\\Users\\Laptop\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+            "C:\\Users\\amelp\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+              "projectPath": "C:\\Users\\amelp\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
             }
           }
         }
@@ -1883,6 +1884,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
@@ -1908,7 +1910,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
