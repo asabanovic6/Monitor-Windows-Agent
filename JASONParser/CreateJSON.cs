@@ -20,7 +20,11 @@ namespace Monitor_Windows_Agent
             dataJSON.name = computer.name;
             dataJSON.location = computer.location;
             dataJSON.timeStamp = DateTime.Now;
-            dataJSON.message = "I am "+computer.name+" computer and I am alive!";
+            dataJSON.message = "Djes Huso";
+            dataJSON.cpuUsage = null;
+            dataJSON.ramUsage = null;
+            dataJSON.hddUsage = null;
+            dataJSON.gpuUsage = null;
             String result = JsonConvert.SerializeObject(dataJSON);
             return result;
         }
