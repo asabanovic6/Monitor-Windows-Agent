@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Monitor_Windows_Agent</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="EventLogger">
+      <HintPath>..\EventLogger\bin\Debug\EventLogger.dll</HintPath>
+    </Reference>
     <Reference Include="ImageSender">
       <HintPath>..\ImageSender\bin\Debug\ImageSender.dll</HintPath>
     </Reference>

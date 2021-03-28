@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Timers;
+using EventLogger;
+using Microsoft.Win32;
 
 namespace MonitorWindowsService
 {
@@ -15,6 +17,8 @@ namespace MonitorWindowsService
 
         public ActionTrigger()
         {
+            Logger.Registry_Write(Registry.LocalMachine);
+
             int triggerPeriod = (int) new Parser().ConfigParser().keepAlive * 1000;
             _timer = new Timer(triggerPeriod) { AutoReset = true };
             _timer.Elapsed += TimerElapsed;

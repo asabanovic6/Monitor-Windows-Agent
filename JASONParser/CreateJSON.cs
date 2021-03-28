@@ -21,10 +21,10 @@ namespace Monitor_Windows_Agent
             dataJSON.location = computer.location;
             dataJSON.timeStamp = DateTime.Now;
             dataJSON.message = "Djes Huso";
-            dataJSON.cpuUsage = null;
-            dataJSON.ramUsage = null;
-            dataJSON.hddUsage = null;
-            dataJSON.gpuUsage = null;
+            dataJSON.cpuUsage = computer.cpuUsage;
+            dataJSON.ramUsage = computer.ramUsage;
+            dataJSON.hddUsage = computer.hddUsage;
+            dataJSON.gpuUsage = computer.gpuUsage;
             String result = JsonConvert.SerializeObject(dataJSON);
             return result;
         }
