@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EventLogger">
+      <HintPath>..\EventLogger\bin\Debug\EventLogger.dll</HintPath>
+    </Reference>
     <Reference Include="JASONParser">
       <HintPath>..\JASONParser\bin\Debug\JASONParser.dll</HintPath>
     </Reference>

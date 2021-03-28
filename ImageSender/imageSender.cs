@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using EventLogger;
 
 namespace ImageSender
 {
@@ -18,6 +19,8 @@ namespace ImageSender
         private static ComputerInfo comp = new ComputerInfo();
         private static Parser parser = new Parser();
         private static JToken result;
+        
+
 
         public void conn()
         {
@@ -38,14 +41,21 @@ namespace ImageSender
         {
             string text = messageEventArgs.Text.ReadToEnd();
              result = JsonConvert.DeserializeObject<JToken>(text);
+            if (result["type"].Value<String>() == "Connected") return Task.FromResult(0);
+
+
 
             if (result["type"].Value<String>() == "command") sendMessage("command_result", "radi");
+            else if (result["type"].Value<String>() == "Disconnected") { }
             else if (result["type"].Value<String>() == "ping") sendMessage("pong", "");
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
-            else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>());
+            else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
+            else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() != "Connected") sendMessage("command_result", "Komanda ne postoji");
-           
-            
+
+            Logger logger = new Logger( result["type"].Value<String>(), result["user"].Value<String>());
+            logger.writeLog();
+
             return Task.FromResult(0);
         }
 
@@ -82,21 +92,24 @@ namespace ImageSender
             ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\"}");
         }
 
-        private static void sendFile (String path)
+        private static void sendFile (String path,String fileName)
         {
-            String abspath = comp.path + "\\" + path;
+            String abspath = comp.path + "\\" + path+ "\\" + fileName;
             byte[] bytes = System.IO.File.ReadAllBytes(abspath);
             string base64String = Convert.ToBase64String(bytes);
             
-            ws.Send ("{ \"type\":\"" + "sendFile" + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"fileName\":\"" + path + "\"}");
+            ws.Send ("{ \"type\":\"" + "sendFile" + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"fileName\":\"" + fileName + "\"}");
             }
 
-     private static void getFile(String base64String)
-        {    
-          
-            Byte[] bytes = Convert.FromBase64String(base64String);
-            File.WriteAllBytes(comp.logs, bytes);
+     private static void getFile(String base64String, String path, String fileName)
+        {
+            String abspath = comp.path + "\\" + path + "\\" + fileName;
+            byte[] bytes = Convert.FromBase64String(base64String);
+            File.WriteAllBytes(abspath, bytes);
+
             //ovdje trebam vratiti ws ono sto njima treba 
+            ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip +  "\"}");
+
         }
 
     }

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +15,12 @@
     <ProjectReference Include="..\ImageSender\ImageSender.csproj" />
     <ProjectReference Include="..\JASONParser\JASONParser.csproj" />
     <ProjectReference Include="..\PingServer\PingServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EventLogger">
+      <HintPath>..\EventLogger\bin\Debug\EventLogger.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

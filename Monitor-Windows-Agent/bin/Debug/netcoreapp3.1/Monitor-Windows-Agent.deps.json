@@ -14,6 +14,7 @@
           "PingServer": "1.0.0",
           "System.Configuration.ConfigurationManager": "5.0.0",
           "websocket-sharp.clone": "3.0.0",
+          "EventLogger": "1.0.0.0",
           "ImageSender.Reference": "1.0.0.0",
           "JASONParser.Reference": "1.0.0.0",
           "PingServer.Reference": "1.0.0.0"
@@ -184,6 +185,14 @@
           }
         }
       },
+      "EventLogger/1.0.0.0": {
+        "runtime": {
+          "EventLogger.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "ImageSender.Reference/1.0.0.0": {
         "runtime": {
           "ImageSender.dll": {
@@ -292,6 +301,11 @@
       "sha512": "sha512-SiBeN0rQsATg/HUjYXZhgmbTEUnOhqYQBf0/2pM0yqk8dPzpHiI8i4v6zdH/wrBzlZ2eYul+IlVQfxaX3WoA9Q==",
       "path": "websocket-sharp.clone/3.0.0",
       "hashPath": "websocket-sharp.clone.3.0.0.nupkg.sha512"
+    },
+    "EventLogger/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     },
     "ImageSender.Reference/1.0.0.0": {
       "type": "reference",
