@@ -3,3 +3,4 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.p
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CoreCompileInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache
