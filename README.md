@@ -11,9 +11,22 @@ MWA ima dvije glavne uloge:
 TBA
 ```
 ### Steps for installing MWA Windows service
+Nakon preuzimanja projekta, pozicionirati se unutar Command Prompta na sljedeću lokaciju:
 ```bash
-TBA
+cd Monitor-Windows-Agent\MonitorWindowsService\bin\Debug\netcoreapp3.1
 ```
+Nakon toga servis se instalira komandom:
+```bash
+monitorwindowsservice.exe install start
+```
+Deinstaliranje servisa se vrši komandom:
+```bash
+monitorwindowsservice.exe uninstall
+```
+# Features
+1. Korisnik ima mogućnost čitanja podataka iz .txt file-a.
+2. Korisnik ima mogućnost slanja file-a prema serveru, kao i primanje file-a od servera.
+3. Korisnik ima mogućnost da se svaki zahtjev prikaže u Event Vieweru u vidu logova u kojima se nalazi podatak o klijentu koji zahtjeva neki upit, te podatak o tipu upita koji se zahtijeva. 
 # Contribute
 1. Dodjeljivanje radnih zadataka (preuzimanje) se radi na nivou Itema, a razvoj softvera se obavlja na nivou Taska.
   Za svaki Item osoba koja je preuzela da radi taj Item kreira novi Branch na Repozitorij koristeći opciju kreiranja brancha za Issue.
