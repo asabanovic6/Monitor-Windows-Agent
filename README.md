@@ -7,9 +7,10 @@ MWA ima dvije glavne uloge:
 -   	prima naredbe od korisnika, putem MS-a, i izvršava ih na IWM-u
 # Installation
 ### Steps for installing MWA Desktop application
-```bash
-TBA
-```
+
+1. Nakon preuzimanja projekta, otvoriti folder Monitor-Windows-Agent i pokrenuti setup.exe.
+2. Nakon što se pokrene instalacija odabrati lokaciju na koju će aplikacija biti instalirana.
+3. Omogućeno je automatsko stvaranje desktop ikone, pa nakon završetka instalacije, sam postupak je završen i desktop aplikacija je spremna za korištenje.
 ### Steps for installing MWA Windows service
 Nakon preuzimanja projekta, pozicionirati se unutar Command Prompta na sljedeću lokaciju:
 ```bash
