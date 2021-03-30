@@ -3,8 +3,6 @@
   "keepAlive": 20,
   "location": "Sarajevo - SCC",
   "ip": "192.168.0.15",
-  "path": "C:\\\\Users\\\\Amina\\\\Desktop\\\\Monitor-Windows-Agent",
-  "logs": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Logs",
   "webSocketUrl": "wss://si-grupa5.herokuapp.com",
   "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
   "cpuUsage": 0.5,

