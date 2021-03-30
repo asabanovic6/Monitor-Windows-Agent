@@ -1,14 +1,14 @@
 {
   "name": "Desktop PC 1",
-  "keepAlive": 20,
+  "keepAlive": 20.0,
   "location": "Sarajevo - SCC",
   "ip": "192.168.0.15",
   "webSocketUrl": "wss://si-grupa5.herokuapp.com",
   "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
-  "cpuUsage": 0.5,
-  "ramUsage": 0.5,
-  "hddUsage": 0.5,
-  "gpuUsage": 0.5,
+  "cpuUsage": null,
+  "ramUsage": null,
+  "hddUsage": null,
+  "gpuUsage": null,
   "fileLocations": {
     "File1": "C:\\",
     "File2": "C:\\",
@@ -17,5 +17,3 @@
     "File5": "C:\\"
   }
 }
-
-

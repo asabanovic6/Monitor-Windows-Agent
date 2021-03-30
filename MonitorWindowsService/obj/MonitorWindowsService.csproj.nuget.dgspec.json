@@ -1,42 +1,44 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj": {}
+    "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj",
+        "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj",
         "projectName": "ImageSender",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+        "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj",
+        "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj",
         "projectName": "JASONParser",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+        "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj": {
+    "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
-        "projectName": "MonitorWindowsService",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
-        "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
+        "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+        "projectName": "Monitor-Windows-Agent",
+        "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+        "packagesPath": "C:\\Users\\Dalee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dalee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,15 +50,16 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-                "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+              "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+                "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
               },
-              "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-                "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+              "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+                "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
               },
-              "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-                "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+              "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+                "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
               }
             }
           }
@@ -69,6 +72,90 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Topshelf": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
+            "websocket-sharp.clone": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+        "projectName": "MonitorWindowsService",
+        "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+        "packagesPath": "C:\\Users\\Dalee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Dalee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
+                "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "System.Configuration.ConfigurationManager": {
               "target": "Package",
@@ -94,16 +181,15 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-      "version": "1.0.0",
+    "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
+        "projectUniqueName": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
         "projectName": "PingServer",
-        "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+        "projectPath": "C:\\Users\\Dalee\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
       },
       "frameworks": {
         "net472": {}
