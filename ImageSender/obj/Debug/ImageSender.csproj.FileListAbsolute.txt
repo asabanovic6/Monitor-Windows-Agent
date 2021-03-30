@@ -118,3 +118,5 @@ C:\Users\amelp\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.Co
 C:\Users\amelp\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CopyComplete
 C:\Users\amelp\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.dll
 C:\Users\amelp\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\EventLogger.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\EventLogger.pdb

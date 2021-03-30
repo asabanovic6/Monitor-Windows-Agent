@@ -12,6 +12,12 @@ namespace JASONParser
         public String name { get; set; }
         public String location { get; set; }
         public String  message { get; set; }
+   
+        public Nullable<Decimal> cpuUsage { get; set; }
+        public Nullable<Decimal> ramUsage { get; set; }
+        public Nullable<Decimal> hddUsage { get; set; }
+        public Nullable<Decimal> gpuUsage { get; set; }
+
 
     }
 }

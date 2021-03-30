@@ -207,3 +207,5 @@ C:\Users\amelp\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3
 C:\Users\amelp\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.dll
 C:\Users\amelp\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.pdb
 C:\Users\amelp\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.genruntimeconfig.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\EventLogger.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\EventLogger.pdb
