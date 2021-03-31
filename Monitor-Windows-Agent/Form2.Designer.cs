@@ -84,6 +84,7 @@ namespace Monitor_Windows_Agent
             this.textBoxInstallationCode = new System.Windows.Forms.TextBox();
             this.submitBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
+            this.Refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // iconNotify
@@ -375,19 +376,30 @@ namespace Monitor_Windows_Agent
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Location = new System.Drawing.Point(445, 385);
+            this.CancelBtn.Location = new System.Drawing.Point(579, 385);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(94, 29);
             this.CancelBtn.TabIndex = 33;
-            this.CancelBtn.Text = "Refresh";
+            this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = true;
             this.CancelBtn.Click += new System.EventHandler(this.Button_Cancel_Click);
+            // 
+            // Refresh
+            // 
+            this.Refresh.Location = new System.Drawing.Point(416, 385);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.Size = new System.Drawing.Size(94, 29);
+            this.Refresh.TabIndex = 34;
+            this.Refresh.Text = "Refresh";
+            this.Refresh.UseVisualStyleBackColor = true;
+            this.Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 426);
+            this.Controls.Add(this.Refresh);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.textBoxInstallationCode);
@@ -432,7 +444,11 @@ namespace Monitor_Windows_Agent
         }
         private void Button_Cancel_Click(object sender, System.EventArgs e)
         {
-            //this.Close();
+            this.Close();
+
+        }
+        private void Button_Refresh_Click(object sender, System.EventArgs e)
+        {
             var json = File.ReadAllText("../../../../config.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             this.textBoxName.Text = jsonObj.name;
@@ -448,7 +464,7 @@ namespace Monitor_Windows_Agent
             this.File5path.Text = jsonObj.fileLocations.File5;
 
         }
-            private void Button_Click(object sender, System.EventArgs e)
+        private void Button_Click(object sender, System.EventArgs e)
         {
             //zamijeniti prve dvije linije koda sa pozivom parsera
             var json = File.ReadAllText("../../../../config.json");
@@ -515,6 +531,8 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.TextBox textBoxInstallationCode;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button CancelBtn;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button Refresh;
     }
 
 }

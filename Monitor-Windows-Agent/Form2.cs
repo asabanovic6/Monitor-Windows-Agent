@@ -96,5 +96,19 @@ namespace Monitor_Windows_Agent
 
         }
 
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
