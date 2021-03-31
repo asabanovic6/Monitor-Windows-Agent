@@ -8,11 +8,13 @@
     ".NETCoreApp,Version=v3.1": {
       "MonitorWindowsService/1.0.0": {
         "dependencies": {
-          "ImageSender": "1.0.0",
-          "JASONParser": "1.0.0",
-          "PingServer": "1.0.0",
+          "Monitor-Windows-Agent": "1.0.0",
           "System.Configuration.ConfigurationManager": "5.0.0",
-          "Topshelf": "4.3.0"
+          "Topshelf": "4.3.0",
+          "EventLogger": "1.0.0.0",
+          "ImageSender.Reference": "1.0.0.0",
+          "JASONParser.Reference": "1.0.0.0",
+          "PingServer.Reference": "1.0.0.0"
         },
         "runtime": {
           "MonitorWindowsService.dll": {}
@@ -45,6 +47,14 @@
           }
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -68,20 +78,6 @@
           "Microsoft.NETCore.Platforms": "5.0.0",
           "Microsoft.Win32.Registry": "4.7.0",
           "System.Security.Principal.Windows": "5.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Diagnostics.EventLog.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.700.19.56404"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp2.0/System.Diagnostics.EventLog.dll": {
-            "rid": "win",
-            "assetType": "runtime",
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.700.19.56404"
-          }
         }
       },
       "System.Drawing.Common/5.0.0": {
@@ -345,34 +341,57 @@
           }
         }
       },
-      "ImageSender/1.0.0": {
+      "websocket-sharp.clone/3.0.0": {
         "runtime": {
-          "ImageSender.dll": {}
-        }
-      },
-      "JASONParser/1.0.0": {
-        "runtime": {
-          "JASONParser.dll": {}
-        }
-      },
-      "PingServer/1.0.0": {
-        "runtime": {
-          "PingServer.dll": {}
-        }
-      },
-      "websocket-sharp.clone/1.0.2.39869": {
-        "runtime": {
-          "websocket-sharp.clone.dll": {
+          "lib/net45/websocket-sharp.clone.dll": {
             "assemblyVersion": "1.0.2.39869",
             "fileVersion": "1.0.2.0"
           }
         }
       },
-      "Newtonsoft.Json/12.0.0.0": {
+      "Monitor-Windows-Agent/1.0.0": {
+        "dependencies": {
+          "ImageSender": "1.0.0",
+          "JASONParser": "1.0.0",
+          "Newtonsoft.Json": "13.0.1",
+          "PingServer": "1.0.0",
+          "System.Configuration.ConfigurationManager": "5.0.0",
+          "Topshelf": "4.3.0",
+          "websocket-sharp.clone": "3.0.0"
+        },
         "runtime": {
-          "Newtonsoft.Json.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.3.23909"
+          "Monitor-Windows-Agent.dll": {}
+        }
+      },
+      "EventLogger/1.0.0.0": {
+        "runtime": {
+          "EventLogger.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ImageSender.Reference/1.0.0.0": {
+        "runtime": {
+          "ImageSender.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JASONParser.Reference/1.0.0.0": {
+        "runtime": {
+          "JASONParser.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PingServer.Reference/1.0.0.0": {
+        "runtime": {
+          "PingServer.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -411,6 +430,13 @@
       "sha512": "sha512-Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
       "path": "microsoft.win32.systemevents/5.0.0",
       "hashPath": "microsoft.win32.systemevents.5.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",
@@ -587,27 +613,34 @@
       "path": "topshelf.serviceinstaller/4.3.0",
       "hashPath": "topshelf.serviceinstaller.4.3.0.nupkg.sha512"
     },
-    "ImageSender/1.0.0": {
+    "websocket-sharp.clone/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SiBeN0rQsATg/HUjYXZhgmbTEUnOhqYQBf0/2pM0yqk8dPzpHiI8i4v6zdH/wrBzlZ2eYul+IlVQfxaX3WoA9Q==",
+      "path": "websocket-sharp.clone/3.0.0",
+      "hashPath": "websocket-sharp.clone.3.0.0.nupkg.sha512"
+    },
+    "Monitor-Windows-Agent/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "JASONParser/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "PingServer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "websocket-sharp.clone/1.0.2.39869": {
+    "EventLogger/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "Newtonsoft.Json/12.0.0.0": {
+    "ImageSender.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "JASONParser.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PingServer.Reference/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
