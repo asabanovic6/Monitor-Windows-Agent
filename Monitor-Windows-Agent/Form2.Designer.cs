@@ -379,7 +379,7 @@ namespace Monitor_Windows_Agent
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(94, 29);
             this.CancelBtn.TabIndex = 33;
-            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.Text = "Refresh";
             this.CancelBtn.UseVisualStyleBackColor = true;
             this.CancelBtn.Click += new System.EventHandler(this.Button_Cancel_Click);
             // 
@@ -428,12 +428,25 @@ namespace Monitor_Windows_Agent
             this.Resize += new System.EventHandler(this.Form2_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
-            Fill();
 
         }
         private void Button_Cancel_Click(object sender, System.EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            var json = File.ReadAllText("../../../../config.json");
+            dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            this.textBoxName.Text = jsonObj.name;
+            this.textBoxKeepAlive.Text = jsonObj.keepAlive;
+            this.textBoxLocation.Text = jsonObj.location;
+            this.textBoxIpAddress.Text = jsonObj.ip;
+            this.textBoxWebSocket.Text= jsonObj.webSocketUrl;
+            this.textBoxPingUri.Text = jsonObj.pingUri;
+            this.File1path.Text = jsonObj.fileLocations.File1;
+            this.File2path.Text = jsonObj.fileLocations.File2;
+            this.File3path.Text = jsonObj.fileLocations.File3;
+            this.File4path.Text = jsonObj.fileLocations.File4;
+            this.File5path.Text = jsonObj.fileLocations.File5;
+
         }
             private void Button_Click(object sender, System.EventArgs e)
         {
