@@ -33,11 +33,10 @@ namespace Monitor_Windows_Agent
         /// </summary>
         private void Fill() {
             this.textBoxName.Text = p.ConfigParser().name;
-            this.textBoxIpAddress.Text = p.ConfigParser().ip;
+            
             this.textBoxKeepAlive.Text = p.ConfigParser().keepAlive.ToString();
-            this.textBoxPingUri.Text = p.ConfigParser().pingUri;
             this.textBoxLocation.Text = p.ConfigParser().location;
-            this.textBoxWebSocket.Text = p.ConfigParser().webSocketUrl;
+          
             this.File1path.Text = p.ConfigParser().fileLocations.File1;
             this.File2path.Text = p.ConfigParser().fileLocations.File2;
             this.File3path.Text = p.ConfigParser().fileLocations.File3;
@@ -53,10 +52,8 @@ namespace Monitor_Windows_Agent
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+          
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -76,12 +73,8 @@ namespace Monitor_Windows_Agent
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
-            this.textBoxIpAddress = new System.Windows.Forms.TextBox();
             this.textBoxKeepAlive = new System.Windows.Forms.TextBox();
-            this.textBoxWebSocket = new System.Windows.Forms.TextBox();
-            this.textBoxPingUri = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxInstallationCode = new System.Windows.Forms.TextBox();
+        
             this.submitBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
@@ -118,43 +111,17 @@ namespace Monitor_Windows_Agent
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Location:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "IP Address:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 173);
+            this.label4.Location = new System.Drawing.Point(79, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Keep alive:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 220);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Web socket:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(79, 266);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ping URI:";
+           
             // 
             // label7
             // 
@@ -162,7 +129,7 @@ namespace Monitor_Windows_Agent
             this.label7.Location = new System.Drawing.Point(396, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 20);
-            this.label7.TabIndex = 7;
+            this.label7.TabIndex = 6;
             this.label7.Text = "File4:";
             // 
             // label8
@@ -171,7 +138,7 @@ namespace Monitor_Windows_Agent
             this.label8.Location = new System.Drawing.Point(396, 34);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 20);
-            this.label8.TabIndex = 8;
+            this.label8.TabIndex = 7;
             this.label8.Text = "File1:";
             // 
             // label9
@@ -180,7 +147,7 @@ namespace Monitor_Windows_Agent
             this.label9.Location = new System.Drawing.Point(396, 82);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 20);
-            this.label9.TabIndex = 9;
+            this.label9.TabIndex = 8;
             this.label9.Text = "File2:";
             // 
             // label10
@@ -189,7 +156,7 @@ namespace Monitor_Windows_Agent
             this.label10.Location = new System.Drawing.Point(396, 220);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 20);
-            this.label10.TabIndex = 10;
+            this.label10.TabIndex = 9;
             this.label10.Text = "File5:";
             // 
             // label11
@@ -198,7 +165,7 @@ namespace Monitor_Windows_Agent
             this.label11.Location = new System.Drawing.Point(396, 129);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 20);
-            this.label11.TabIndex = 11;
+            this.label11.TabIndex = 10;
             this.label11.Text = "File3:";
             // 
             // File1path
@@ -207,7 +174,7 @@ namespace Monitor_Windows_Agent
             this.File1path.Name = "File1path";
             this.File1path.ReadOnly = true;
             this.File1path.Size = new System.Drawing.Size(241, 27);
-            this.File1path.TabIndex = 12;
+            this.File1path.TabIndex = 11;
             this.File1path.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
@@ -215,7 +182,7 @@ namespace Monitor_Windows_Agent
             this.button1.Location = new System.Drawing.Point(692, 33);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(42, 24);
-            this.button1.TabIndex = 13;
+            this.button1.TabIndex = 12;
             this.button1.Text = "...";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -226,7 +193,7 @@ namespace Monitor_Windows_Agent
             this.File2path.Name = "File2path";
             this.File2path.ReadOnly = true;
             this.File2path.Size = new System.Drawing.Size(241, 27);
-            this.File2path.TabIndex = 14;
+            this.File2path.TabIndex = 13;
             // 
             // File3path
             // 
@@ -234,7 +201,7 @@ namespace Monitor_Windows_Agent
             this.File3path.Name = "File3path";
             this.File3path.ReadOnly = true;
             this.File3path.Size = new System.Drawing.Size(241, 27);
-            this.File3path.TabIndex = 15;
+            this.File3path.TabIndex = 14;
             // 
             // File4path
             // 
@@ -242,7 +209,7 @@ namespace Monitor_Windows_Agent
             this.File4path.Name = "File4path";
             this.File4path.ReadOnly = true;
             this.File4path.Size = new System.Drawing.Size(241, 27);
-            this.File4path.TabIndex = 16;
+            this.File4path.TabIndex = 15;
             // 
             // File5path
             // 
@@ -250,14 +217,14 @@ namespace Monitor_Windows_Agent
             this.File5path.Name = "File5path";
             this.File5path.ReadOnly = true;
             this.File5path.Size = new System.Drawing.Size(241, 27);
-            this.File5path.TabIndex = 17;
+            this.File5path.TabIndex = 16;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(692, 79);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(42, 23);
-            this.button2.TabIndex = 18;
+            this.button2.TabIndex = 17;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -267,7 +234,7 @@ namespace Monitor_Windows_Agent
             this.button3.Location = new System.Drawing.Point(692, 127);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(42, 24);
-            this.button3.TabIndex = 19;
+            this.button3.TabIndex = 18;
             this.button3.Text = "...";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -277,7 +244,7 @@ namespace Monitor_Windows_Agent
             this.button4.Location = new System.Drawing.Point(692, 171);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(42, 24);
-            this.button4.TabIndex = 20;
+            this.button4.TabIndex = 19;
             this.button4.Text = "...";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -287,7 +254,7 @@ namespace Monitor_Windows_Agent
             this.button5.Location = new System.Drawing.Point(692, 216);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(42, 24);
-            this.button5.TabIndex = 21;
+            this.button5.TabIndex = 20;
             this.button5.Text = "...";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -297,72 +264,38 @@ namespace Monitor_Windows_Agent
             this.textBox2.Location = new System.Drawing.Point(-2176, 21);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(281, 27);
-            this.textBox2.TabIndex = 22;
+            this.textBox2.TabIndex = 21;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(-2186, 25);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(281, 27);
-            this.textBox3.TabIndex = 23;
+            this.textBox3.TabIndex = 22;
             // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(-2040, 6);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 27);
-            this.textBox4.TabIndex = 24;
+            this.textBox4.TabIndex = 23;
             // 
             // textBoxLocation
             // 
             this.textBoxLocation.Location = new System.Drawing.Point(206, 78);
             this.textBoxLocation.Name = "textBoxLocation";
             this.textBoxLocation.Size = new System.Drawing.Size(144, 27);
-            this.textBoxLocation.TabIndex = 25;
-            // 
-            // textBoxIpAddress
-            // 
-            this.textBoxIpAddress.Location = new System.Drawing.Point(206, 123);
-            this.textBoxIpAddress.Name = "textBoxIpAddress";
-            this.textBoxIpAddress.Size = new System.Drawing.Size(144, 27);
-            this.textBoxIpAddress.TabIndex = 26;
+            this.textBoxLocation.TabIndex = 24;
+            this.textBoxLocation.TextChanged += new System.EventHandler(this.textBoxLocation_TextChanged);
             // 
             // textBoxKeepAlive
             // 
-            this.textBoxKeepAlive.Location = new System.Drawing.Point(206, 169);
+            this.textBoxKeepAlive.Location = new System.Drawing.Point(206, 131);
             this.textBoxKeepAlive.Name = "textBoxKeepAlive";
             this.textBoxKeepAlive.Size = new System.Drawing.Size(144, 27);
-            this.textBoxKeepAlive.TabIndex = 27;
-            // 
-            // textBoxWebSocket
-            // 
-            this.textBoxWebSocket.Location = new System.Drawing.Point(206, 217);
-            this.textBoxWebSocket.Name = "textBoxWebSocket";
-            this.textBoxWebSocket.Size = new System.Drawing.Size(144, 27);
-            this.textBoxWebSocket.TabIndex = 28;
-            // 
-            // textBoxPingUri
-            // 
-            this.textBoxPingUri.Location = new System.Drawing.Point(206, 263);
-            this.textBoxPingUri.Name = "textBoxPingUri";
-            this.textBoxPingUri.Size = new System.Drawing.Size(144, 27);
-            this.textBoxPingUri.TabIndex = 29;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(79, 317);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 20);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Installation code:";
-            // 
-            // textBoxInstallationCode
-            // 
-            this.textBoxInstallationCode.Location = new System.Drawing.Point(206, 313);
-            this.textBoxInstallationCode.Name = "textBoxInstallationCode";
-            this.textBoxInstallationCode.Size = new System.Drawing.Size(144, 27);
-            this.textBoxInstallationCode.TabIndex = 31;
+            this.textBoxKeepAlive.TabIndex = 25;
+           
+           
             // 
             // submitBtn
             // 
@@ -402,12 +335,8 @@ namespace Monitor_Windows_Agent
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.submitBtn);
-            this.Controls.Add(this.textBoxInstallationCode);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBoxPingUri);
-            this.Controls.Add(this.textBoxWebSocket);
+            
             this.Controls.Add(this.textBoxKeepAlive);
-            this.Controls.Add(this.textBoxIpAddress);
             this.Controls.Add(this.textBoxLocation);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -427,10 +356,8 @@ namespace Monitor_Windows_Agent
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+           
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
@@ -454,9 +381,6 @@ namespace Monitor_Windows_Agent
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
             this.textBoxLocation.Text = jsonObj.location;
-            this.textBoxIpAddress.Text = jsonObj.ip;
-            this.textBoxWebSocket.Text= jsonObj.webSocketUrl;
-            this.textBoxPingUri.Text = jsonObj.pingUri;
             this.File1path.Text = jsonObj.fileLocations.File1;
             this.File2path.Text = jsonObj.fileLocations.File2;
             this.File3path.Text = jsonObj.fileLocations.File3;
@@ -479,9 +403,6 @@ namespace Monitor_Windows_Agent
             comp.name= this.textBoxName.Text;
             comp.keepAlive= Decimal.Parse(this.textBoxKeepAlive.Text);
             comp.location= this.textBoxLocation.Text;
-            comp.ip= this.textBoxIpAddress.Text;
-            comp.webSocketUrl=this.textBoxWebSocket.Text;
-            comp.pingUri = this.textBoxPingUri.Text;
             FileLocations f = new FileLocations();
             f.File1 = this.File1path.Text;
             f.File2 = this.File2path.Text;
@@ -500,10 +421,7 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -523,12 +441,7 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBoxLocation;
-        private System.Windows.Forms.TextBox textBoxIpAddress;
         private System.Windows.Forms.TextBox textBoxKeepAlive;
-        private System.Windows.Forms.TextBox textBoxWebSocket;
-        private System.Windows.Forms.TextBox textBoxPingUri;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBoxInstallationCode;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button button6;
