@@ -353,3 +353,11 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\EventLogger.pdb
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.CopyComplete
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.genruntimeconfig.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\System.ServiceProcess.ServiceController.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Topshelf.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\TopShelf.ServiceInstaller.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.ServiceProcess.ServiceController.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\ImageSender.dll.config
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor_Windows_Agent.Form1.resources
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor_Windows_Agent.Form2.resources
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.GenerateResource.cache

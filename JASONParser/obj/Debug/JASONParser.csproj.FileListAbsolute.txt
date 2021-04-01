@@ -184,3 +184,5 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASO
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.xml

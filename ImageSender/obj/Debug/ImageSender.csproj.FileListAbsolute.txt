@@ -201,3 +201,6 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\ImageSender\obj\Debug\Imag
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.csproj.CopyComplete
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.dll
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\ImageSender\obj\Debug\ImageSender.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.dll.config
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Topshelf.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Topshelf.xml

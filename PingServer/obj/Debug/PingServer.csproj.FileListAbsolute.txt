@@ -185,3 +185,5 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\PingServer\obj\Debug\PingS
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csproj.CopyComplete
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.dll
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Topshelf.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Topshelf.xml

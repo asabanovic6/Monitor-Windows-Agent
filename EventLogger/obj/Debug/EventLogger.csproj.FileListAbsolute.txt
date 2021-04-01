@@ -31,3 +31,6 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\Even
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
