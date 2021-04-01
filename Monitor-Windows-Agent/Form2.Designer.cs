@@ -53,7 +53,6 @@ namespace Monitor_Windows_Agent
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-          
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -74,10 +73,15 @@ namespace Monitor_Windows_Agent
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
             this.textBoxKeepAlive = new System.Windows.Forms.TextBox();
-        
             this.submitBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // iconNotify
@@ -90,7 +94,7 @@ namespace Monitor_Windows_Agent
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 37);
+            this.label1.Location = new System.Drawing.Point(13, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 0;
@@ -98,15 +102,17 @@ namespace Monitor_Windows_Agent
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(206, 34);
+            this.textBoxName.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxName.Location = new System.Drawing.Point(105, 17);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(144, 27);
+            this.textBoxName.ReadOnly = true;
+            this.textBoxName.Size = new System.Drawing.Size(225, 27);
             this.textBoxName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 82);
+            this.label2.Location = new System.Drawing.Point(13, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 2;
@@ -116,61 +122,61 @@ namespace Monitor_Windows_Agent
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 131);
+            this.label4.Location = new System.Drawing.Point(13, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Keep alive:";
-           
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(396, 173);
+            this.label7.Location = new System.Drawing.Point(10, 158);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 20);
+            this.label7.Size = new System.Drawing.Size(47, 20);
             this.label7.TabIndex = 6;
-            this.label7.Text = "File4:";
+            this.label7.Text = "File 4:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(396, 34);
+            this.label8.Location = new System.Drawing.Point(10, 21);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 20);
+            this.label8.Size = new System.Drawing.Size(47, 20);
             this.label8.TabIndex = 7;
-            this.label8.Text = "File1:";
+            this.label8.Text = "File 1:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(396, 82);
+            this.label9.Location = new System.Drawing.Point(10, 69);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 20);
+            this.label9.Size = new System.Drawing.Size(47, 20);
             this.label9.TabIndex = 8;
-            this.label9.Text = "File2:";
+            this.label9.Text = "File 2:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(396, 220);
+            this.label10.Location = new System.Drawing.Point(10, 203);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 20);
+            this.label10.Size = new System.Drawing.Size(47, 20);
             this.label10.TabIndex = 9;
-            this.label10.Text = "File5:";
+            this.label10.Text = "File 5:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(396, 129);
+            this.label11.Location = new System.Drawing.Point(10, 114);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 20);
+            this.label11.Size = new System.Drawing.Size(47, 20);
             this.label11.TabIndex = 10;
-            this.label11.Text = "File3:";
+            this.label11.Text = "File 3:";
             // 
             // File1path
             // 
-            this.File1path.Location = new System.Drawing.Point(445, 31);
+            this.File1path.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.File1path.Location = new System.Drawing.Point(63, 17);
             this.File1path.Name = "File1path";
             this.File1path.ReadOnly = true;
             this.File1path.Size = new System.Drawing.Size(241, 27);
@@ -179,17 +185,19 @@ namespace Monitor_Windows_Agent
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(692, 33);
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(310, 17);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 24);
+            this.button1.Size = new System.Drawing.Size(42, 26);
             this.button1.TabIndex = 12;
             this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // File2path
             // 
-            this.File2path.Location = new System.Drawing.Point(445, 77);
+            this.File2path.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.File2path.Location = new System.Drawing.Point(63, 63);
             this.File2path.Name = "File2path";
             this.File2path.ReadOnly = true;
             this.File2path.Size = new System.Drawing.Size(241, 27);
@@ -197,7 +205,8 @@ namespace Monitor_Windows_Agent
             // 
             // File3path
             // 
-            this.File3path.Location = new System.Drawing.Point(445, 124);
+            this.File3path.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.File3path.Location = new System.Drawing.Point(63, 110);
             this.File3path.Name = "File3path";
             this.File3path.ReadOnly = true;
             this.File3path.Size = new System.Drawing.Size(241, 27);
@@ -205,7 +214,8 @@ namespace Monitor_Windows_Agent
             // 
             // File4path
             // 
-            this.File4path.Location = new System.Drawing.Point(445, 168);
+            this.File4path.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.File4path.Location = new System.Drawing.Point(63, 154);
             this.File4path.Name = "File4path";
             this.File4path.ReadOnly = true;
             this.File4path.Size = new System.Drawing.Size(241, 27);
@@ -213,7 +223,8 @@ namespace Monitor_Windows_Agent
             // 
             // File5path
             // 
-            this.File5path.Location = new System.Drawing.Point(445, 213);
+            this.File5path.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.File5path.Location = new System.Drawing.Point(63, 199);
             this.File5path.Name = "File5path";
             this.File5path.ReadOnly = true;
             this.File5path.Size = new System.Drawing.Size(241, 27);
@@ -221,42 +232,46 @@ namespace Monitor_Windows_Agent
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(692, 79);
+            this.button2.BackColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(310, 63);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 23);
+            this.button2.Size = new System.Drawing.Size(42, 27);
             this.button2.TabIndex = 17;
             this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(692, 127);
+            this.button3.BackColor = System.Drawing.SystemColors.Control;
+            this.button3.Location = new System.Drawing.Point(310, 110);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 24);
+            this.button3.Size = new System.Drawing.Size(42, 27);
             this.button3.TabIndex = 18;
             this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(692, 171);
+            this.button4.BackColor = System.Drawing.SystemColors.Control;
+            this.button4.Location = new System.Drawing.Point(310, 154);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 24);
+            this.button4.Size = new System.Drawing.Size(42, 27);
             this.button4.TabIndex = 19;
             this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(692, 216);
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.Location = new System.Drawing.Point(310, 199);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 24);
+            this.button5.Size = new System.Drawing.Size(42, 27);
             this.button5.TabIndex = 20;
             this.button5.Text = "...";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox2
@@ -282,36 +297,39 @@ namespace Monitor_Windows_Agent
             // 
             // textBoxLocation
             // 
-            this.textBoxLocation.Location = new System.Drawing.Point(206, 78);
+            this.textBoxLocation.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxLocation.Location = new System.Drawing.Point(105, 61);
             this.textBoxLocation.Name = "textBoxLocation";
-            this.textBoxLocation.Size = new System.Drawing.Size(144, 27);
+            this.textBoxLocation.ReadOnly = true;
+            this.textBoxLocation.Size = new System.Drawing.Size(225, 27);
             this.textBoxLocation.TabIndex = 24;
             this.textBoxLocation.TextChanged += new System.EventHandler(this.textBoxLocation_TextChanged);
             // 
             // textBoxKeepAlive
             // 
-            this.textBoxKeepAlive.Location = new System.Drawing.Point(206, 131);
+            this.textBoxKeepAlive.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBoxKeepAlive.Location = new System.Drawing.Point(105, 114);
             this.textBoxKeepAlive.Name = "textBoxKeepAlive";
-            this.textBoxKeepAlive.Size = new System.Drawing.Size(144, 27);
+            this.textBoxKeepAlive.ReadOnly = true;
+            this.textBoxKeepAlive.Size = new System.Drawing.Size(225, 27);
             this.textBoxKeepAlive.TabIndex = 25;
-           
-           
             // 
             // submitBtn
             // 
-            this.submitBtn.Location = new System.Drawing.Point(256, 385);
+            this.submitBtn.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.submitBtn.Location = new System.Drawing.Point(655, 343);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(94, 29);
+            this.submitBtn.Size = new System.Drawing.Size(106, 36);
             this.submitBtn.TabIndex = 32;
             this.submitBtn.Text = "Submit";
-            this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.Button_Click);
             // 
             // CancelBtn
             // 
-            this.CancelBtn.Location = new System.Drawing.Point(579, 385);
+            this.CancelBtn.Location = new System.Drawing.Point(422, 343);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(94, 29);
+            this.CancelBtn.Size = new System.Drawing.Size(106, 36);
             this.CancelBtn.TabIndex = 33;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = true;
@@ -319,52 +337,86 @@ namespace Monitor_Windows_Agent
             // 
             // Refresh
             // 
-            this.Refresh.Location = new System.Drawing.Point(416, 385);
+            this.Refresh.Location = new System.Drawing.Point(538, 343);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(94, 29);
+            this.Refresh.Size = new System.Drawing.Size(106, 36);
             this.Refresh.TabIndex = 34;
             this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = true;
             this.Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.submitBtn);
+            this.groupBox1.Controls.Add(this.CancelBtn);
+            this.groupBox1.Controls.Add(this.Refresh);
+            this.groupBox1.Controls.Add(this.panel2);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(783, 401);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Configuration form";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBoxName);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBoxKeepAlive);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBoxLocation);
+            this.panel1.Location = new System.Drawing.Point(26, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 285);
+            this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.File1path);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.File2path);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.File3path);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.File4path);
+            this.panel2.Controls.Add(this.File5path);
+            this.panel2.Location = new System.Drawing.Point(394, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(367, 285);
+            this.panel2.TabIndex = 1;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 426);
-            this.Controls.Add(this.Refresh);
-            this.Controls.Add(this.CancelBtn);
-            this.Controls.Add(this.submitBtn);
-            
-            this.Controls.Add(this.textBoxKeepAlive);
-            this.Controls.Add(this.textBoxLocation);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.File5path);
-            this.Controls.Add(this.File4path);
-            this.Controls.Add(this.File3path);
-            this.Controls.Add(this.File2path);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.File1path);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-           
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Resize += new System.EventHandler(this.Form2_Resize);
+            this.groupBox1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,6 +498,9 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button Refresh;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
     }
 
 }
