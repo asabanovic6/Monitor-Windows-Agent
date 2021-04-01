@@ -22,3 +22,12 @@ C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.pdb
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.dll
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.pdb
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.dll
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.xml
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.pdb

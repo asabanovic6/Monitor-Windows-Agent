@@ -33,7 +33,7 @@ namespace Monitor_Windows_Agent
         /// </summary>
         private void Fill() {
             this.textBoxName.Text = p.ConfigParser().name;
-            this.textBoxIpAddress.Text = p.ConfigParser().ip;
+            
             this.textBoxKeepAlive.Text = p.ConfigParser().keepAlive.ToString();
             this.textBoxPingUri.Text = p.ConfigParser().pingUri;
             this.textBoxLocation.Text = p.ConfigParser().location;
@@ -53,7 +53,6 @@ namespace Monitor_Windows_Agent
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -76,12 +75,9 @@ namespace Monitor_Windows_Agent
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBoxLocation = new System.Windows.Forms.TextBox();
-            this.textBoxIpAddress = new System.Windows.Forms.TextBox();
             this.textBoxKeepAlive = new System.Windows.Forms.TextBox();
             this.textBoxWebSocket = new System.Windows.Forms.TextBox();
             this.textBoxPingUri = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBoxInstallationCode = new System.Windows.Forms.TextBox();
             this.submitBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
@@ -118,21 +114,12 @@ namespace Monitor_Windows_Agent
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Location:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "IP Address:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 173);
+            this.label4.Location = new System.Drawing.Point(79, 131);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 4;
@@ -141,7 +128,7 @@ namespace Monitor_Windows_Agent
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(79, 220);
+            this.label5.Location = new System.Drawing.Point(79, 175);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 5;
@@ -150,7 +137,7 @@ namespace Monitor_Windows_Agent
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(79, 266);
+            this.label6.Location = new System.Drawing.Point(79, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 20);
             this.label6.TabIndex = 6;
@@ -319,50 +306,28 @@ namespace Monitor_Windows_Agent
             this.textBoxLocation.Name = "textBoxLocation";
             this.textBoxLocation.Size = new System.Drawing.Size(144, 27);
             this.textBoxLocation.TabIndex = 25;
-            // 
-            // textBoxIpAddress
-            // 
-            this.textBoxIpAddress.Location = new System.Drawing.Point(206, 123);
-            this.textBoxIpAddress.Name = "textBoxIpAddress";
-            this.textBoxIpAddress.Size = new System.Drawing.Size(144, 27);
-            this.textBoxIpAddress.TabIndex = 26;
+            this.textBoxLocation.TextChanged += new System.EventHandler(this.textBoxLocation_TextChanged);
             // 
             // textBoxKeepAlive
             // 
-            this.textBoxKeepAlive.Location = new System.Drawing.Point(206, 169);
+            this.textBoxKeepAlive.Location = new System.Drawing.Point(206, 131);
             this.textBoxKeepAlive.Name = "textBoxKeepAlive";
             this.textBoxKeepAlive.Size = new System.Drawing.Size(144, 27);
             this.textBoxKeepAlive.TabIndex = 27;
             // 
             // textBoxWebSocket
             // 
-            this.textBoxWebSocket.Location = new System.Drawing.Point(206, 217);
+            this.textBoxWebSocket.Location = new System.Drawing.Point(206, 175);
             this.textBoxWebSocket.Name = "textBoxWebSocket";
             this.textBoxWebSocket.Size = new System.Drawing.Size(144, 27);
             this.textBoxWebSocket.TabIndex = 28;
             // 
             // textBoxPingUri
             // 
-            this.textBoxPingUri.Location = new System.Drawing.Point(206, 263);
+            this.textBoxPingUri.Location = new System.Drawing.Point(206, 220);
             this.textBoxPingUri.Name = "textBoxPingUri";
             this.textBoxPingUri.Size = new System.Drawing.Size(144, 27);
             this.textBoxPingUri.TabIndex = 29;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(79, 317);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 20);
-            this.label12.TabIndex = 30;
-            this.label12.Text = "Installation code:";
-            // 
-            // textBoxInstallationCode
-            // 
-            this.textBoxInstallationCode.Location = new System.Drawing.Point(206, 313);
-            this.textBoxInstallationCode.Name = "textBoxInstallationCode";
-            this.textBoxInstallationCode.Size = new System.Drawing.Size(144, 27);
-            this.textBoxInstallationCode.TabIndex = 31;
             // 
             // submitBtn
             // 
@@ -402,12 +367,9 @@ namespace Monitor_Windows_Agent
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.submitBtn);
-            this.Controls.Add(this.textBoxInstallationCode);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.textBoxPingUri);
             this.Controls.Add(this.textBoxWebSocket);
             this.Controls.Add(this.textBoxKeepAlive);
-            this.Controls.Add(this.textBoxIpAddress);
             this.Controls.Add(this.textBoxLocation);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -430,7 +392,6 @@ namespace Monitor_Windows_Agent
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
@@ -454,7 +415,6 @@ namespace Monitor_Windows_Agent
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
             this.textBoxLocation.Text = jsonObj.location;
-            this.textBoxIpAddress.Text = jsonObj.ip;
             this.textBoxWebSocket.Text= jsonObj.webSocketUrl;
             this.textBoxPingUri.Text = jsonObj.pingUri;
             this.File1path.Text = jsonObj.fileLocations.File1;
@@ -479,7 +439,6 @@ namespace Monitor_Windows_Agent
             comp.name= this.textBoxName.Text;
             comp.keepAlive= Decimal.Parse(this.textBoxKeepAlive.Text);
             comp.location= this.textBoxLocation.Text;
-            comp.ip= this.textBoxIpAddress.Text;
             comp.webSocketUrl=this.textBoxWebSocket.Text;
             comp.pingUri = this.textBoxPingUri.Text;
             FileLocations f = new FileLocations();
@@ -500,7 +459,6 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -523,12 +481,9 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBoxLocation;
-        private System.Windows.Forms.TextBox textBoxIpAddress;
         private System.Windows.Forms.TextBox textBoxKeepAlive;
         private System.Windows.Forms.TextBox textBoxWebSocket;
         private System.Windows.Forms.TextBox textBoxPingUri;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBoxInstallationCode;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Button button6;
