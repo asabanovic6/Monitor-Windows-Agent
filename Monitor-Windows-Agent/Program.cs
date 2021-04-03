@@ -28,13 +28,13 @@ namespace Monitor_Windows_Agent
            
            // Ping p = new Ping();
            //p.PostJsonAndKeepAplive();
-            // imageSender p1 = new imageSender();
-            // p1.conn();
+             imageSender p1 = new imageSender();
+             p1.conn();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new Form1());
         }
     }
 }

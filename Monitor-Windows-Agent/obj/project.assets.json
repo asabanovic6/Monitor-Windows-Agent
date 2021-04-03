@@ -1898,19 +1898,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Korisnik\\.nuget\\packages\\": {}
+    "C:\\Users\\Amina\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+      "projectUniqueName": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
       "projectName": "Monitor-Windows-Agent",
-      "projectPath": "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
-      "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
+      "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+      "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1922,16 +1922,15 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-              "projectPath": "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+            "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+              "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
             },
-            "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-              "projectPath": "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+            "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+              "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
             },
-            "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-              "projectPath": "C:\\Users\\Korisnik\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+            "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+              "projectPath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
             }
           }
         }
@@ -1944,7 +1943,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Newtonsoft.Json": {
             "target": "Package",
@@ -1973,12 +1971,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -1987,7 +1979,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.21077.7\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   },

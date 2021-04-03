@@ -428,12 +428,12 @@ namespace Monitor_Windows_Agent
         }
         private void Button_Refresh_Click(object sender, System.EventArgs e)
         {
-            var json = File.ReadAllText("../../../../config.json");
+            var json = File.ReadAllText("../../../../config2.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
             this.textBoxLocation.Text = jsonObj.location;
-            this.File1path.Text = jsonObj.fileLocations.File1;
+            this.File2path.Text = jsonObj.fileLocations.File2;
             this.File2path.Text = jsonObj.fileLocations.File2;
             this.File3path.Text = jsonObj.fileLocations.File3;
             this.File4path.Text = jsonObj.fileLocations.File4;
@@ -443,7 +443,7 @@ namespace Monitor_Windows_Agent
         private void Button_Click(object sender, System.EventArgs e)
         {
             //zamijeniti prve dvije linije koda sa pozivom parsera
-            var json = File.ReadAllText("../../../../config.json");
+            var json = File.ReadAllText("../../../../config2.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             //jsonObj["name"] = this.textBoxName.Text;
             //jsonObj["keepAlive"] = Int32.Parse(this.textBoxKeepAlive.Text);
