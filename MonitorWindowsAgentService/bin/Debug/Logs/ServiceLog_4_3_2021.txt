@@ -1,0 +1,90 @@
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 5:10:09 PM
+Service is started at 4/3/2021 5:10:09 PM
+Service is stopped at 4/3/2021 5:12:42 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 5:12:44 PM
+Service is started at 4/3/2021 5:12:44 PM
+Service is stopped at 4/3/2021 5:13:01 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 5:13:03 PM
+Service is started at 4/3/2021 5:13:03 PM
+Service is stopped at 4/3/2021 5:21:00 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 5:21:09 PM
+Service is started at 4/3/2021 5:21:09 PM
+Hocu sliku
+Service is stopped at 4/3/2021 5:22:05 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 5:24:04 PM
+Service is started at 4/3/2021 5:24:04 PM
+Hocu sliku
+Service is stopped at 4/3/2021 5:26:33 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:05:02 PM
+Service is started at 4/3/2021 11:05:02 PM
+Service is stopped at 4/3/2021 11:05:35 PM
+usooo
+Inicijalizovo sam se: wss://echo.websocket.org u: 4/3/2021 11:12:18 PM
+Service is started at 4/3/2021 11:12:18 PM
+usooo
+Service is stopped at 4/3/2021 11:15:08 PM
+usooo
+Inicijalizovo sam se: wss://echo.websocket.org u: 4/3/2021 11:16:09 PM
+Service is started at 4/3/2021 11:16:09 PM
+Service is stopped at 4/3/2021 11:17:04 PM
+usooo
+Inicijalizovo sam se: wss://echo.websocket.org u: 4/3/2021 11:17:07 PM
+Service is started at 4/3/2021 11:17:07 PM
+Service is stopped at 4/3/2021 11:20:01 PM
+usooo
+Inicijalizovo sam se: wss://echo.websocket.org u: 4/3/2021 11:20:04 PM
+Service is started at 4/3/2021 11:20:04 PM
+Service is stopped at 4/3/2021 11:28:55 PM
+usooo
+Inicijalizovo sam se: wss://echo.websocket.org u: 4/3/2021 11:30:39 PM
+Service is started at 4/3/2021 11:30:39 PM
+Service is stopped at 4/3/2021 11:30:58 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:31:25 PM
+Service is started at 4/3/2021 11:31:25 PM
+usooo
+Service is stopped at 4/3/2021 11:32:56 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:32:59 PM
+Service is started at 4/3/2021 11:32:59 PM
+usooo
+Service is stopped at 4/3/2021 11:33:20 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:33:33 PM
+Service is started at 4/3/2021 11:33:33 PM
+Service is stopped at 4/3/2021 11:34:02 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:35:14 PM
+Service is started at 4/3/2021 11:35:14 PM
+Service is stopped at 4/3/2021 11:36:44 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:36:56 PM
+Service is started at 4/3/2021 11:36:56 PM
+usooo
+Service is stopped at 4/3/2021 11:38:20 PM
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:38:51 PM
+Service is started at 4/3/2021 11:38:51 PM
+Service is stopped at 4/3/2021 11:38:52 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:39:00 PM
+Service is started at 4/3/2021 11:39:00 PM
+usooo
+System.ComponentModel.Win32Exception (0x80004005): The handle is invalid
+   at System.Drawing.Graphics.CopyFromScreen(Int32 sourceX, Int32 sourceY, Int32 destinationX, Int32 destinationY, Size blockRegionSize, CopyPixelOperation copyPixelOperation)
+   at System.Drawing.Graphics.CopyFromScreen(Int32 sourceX, Int32 sourceY, Int32 destinationX, Int32 destinationY, Size blockRegionSize)
+   at MonitorWindowsAgentService.Service1.sendScreenshot() in C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\Service1.cs:line 190
+Service is stopped at 4/3/2021 11:44:13 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:44:15 PM
+Service is started at 4/3/2021 11:44:15 PM
+usooo
+usooo
+Service is stopped at 4/3/2021 11:58:47 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:58:58 PM
+Service is started at 4/3/2021 11:58:58 PM
+usooo
+Service is stopped at 4/3/2021 11:59:40 PM
+usooo
+Inicijalizovo sam se: ws://109.237.39.237:25565 u: 4/3/2021 11:59:43 PM
+Service is started at 4/3/2021 11:59:43 PM
+usooo

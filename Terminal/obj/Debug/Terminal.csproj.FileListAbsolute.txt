@@ -1,0 +1,9 @@
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\bin\Debug\Terminal.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\bin\Debug\Terminal.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.csprojAssemblyReference.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.csproj.CopyComplete
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.pdb

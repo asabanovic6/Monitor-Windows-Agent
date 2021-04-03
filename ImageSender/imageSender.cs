@@ -10,6 +10,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using EventLogger;
+using System.Net;
 
 namespace ImageSender
 {
@@ -19,14 +20,44 @@ namespace ImageSender
         private static ComputerInfo comp = new ComputerInfo();
         private static Parser parser = new Parser();
         private static JToken result;
-        
 
+        public void Post()
+        {
+            try
+            {
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://109.237.39.237:25565/login");
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+                CookieContainer cok = new CookieContainer();
+                httpWebRequest.CookieContainer = cok;
+                httpWebRequest.AllowAutoRedirect = false;
+                httpWebRequest.Headers.Add("Authorization", comp.uid);
+
+                using (var streamWriter = new
+
+                StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = "{ \"id\":\"" + parser.ConfigParser().uid + "\"}";
+
+                    streamWriter.Write(json);
+                }
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                if(httpResponse.StatusCode.ToString()=="OK") conn();
+               
+            }
+            catch (Exception e) { 
+                
+            }
+         
+        }
 
         public void conn()
         {
+
             // vs = ws://109.237.36.76:25565
             // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
             ws = new WebSocket(url: parser.ConfigParser().webSocketUrl, onMessage: OnMessage, onError: OnError);
+            ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", parser.ConfigParser().uid));
             ws.Connect().Wait();
 
             sendMessage("sendCredentials", "" );
@@ -50,12 +81,14 @@ namespace ImageSender
             else if (result["type"].Value<String>() == "Disconnected") { return Task.FromResult(0); }
 
             if (result["type"].Value<String>() == "command") sendMessage("command_result", "radi");
-     
+
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
-            else if (result["type"].Value<String>() != "Connected") sendMessage("command_result", "Komanda ne postoji");
-
+           // else if (result["type"].Value<String>() != "Connected") sendMessage("command_result", "Komanda ne postoji");
+            else {
+                sendMessage("Empty", "Bilo sta");
+                }
             Logger logger = new Logger( result["type"].Value<String>(), result["user"].Value<String>());
             logger.writeLog();
 
@@ -97,7 +130,8 @@ namespace ImageSender
 
         private static void sendFile (String path,String fileName)
         {
-            String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
+            // String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
+            String abspath = @"C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\Logs\ServiceLog.txt";
             byte[] bytes = System.IO.File.ReadAllBytes(abspath);
             string base64String = Convert.ToBase64String(bytes);
             

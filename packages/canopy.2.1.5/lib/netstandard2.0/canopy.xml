@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>canopy</name></assembly>
+<members>
+<member name="M:canopy.jaroWinkler.JaroWinklerDistance(System.String,System.String)">
+<summary>
+ Calculates the Jaro-Winkler edit distance between two strings.
+ The edit distance is a metric that allows to measure the amount of similarity between two strings.
+</summary>
+</member>
+<member name="M:canopy.jaroWinkler.jaro(System.String,System.String)">
+<summary>
+ The jaro distance between s1 and s2
+</summary>
+</member>
+<member name="M:canopy.jaroWinkler.existsInWin``2(System.Char,System.String,``0,``1)">
+<summary>
+ Given an offset and a radius from that offset, 
+ does mChar exist in that part of str?
+</summary>
+</member>
+<member name="T:canopy.jaroWinkler">
+<summary>
+ Functions to compute the edit distance between two strings
+ Taken from the Visual F# compiler
+</summary>
+</member>
+</members>
+</doc>

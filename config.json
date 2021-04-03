@@ -1,19 +1,20 @@
 {
   "name": "Desktop PC 1",
-  "keepAlive": 20.0,
+  "keepAlive": 10.0,
   "location": "Sarajevo - SCC",
   "ip": "192.168.0.15",
-  "webSocketUrl": "wss://si-grupa5.herokuapp.com",
-  "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
+  "webSocketUrl": "ws://109.237.39.237:25565",
+  "pingUri": "https://webhook.site/ca93ab9f-9de6-4083-9e79-ad7ebaed0c26",
+  "uid": "eed19402-67c5-4978-9ad2-513cd5db6376",
   "cpuUsage": null,
   "ramUsage": null,
   "hddUsage": null,
   "gpuUsage": null,
   "fileLocations": {
-    "File1": "C:\\",
-    "File2": "C:\\",
-    "File3": "C:\\",
-    "File4": "C:\\",
-    "File5": "C:\\"
+    "File1": "C:\\\\",
+    "File2": "C:\\\\",
+    "File3": "C:\\\\",
+    "File4": "C:\\\\",
+    "File5": "C:\\\\"
   }
 }

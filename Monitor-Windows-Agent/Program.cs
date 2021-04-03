@@ -28,8 +28,8 @@ namespace Monitor_Windows_Agent
            
            // Ping p = new Ping();
            //p.PostJsonAndKeepAplive();
-            // imageSender p1 = new imageSender();
-            // p1.conn();
+            imageSender p1 = new imageSender();
+            p1.Post();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
