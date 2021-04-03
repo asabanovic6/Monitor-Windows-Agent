@@ -1,0 +1,9 @@
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Release\EventLogger.dll
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Release\EventLogger.pdb
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Release\Topshelf.dll
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\bin\Release\Topshelf.xml
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csprojAssemblyReference.cache
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.dll
+C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.pdb

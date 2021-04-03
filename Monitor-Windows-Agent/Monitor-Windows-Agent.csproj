@@ -6,6 +6,7 @@
     <RootNamespace>Monitor_Windows_Agent</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Monitor_Windows_Agent.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
