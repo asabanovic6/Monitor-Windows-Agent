@@ -115,5 +115,10 @@ namespace Monitor_Windows_Agent
             
             
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
