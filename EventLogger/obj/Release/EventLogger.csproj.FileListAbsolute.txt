@@ -1,0 +1,9 @@
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\bin\Release\EventLogger.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\bin\Release\EventLogger.pdb
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\bin\Release\Topshelf.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\bin\Release\Topshelf.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\obj\Release\EventLogger.csprojAssemblyReference.cache
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\obj\Release\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\obj\Release\EventLogger.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\EventLogger\obj\Release\EventLogger.pdb

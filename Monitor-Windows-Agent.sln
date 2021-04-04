@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal", "Terminal\Termin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorWindowsAgentService", "MonitorWindowsAgentService\MonitorWindowsAgentService.csproj", "{70B7A6B4-9F44-4ADE-8415-59E68AA07A47}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Monitor Service", "Monitor Service\Monitor Service.vdproj", "{2414A780-E2D8-4E4D-A100-0C181315A31A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,8 @@ Global
 		{70B7A6B4-9F44-4ADE-8415-59E68AA07A47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B7A6B4-9F44-4ADE-8415-59E68AA07A47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B7A6B4-9F44-4ADE-8415-59E68AA07A47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Debug|Any CPU.ActiveCfg = Debug
+		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,7 +72,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 		{BDA29D19-C117-425D-8CB9-7CFD8CA59CFC} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
-		{37EBCFD7-214C-4A23-9B15-450F15ACC9CF} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 	EndGlobalSection

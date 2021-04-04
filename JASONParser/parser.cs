@@ -13,10 +13,10 @@ namespace JASONParser
 
         public ComputerInfo ConfigParser()
         {
-             var json = File.ReadAllText(@"C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\config.json");
+           //  var json = File.ReadAllText(@"C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\config.json");
 
-            //string path = AppDomain.CurrentDomain.BaseDirectory;
-            //var json = File.ReadAllText(path + "\\config.json"); //osigurava da se moze izvrsiti gdje god da se servis instalira preko setup-a
+            string path = AppDomain.CurrentDomain.BaseDirectory;
+            var json = File.ReadAllText(path + "\\config.json"); //osigurava da se moze izvrsiti gdje god da se servis instalira preko setup-a
 
             var item = JsonConvert.DeserializeObject<ComputerInfo>(json);
 

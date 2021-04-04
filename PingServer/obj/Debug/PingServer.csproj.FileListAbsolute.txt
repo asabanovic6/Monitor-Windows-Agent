@@ -210,3 +210,26 @@ C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csproj.CopyComplete
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.pdb
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\PingServer.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\PingServer.pdb
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\JASONParser.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Security.AccessControl.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Security.Permissions.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\Topshelf.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\websocket-sharp.clone.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\JASONParser.pdb
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Security.AccessControl.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Security.Permissions.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\Topshelf.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\websocket-sharp.clone.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Debug\PingServer.csproj.CoreCompileInputs.cache
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Debug\PingServer.csproj.CopyComplete
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Debug\PingServer.dll
+C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Debug\PingServer.pdb

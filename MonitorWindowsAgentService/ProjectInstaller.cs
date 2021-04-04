@@ -14,6 +14,13 @@ namespace MonitorWindowsAgentService
         public ProjectInstaller()
         {
             InitializeComponent();
+            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+        }
+        protected override void OnCommitted(System.Collections.IDictionary savedState)
+        {
+            System.ServiceProcess.ServiceController sc = new System.ServiceProcess.ServiceController("MonitorWindowsAgentService");
+            sc.Start();
         }
     }
+
 }
