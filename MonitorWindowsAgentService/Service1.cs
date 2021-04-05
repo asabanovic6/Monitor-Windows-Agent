@@ -41,7 +41,8 @@ namespace MonitorWindowsAgentService
         }
         protected override void OnStart(string[] args)
         {
-           // WriteToFile("Service is started at " +comp.ToString());
+           //
+           //WriteToFile("Service is started at " +comp.ToString());
            // pars = new Parser();
             timer1 = new System.Timers.Timer();
             timer1.Elapsed += new ElapsedEventHandler(this.OnElapsedTime);
@@ -56,7 +57,43 @@ namespace MonitorWindowsAgentService
             timer2.Enabled = true;
             timer2.Start();
         }
+        private void GetStartValue() {
+            comp = pars.ConfigParser();
+            String url = comp.mainUri + comp.installationCode;
+            JToken result;
+            //ComputerInfo comp = new ComputerInfo();
+            //WriteToFile(url+"aaa");
 
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Method = "GET";
+            try
+            {
+                var httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                //WriteToFile(httpWebResponse.Headers.ToString());
+                using (Stream stream = httpWebResponse.GetResponseStream())
+                {
+                    StreamReader reader = new StreamReader(stream, Encoding.UTF8);
+                    String responseString = reader.ReadToEnd();
+                    
+                    result = JsonConvert.DeserializeObject<JToken>(responseString);
+                    WriteToFile(result.ToString());
+                }
+                comp.deviceUid = result["deviceUid"].Value<String>();
+                comp.name = result["name"].Value<String>();
+                comp.location = result["location"].Value<String>();
+               
+                string json = JsonConvert.SerializeObject(comp);
+                File.WriteAllText(@"C:\Program Files (x86)\Grupa2\Monitor Service", json);
+                Post();
+            }
+            catch (System.Net.WebException)
+            {
+                Post();
+
+            }
+
+
+        }
         private void SocketPong(object sender, ElapsedEventArgs e)
         {
             
@@ -77,8 +114,10 @@ namespace MonitorWindowsAgentService
         public void StartConfig() {
             //string uri = pars.ConfigParser().pingUri;
             //p1.Post();
-            Post();
-            WriteToFile("Inicijalizovo sam se: " + pars.ConfigParser()+" u: "+ DateTime.Now);
+            // Post();
+            GetStartValue();
+            
+            //  WriteToFile("Inicijalizovo sam se: " + pars.ConfigParser()+" u: "+ DateTime.Now);
 
         }
         public void PostJson() {
@@ -151,7 +190,7 @@ namespace MonitorWindowsAgentService
             }
             catch (Exception e)
             {
-                WriteToFile(pars.ConfigParser().deviceUid + "mater usta");
+                WriteToFile(pars.ConfigParser().deviceUid + " mater usta");
             }
 
         }

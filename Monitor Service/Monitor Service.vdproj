@@ -196,6 +196,18 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3F3C66735DFD365874E7181351B95904"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9BCBECE4DEABFDE80F48CF0E27D3CA63"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DDDC1015D6E742412268269D3D98CD5E"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -226,19 +238,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3F3C66735DFD365874E7181351B95904"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_821BF245F28D805891EB2400B618768A"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9BCBECE4DEABFDE80F48CF0E27D3CA63"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1023,14 +1023,14 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Monitor Service"
-        "ProductCode" = "8:{6DADD2BD-CEE1-4750-A6AF-008CCB76AA9F}"
-        "PackageCode" = "8:{28C9CB72-57A9-4337-B438-4CF01560C76E}"
-        "UpgradeCode" = "8:{963C03D7-AF0C-4BEC-8B94-7D159CCF81C0}"
+        "ProductCode" = "8:{330F9FC2-F15F-42B8-A9EB-2A796168C131}"
+        "PackageCode" = "8:{DFD5B584-DA66-48AC-9672-A48FD6AD019C}"
+        "UpgradeCode" = "8:{46D442EC-7270-40D0-87D0-210B60595B9C}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:Grupa2"
         "ARPHELPTELEPHONE" = "8:"

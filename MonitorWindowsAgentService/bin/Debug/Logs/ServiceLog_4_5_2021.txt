@@ -19,3 +19,37 @@ eed19402-67c5-4978-9ad2-513cd5db6376mater usta
 Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:31:13 PM
 Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:40:50 PM
 Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:47:44 PM
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 5:11:15 PM
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 6:17:15 PM
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 6:27:58 PM
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/davoraaa
+{
+  "deviceId": 19,
+  "name": "Desktop PC 2",
+  "location": "Sarajevo - SCC",
+  "locationLongitude": 18.43,
+  "locationLatitude": 43.5,
+  "status": true,
+  "lastTimeOnline": "2021-03-30T21:35:57.778718+02:00",
+  "installationCode": null,
+  "deviceUid": "d3143e54-d497-402f-82ef-b1b213c1d172",
+  "deviceGroups": [],
+  "errorLogs": [],
+  "userTasks": []
+}
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/davoraaa
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/davoraaa
+{
+  "deviceId": 19,
+  "name": "Desktop PC 2",
+  "location": "Sarajevo - SCC",
+  "locationLongitude": 18.43,
+  "locationLatitude": 43.5,
+  "status": true,
+  "lastTimeOnline": "2021-03-30T21:35:57.778718+02:00",
+  "installationCode": null,
+  "deviceUid": "d3143e54-d497-402f-82ef-b1b213c1d172",
+  "deviceGroups": [],
+  "errorLogs": [],
+  "userTasks": []
+}

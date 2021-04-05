@@ -15,7 +15,7 @@ namespace MonitorWindowsAgentService
         public ProjectInstaller()
         {
             InitializeComponent();
-            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
+            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Manual;
         }
         protected override void OnCommitted(System.Collections.IDictionary savedState)
         {

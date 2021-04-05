@@ -45,14 +45,12 @@ namespace MonitorWindowsAgentService
             this.serviceInstaller1.Description = "Monitor Windows Agent Service";
             this.serviceInstaller1.DisplayName = "MonitorWindowsAgentService";
             this.serviceInstaller1.ServiceName = "MonitorWindowsAgentService";
-            this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
             // ProjectInstaller
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
             this.serviceInstaller1});
-
 
         }
 

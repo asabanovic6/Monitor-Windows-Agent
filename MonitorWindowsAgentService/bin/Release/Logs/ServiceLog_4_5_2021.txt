@@ -38,3 +38,13 @@ Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:48:04 PM
 Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:55:53 PM
 Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:56:20 PM
 Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 4:56:38 PM
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 5:11:23 PM
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 6:17:23 PM
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 6:28:09 PM
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 6:30:00 PM
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/
+Inicijalizovo sam se: JASONParser.ComputerInfo u: 4/5/2021 6:31:34 PM
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/aaa
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/aaa
+https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/aaa
