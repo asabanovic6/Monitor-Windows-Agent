@@ -77,7 +77,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Config
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.AccessControl.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Permissions.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Principal.Windows.xml
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
 C:\Users\Laptop\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.dll
 C:\Users\Laptop\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.pdb
 C:\Users\Laptop\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Json.Net.dll
@@ -186,3 +185,4 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASO
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache

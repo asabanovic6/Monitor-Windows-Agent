@@ -18,7 +18,8 @@
           "EventLogger": "1.0.0.0",
           "ImageSender.Reference": "1.0.0.0",
           "JASONParser.Reference": "1.0.0.0",
-          "PingServer.Reference": "1.0.0.0"
+          "PingServer.Reference": "1.0.0.0",
+          "Terminal": "1.0.0.0"
         },
         "runtime": {
           "Monitor-Windows-Agent.dll": {}
@@ -384,6 +385,14 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Terminal/1.0.0.0": {
+        "runtime": {
+          "Terminal.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -626,6 +635,11 @@
       "sha512": ""
     },
     "PingServer.Reference/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Terminal/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

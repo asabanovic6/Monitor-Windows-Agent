@@ -3,7 +3,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.p
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CoreCompileInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.pdb
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache
 C:\Users\Dalee\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.dll
 C:\Users\Dalee\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.pdb
 C:\Users\Dalee\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.dll
@@ -34,3 +33,4 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\EventLogger\obj\Debug\Even
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache

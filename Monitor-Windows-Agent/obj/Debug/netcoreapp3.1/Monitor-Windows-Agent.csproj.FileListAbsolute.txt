@@ -361,3 +361,5 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\net
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor_Windows_Agent.Form1.resources
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor_Windows_Agent.Form2.resources
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.GenerateResource.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Terminal.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Terminal.pdb

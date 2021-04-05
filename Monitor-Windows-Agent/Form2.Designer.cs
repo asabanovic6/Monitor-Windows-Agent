@@ -2,6 +2,7 @@
 using JASONParser;
 using System;
 using System.IO;
+using ImageSender;
 
 namespace Monitor_Windows_Agent
 {
@@ -11,7 +12,7 @@ namespace Monitor_Windows_Agent
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-        public Parser p = new Parser();
+
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -31,17 +32,18 @@ namespace Monitor_Windows_Agent
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void Fill() {
-            this.textBoxName.Text = p.ConfigParser().name;
-            
-            this.textBoxKeepAlive.Text = p.ConfigParser().keepAlive.ToString();
-            this.textBoxLocation.Text = p.ConfigParser().location;
-          
-            this.File1path.Text = p.ConfigParser().fileLocations.File1;
-            this.File2path.Text = p.ConfigParser().fileLocations.File2;
-            this.File3path.Text = p.ConfigParser().fileLocations.File3;
-            this.File4path.Text = p.ConfigParser().fileLocations.File4;
-            this.File5path.Text = p.ConfigParser().fileLocations.File5;
+        private void Fill()
+        {
+            var json = File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+            dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            this.textBoxName.Text = jsonObj.name;
+            this.textBoxKeepAlive.Text = jsonObj.keepAlive;
+            this.textBoxLocation.Text = jsonObj.location;
+            this.File1path.Text = jsonObj.fileLocations.File1;
+            this.File2path.Text = jsonObj.fileLocations.File2;
+            this.File3path.Text = jsonObj.fileLocations.File3;
+            this.File4path.Text = jsonObj.fileLocations.File4;
+            this.File5path.Text = jsonObj.fileLocations.File5;
 
         }
         private void InitializeComponent()
@@ -89,21 +91,21 @@ namespace Monitor_Windows_Agent
             this.iconNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("iconNotify.Icon")));
             this.iconNotify.Text = "notifyIcon1";
             this.iconNotify.Visible = true;
-            this.iconNotify.DoubleClick += new System.EventHandler(this.iconNotify_DoubleClick);
+         //  this.iconNotify.DoubleClick += new System.EventHandler(this.iconNotify_DoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 21);
+            this.label1.Location = new System.Drawing.Point(15, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
             // textBoxName
             // 
             this.textBoxName.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxName.Location = new System.Drawing.Point(105, 17);
+            this.textBoxName.Location = new System.Drawing.Point(100, 20);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.ReadOnly = true;
             this.textBoxName.Size = new System.Drawing.Size(225, 27);
@@ -112,9 +114,9 @@ namespace Monitor_Windows_Agent
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 66);
+            this.label2.Location = new System.Drawing.Point(15, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Location:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -122,9 +124,9 @@ namespace Monitor_Windows_Agent
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 115);
+            this.label4.Location = new System.Drawing.Point(15, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Keep alive:";
             // 
@@ -276,21 +278,21 @@ namespace Monitor_Windows_Agent
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(-2176, 21);
+            this.textBox2.Location = new System.Drawing.Point(-2150, 21);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(281, 27);
             this.textBox2.TabIndex = 21;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(-2186, 25);
+            this.textBox3.Location = new System.Drawing.Point(-2150, 25);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(281, 27);
             this.textBox3.TabIndex = 22;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(-2040, 6);
+            this.textBox4.Location = new System.Drawing.Point(-2150, 6);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(244, 27);
             this.textBox4.TabIndex = 23;
@@ -298,7 +300,7 @@ namespace Monitor_Windows_Agent
             // textBoxLocation
             // 
             this.textBoxLocation.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxLocation.Location = new System.Drawing.Point(105, 61);
+            this.textBoxLocation.Location = new System.Drawing.Point(100, 67);
             this.textBoxLocation.Name = "textBoxLocation";
             this.textBoxLocation.ReadOnly = true;
             this.textBoxLocation.Size = new System.Drawing.Size(225, 27);
@@ -308,7 +310,7 @@ namespace Monitor_Windows_Agent
             // textBoxKeepAlive
             // 
             this.textBoxKeepAlive.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxKeepAlive.Location = new System.Drawing.Point(105, 114);
+            this.textBoxKeepAlive.Location = new System.Drawing.Point(100, 114);
             this.textBoxKeepAlive.Name = "textBoxKeepAlive";
             this.textBoxKeepAlive.ReadOnly = true;
             this.textBoxKeepAlive.Size = new System.Drawing.Size(225, 27);
@@ -411,7 +413,7 @@ namespace Monitor_Windows_Agent
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.Resize += new System.EventHandler(this.Form2_Resize);
+           // this.Resize += new System.EventHandler(this.Form2_Resize);
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -428,12 +430,12 @@ namespace Monitor_Windows_Agent
         }
         private void Button_Refresh_Click(object sender, System.EventArgs e)
         {
-            var json = File.ReadAllText("../../../../config2.json");
+            var json = File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
             this.textBoxLocation.Text = jsonObj.location;
-            this.File2path.Text = jsonObj.fileLocations.File2;
+            this.File1path.Text = jsonObj.fileLocations.File1;
             this.File2path.Text = jsonObj.fileLocations.File2;
             this.File3path.Text = jsonObj.fileLocations.File3;
             this.File4path.Text = jsonObj.fileLocations.File4;
@@ -443,8 +445,9 @@ namespace Monitor_Windows_Agent
         private void Button_Click(object sender, System.EventArgs e)
         {
             //zamijeniti prve dvije linije koda sa pozivom parsera
-            var json = File.ReadAllText("../../../../config2.json");
+            var json = File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+         
             //jsonObj["name"] = this.textBoxName.Text;
             //jsonObj["keepAlive"] = Int32.Parse(this.textBoxKeepAlive.Text);
             //jsonObj["location"] = this.textBoxLocation.Text;
@@ -452,11 +455,16 @@ namespace Monitor_Windows_Agent
            // jsonObj["webSocketUrl"] = this.textBoxWebSocket.Text;
            // jsonObj["pingUri"] = this.textBoxPingUri.Text;
             ComputerInfo comp = new ComputerInfo();
-            comp.name= this.textBoxName.Text;
-            comp.keepAlive= Decimal.Parse(this.textBoxKeepAlive.Text);
-            comp.location= this.textBoxLocation.Text;
+            comp.name= jsonObj.name;
+            comp.keepAlive= jsonObj.keepAlive;
+            comp.location= jsonObj.location;
+            comp.deviceUid = jsonObj.deviceUid;
+            comp.fileUri= jsonObj.fileUri;
+            comp.pingUri = jsonObj.pingUri;
+            comp.webSocketUrl = jsonObj.webSocketUrl;
+            comp.installationCode = null;
             FileLocations f = new FileLocations();
-            f.File1 = this.File1path.Text;
+            f.File1 = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             f.File2 = this.File2path.Text;
             f.File3 = this.File3path.Text;
             f.File4 = this.File4path.Text;
@@ -464,8 +472,11 @@ namespace Monitor_Windows_Agent
             comp.fileLocations = f;
             
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(comp, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText("../../../../config.json", output);
-            this.Close();
+            File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
+
+         
+            p1.sendFile((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)), "config.json");
+
         }
         #endregion
 

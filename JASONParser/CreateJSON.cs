@@ -9,13 +9,16 @@ namespace Monitor_Windows_Agent
 {
     public class CreateJSON
     {
-        
-        private static Parser parser = new Parser();
-        private static ComputerInfo computer = parser.ConfigParser();
+
+        private static ComputerInfo computer;
         private static ComputerDataJSON dataJSON = new ComputerDataJSON();
   
-
-    public static String getJSON ()
+        public CreateJSON (String path )
+        {
+                Parser parser = new Parser(path);
+     computer = parser.ConfigParser();
+    }
+    public  String getJSON ()
         {
             dataJSON.deviceUid = computer.deviceUid;
             dataJSON.timeStamp = DateTime.Now;

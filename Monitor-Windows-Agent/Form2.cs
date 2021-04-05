@@ -6,11 +6,15 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using PingServer;
+using ImageSender;
+
 
 namespace Monitor_Windows_Agent
 {
     public partial class Form2 : Form
     {
+        public static imageSender p1;
         private void iconNotify_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -22,6 +26,12 @@ namespace Monitor_Windows_Agent
         {
             InitializeComponent();
             iconNotify.MouseClick += iconNotify_MouseClick;
+           
+           // Ping p = new Ping(Form1.path);
+            // p.PostJsonAndKeepAplive();
+            
+           p1 = new imageSender((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))+"\\config.json");
+            p1.conn();
         }
 
         private void Form2_Resize(object sender, EventArgs e)
@@ -30,25 +40,25 @@ namespace Monitor_Windows_Agent
                 Hide();
                 iconNotify.Visible = true;
             }
+            iconNotify.Visible = true;
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            this.WindowState = FormWindowState.Minimized;
-            Hide();
-            iconNotify.Visible = true;
+            e.Cancel = false;
+            
         }
         private void iconNotify_DoubleClick(object sender, EventArgs e)
         {
             Show();
             this.WindowState = FormWindowState.Normal;
-            iconNotify.Visible = false;
+            iconNotify.Visible = true;
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             iconNotify.BalloonTipText = "Aplikacija minimizirana";
             iconNotify.BalloonTipTitle = "Monitor Windows Agent";
+            Fill();
         }
 
         private void label3_Click(object sender, EventArgs e)

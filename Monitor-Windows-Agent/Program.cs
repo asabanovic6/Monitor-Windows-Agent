@@ -24,17 +24,24 @@ namespace Monitor_Windows_Agent
         static void Main()
         {
             Logger.Registry_Write(Registry.LocalMachine);
-            //pozivamo metodu koja ce svako 0.5 sec da salje kreirani json objekat prema serveru 
-           
-           // Ping p = new Ping();
-           //p.PostJsonAndKeepAplive();
-             imageSender p1 = new imageSender();
-             p1.conn();
+
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form2());
+            /*
+            if (!File.Exists((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json"))
+            {
+                
+                Application.Run(new Form1());
+            }
+          else if (File.Exists((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json"))
+            {
+                
+                Application.Run(new Form2());
+            }
+            */
         }
     }
 }

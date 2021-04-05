@@ -35,6 +35,9 @@
     <Reference Include="PingServer">
       <HintPath>..\PingServer\bin\Debug\PingServer.dll</HintPath>
     </Reference>
+    <Reference Include="Terminal">
+      <HintPath>..\Terminal\bin\Debug\Terminal.dll</HintPath>
+    </Reference>
     <Reference Include="websocket-sharp.clone">
       <HintPath>..\PingServer\bin\Debug\websocket-sharp.clone.dll</HintPath>
     </Reference>

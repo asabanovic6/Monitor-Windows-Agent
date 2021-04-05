@@ -17,6 +17,8 @@ namespace Monitor_Windows_Agent
 {
     public partial class Form1 : Form
     {
+
+       
         private void iconNotify_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -36,7 +38,9 @@ namespace Monitor_Windows_Agent
             {
                 Hide();
                 iconNotify.Visible = true;
+
             }
+            
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
@@ -49,7 +53,7 @@ namespace Monitor_Windows_Agent
         {
             Show();
             this.WindowState = FormWindowState.Normal;
-            iconNotify.Visible = false;
+            iconNotify.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -90,13 +94,21 @@ namespace Monitor_Windows_Agent
                     comp.mainUri = textBox1.Text;
                     comp.fileUri = textBox4.Text;
                     comp.keepAlive = 30;
-                comp.fileLocations.File1 = File1path.Text;
-                comp.fileLocations.File2 = null;
-                comp.fileLocations.File3 = null;
-                comp.fileLocations.File4 = null;
-                comp.fileLocations.File5 = null;
+                FileLocations f = new FileLocations();
+                f.File1 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                f.File2 = null;
+                f.File3 = null;
+                f.File4 = null;
+                f.File5 = null;
+                comp.fileLocations = f;
+                
                 string json = JsonConvert.SerializeObject(comp);
-                    File.WriteAllText(File1path.Text, json);
+                FileInfo fi = new FileInfo((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+                if (!fi.Exists)
+                {
+                    fi.Create().Dispose();
+                }
+                File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))+"\\config.json", json);
                     Form2 form2 = new Form2();
                     this.Hide(); 
                     form2.ShowDialog();

@@ -1,0 +1,8 @@
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Terminal.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Terminal.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.csproj.CoreCompileInputs.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.csproj.CopyComplete
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.pdb

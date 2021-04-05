@@ -28,9 +28,9 @@ namespace MonitorWindowsService
             Application.Run();
             f.Hide();
             
-            int triggerPeriod = (int) new Parser().ConfigParser().keepAlive * 1000;
-            _timer = new System.Timers.Timer(triggerPeriod) { AutoReset = true };
-            _timer.Elapsed += TimerElapsed;
+           // int triggerPeriod = (int) new Parser().ConfigParser().keepAlive * 1000;
+        //    _timer = new System.Timers.Timer(triggerPeriod) { AutoReset = true };
+          //  _timer.Elapsed += TimerElapsed;
            // _ping = new Ping();
 
            // imageSender p1 = new imageSender();

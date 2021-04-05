@@ -23,7 +23,6 @@ C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\PingServer\bin\Debug\websoc
 C:\Users\Dalee\Desktop\SI_proj\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\websocket-sharp.clone.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\websocket-sharp.clone.xml
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache
 C:\Users\benja\source\repos\Monitor-Windows-Agent\PingServer\bin\Debug\PingServer.dll
 C:\Users\benja\source\repos\Monitor-Windows-Agent\PingServer\bin\Debug\PingServer.pdb
 C:\Users\benja\source\repos\Monitor-Windows-Agent\PingServer\bin\Debug\JASONParser.dll
@@ -187,3 +186,4 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\PingServer\obj\Debug\PingS
 C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Topshelf.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Topshelf.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache

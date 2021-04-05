@@ -12,67 +12,120 @@ using Newtonsoft.Json.Linq;
 using EventLogger;
 using System.Net;
 using System.Threading;
+using TerminalLibrary;
 
 namespace ImageSender
 {
+
+    
     public class imageSender
     {
-        static WebSocket ws;
-        private static ComputerInfo comp = new ComputerInfo();
-        private static Parser parser = new Parser();
-        private static JToken result;
-        
 
+        private int connected = 0;
+         WebSocket ws;
+        private  ComputerInfo comp { get; set; }
+        private  JToken result;
+        private String pathConfig;
+        static System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+        static System.Windows.Forms.Timer connTimer = new System.Windows.Forms.Timer();
+        private bool timer = false;
 
-        public void conn()
+        public imageSender (String path)
+        {
+            Parser pars = new Parser(path);
+            comp = new ComputerInfo();
+            comp = pars.ConfigParser();
+            pathConfig = path;
+        }
+
+        public bool conn()
         {
            
                if (logIn()==0)
             {
-                MessageBox.Show("Error");
-                return;
+                
+                return false;
             }
 
-                ws = new WebSocket(url: "ws://109.237.39.237:25565", onMessage: OnMessage, onError: OnError);
-                ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", "594bd055-a29f-41c6-aac9-3d34ca4b96e6"));
+                ws = new WebSocket(url: "ws://"+ comp.webSocketUrl, onMessage: OnMessage, onError: OnError, onClose: OnClose); //dodati wss 
+                ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", comp.deviceUid));
                 ws.Connect().Wait();
-            TimeSpan startTimeSpan = TimeSpan.Zero;
-            TimeSpan periodTimeSpan = TimeSpan.FromMilliseconds(30000);
 
-            System.Threading.Timer timer = new System.Threading.Timer((e) =>
+
+            connected = 0;
+            if (timer==false)
             {
-                ws.Send("{ \"type\":\"" + "pong" + "\"}");
-            }, null, startTimeSpan, periodTimeSpan);
-         
+                timer = true;
+                myTimer.Tick += new EventHandler(TimerEventProcessor);
 
-            sendMessage("sendCredentials", "");
-           
+                // Sets the timer interval to 30 seconds.
+                myTimer.Interval = 30000;
+                myTimer.Start();
+
+                connTimer.Tick += new EventHandler(CheckConnection);
+
+                // Sets the timer interval to 5 seconds.
+                connTimer.Interval = 5000;
+                connTimer.Start();
+
+            }
+
+
+            ws.Send("{ \"type\":\"" + "sendCredentials" + "\", \"message\":\"" + "" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + comp.fileLocations.File2 + "\"}");
+            
+            return true;
            
 
         }
+
+        private Task OnClose(CloseEventArgs arg)
+        {
+            connected = 10;
+            return Task.FromResult(0);
+        }
+
+        private void CheckConnection(object sender, EventArgs e)
+        {
+            if (connected++ >= 10) conn();
+        }
+
+        private void TimerEventProcessor(object sender, EventArgs e)
+        {
+           
+            ws.Send("{ \"type\":\"" + "pong" + "\"}");
+        }
+
+       
 
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
-            throw new NotImplementedException(); 
-        }
 
-        private static Task OnMessage(MessageEventArgs messageEventArgs)
+            return Task.FromResult(0);
+        }
+        
+        private  Task OnMessage(MessageEventArgs messageEventArgs)
         {
             string text = messageEventArgs.Text.ReadToEnd();
              result = JsonConvert.DeserializeObject<JToken>(text);
+           if (result["type"].Value<String>()=="Error") return Task.FromResult(0);
             if (result["type"].Value<String>() == "Connected") return Task.FromResult(0);
+         
             else if (result["type"].Value<String>() == "ping")
             {
-                sendMessage("pong", "");
+                connected = 0;
                 return Task.FromResult(0);
             }
             else if (result["type"].Value<String>() == "Disconnected") { return Task.FromResult(0); }
 
-            if (result["type"].Value<String>() == "command") sendMessage("command_result", "radi");
-     
+            if (result["type"].Value<String>() == "command")
+            {
+                String ret = TerminalCommand.RunCommand(result["command"].Value<String>(), result["path"].Value<String>());
+                ret += comp.deviceUid + "\"}";
+                ws.Send(ret);
+            }
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
-            else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(),"sendFileDirect");
+            else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
 
@@ -82,77 +135,91 @@ namespace ImageSender
             return Task.FromResult(0);
         }
 
-        private static void sendScreenshot()
+        private  void sendScreenshot()
         {
-
-            var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
-            using (var captureGraphic = Graphics.FromImage(captureBmp))
-            {
-                captureGraphic.CopyFromScreen(0, 0, 0, 0, captureBmp.Size);
-                captureBmp.Save("capture.jpg", ImageFormat.Jpeg);
-            }
-            //potrebno podesit putanju slike
-            using (Image image = Image.FromFile(@"capture.jpg"))
-            {
-
-                using (MemoryStream m = new MemoryStream())
+           
+                var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
+                using (var captureGraphic = Graphics.FromImage(captureBmp))
+                {
+                    captureGraphic.CopyFromScreen(0, 0, 0, 0, captureBmp.Size);
+                    captureBmp.Save("capture.jpg", ImageFormat.Jpeg);
+                }
+                //potrebno podesit putanju slike
+                using (Image image = Image.FromFile(@"capture.jpg"))
                 {
 
-                    image.Save(m, image.RawFormat);
-                    byte[] imageBytes = m.ToArray();
+                    using (MemoryStream m = new MemoryStream())
+                    {
 
-                    string base64String = Convert.ToBase64String(imageBytes);
-                
-                    sendMessage("sendScreenshot", base64String);
+                        image.Save(m, image.RawFormat);
+                        byte[] imageBytes = m.ToArray();
 
+                        string base64String = Convert.ToBase64String(imageBytes);
+
+                        sendMessage("sendScreenshot", base64String);
+
+                    }
                 }
-            }
-        }
-        private static void sendMessage(string type, string message)
-        {
-            comp = parser.ConfigParser();
-  
-            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
-        }
-
-        private static void sendFile (String path,String fileName,String type = "sendFile")
-        {
-            String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
-            byte[] bytes = System.IO.File.ReadAllBytes(abspath);
-            string base64String = Convert.ToBase64String(bytes);
             
-            ws.Send ("{ \"type\":\"" + type + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\", \"fileName\":\"" + fileName + "\"}");
-            }
-
-     private static void getFile(String base64String, String path, String fileName)
+        }
+        private  void sendMessage(string type, string message)
         {
-            String abspath = comp.fileLocations.File1 + "\\" + path +  fileName;
-            byte[] bytes = Convert.FromBase64String(base64String);
-            File.WriteAllBytes(abspath, bytes);
+          
+  
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + "" + "\"}");
+        }
 
-            //ovdje trebam vratiti ws ono sto njima treba 
-            ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" +  "\"}");
+        public void sendFile(String path, String fileName, String type = "sendFile")
+        {
+           
+                String abspath = path + fileName;
+                if (fileName == "config.json")
+                {
+                    abspath = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json";
+                }
+               
+                byte[] bytes = System.IO.File.ReadAllBytes(abspath);
+                string base64String = Convert.ToBase64String(bytes);
+
+                ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"fileName\":\"" + fileName + "\"}");
+           
+        }
+
+     private void getFile(String base64String, String path, String fileName)
+        {
+            
+                String abspath = path + fileName;
+                if (fileName == "config.json")
+                {
+                    abspath = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json";
+                }
+             
+                byte[] bytes = Convert.FromBase64String(base64String);
+                File.WriteAllBytes(abspath, bytes);
+
+                //ovdje trebam vratiti ws ono sto njima treba 
+                ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
 
         }
 
-   private static int logIn ( )
+   private  int logIn ( )
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://109.237.39.237:25565/login");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://"+comp.webSocketUrl +"/login");
 
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 CookieContainer cok = new CookieContainer();
                 httpWebRequest.CookieContainer = cok;
                 httpWebRequest.AllowAutoRedirect = false;
-                httpWebRequest.Headers.Add("Authorization", "594bd055-a29f-41c6-aac9-3d34ca4b96e6");
+                httpWebRequest.Headers.Add("Authorization", comp.deviceUid);
 
                 using (var streamWriter = new
 
                 StreamWriter(httpWebRequest.GetRequestStream()))
                 {
-                    string json = "{ \"id\":\"" + "594bd055-a29f-41c6-aac9-3d34ca4b96e6" + "\"}";
+                    string json = "{ \"id\":\"" + comp.deviceUid + "\"}";
 
                     streamWriter.Write(json);
                 }
@@ -162,6 +229,7 @@ namespace ImageSender
             }
             catch (Exception E)
             {
+                
                 return 0;
             }
         }

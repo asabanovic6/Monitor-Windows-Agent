@@ -10,10 +10,16 @@ namespace JASONParser
 {
     public class Parser
     {
+      public  String path { get; set; }
+      
+        public Parser (String pathConfig)
+        {
+            this.path = pathConfig;
+        }
         
         public  ComputerInfo ConfigParser()
         {
-            var json = File.ReadAllText("../../../../config.json");
+            var json = File.ReadAllText(path); 
 
             var item = JsonConvert.DeserializeObject<ComputerInfo>(json);
 

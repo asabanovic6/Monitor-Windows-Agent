@@ -204,3 +204,5 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\ImageSender\obj\Debug\Imag
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.dll.config
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Topshelf.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Topshelf.xml
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.pdb
