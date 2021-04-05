@@ -207,7 +207,6 @@ C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONPars
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.pdb
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\bin\Debug\JASONParser.dll
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\bin\Debug\JASONParser.pdb
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\bin\Debug\Json.Net.dll
@@ -230,3 +229,4 @@ C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Debug\JASONPar
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Debug\JASONParser.dll
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Debug\JASONParser.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache

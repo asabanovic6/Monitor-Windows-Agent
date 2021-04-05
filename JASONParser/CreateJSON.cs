@@ -17,14 +17,13 @@ namespace Monitor_Windows_Agent
 
     public static String getJSON ()
         {
-            dataJSON.name = computer.name;
-            dataJSON.location = computer.location;
+            dataJSON.deviceUid = computer.deviceUid;
             dataJSON.timeStamp = DateTime.Now;
             dataJSON.message = "Djes Huso";
-            dataJSON.cpuUsage = computer.cpuUsage;
-            dataJSON.ramUsage = computer.ramUsage;
-            dataJSON.hddUsage = computer.hddUsage;
-            dataJSON.gpuUsage = computer.gpuUsage;
+            dataJSON.cpuUsage = (Decimal)0.5;
+            dataJSON.ramUsage = (Decimal)0.5;
+            dataJSON.hddUsage = (Decimal)0.5;
+            dataJSON.gpuUsage = (Decimal)0.5;
             String result = JsonConvert.SerializeObject(dataJSON);
             return result;
         }

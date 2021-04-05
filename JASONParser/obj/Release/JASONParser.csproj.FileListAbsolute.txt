@@ -40,3 +40,24 @@ C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Release\JASONP
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Release\JASONParser.csproj.CopyComplete
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Release\JASONParser.dll
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\JASONParser\obj\Release\JASONParser.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\JASONParser.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\JASONParser.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\Json.Net.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\Newtonsoft.Json.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Configuration.ConfigurationManager.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Security.AccessControl.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Security.Permissions.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Security.Principal.Windows.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\Topshelf.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\websocket-sharp.clone.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\Newtonsoft.Json.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Configuration.ConfigurationManager.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Security.AccessControl.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Security.Permissions.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\System.Security.Principal.Windows.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\Topshelf.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\bin\Release\websocket-sharp.clone.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.csproj.CopyComplete
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.pdb

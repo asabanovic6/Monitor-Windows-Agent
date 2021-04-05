@@ -119,17 +119,9 @@
       <Project>{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}</Project>
       <Name>EventLogger</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ImageSender\ImageSender.csproj">
-      <Project>{37EBCFD7-214C-4A23-9B15-450F15ACC9CF}</Project>
-      <Name>ImageSender</Name>
-    </ProjectReference>
     <ProjectReference Include="..\JASONParser\JASONParser.csproj">
       <Project>{d22a0fef-c14c-4e7b-95f3-35033647aeb9}</Project>
       <Name>JASONParser</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PingServer\PingServer.csproj">
-      <Project>{bda29d19-c117-425d-8cb9-7cfd8ca59cfc}</Project>
-      <Name>PingServer</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

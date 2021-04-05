@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using EventLogger;
 using System.Net;
+using System.Threading;
 
 namespace ImageSender
 {
@@ -21,61 +22,48 @@ namespace ImageSender
         private static Parser parser = new Parser();
         private static JToken result;
 
-        public void Post()
-        {
-            try
-            {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://109.237.39.237:25565/login");
-                httpWebRequest.ContentType = "application/json";
-                httpWebRequest.Method = "POST";
-                CookieContainer cok = new CookieContainer();
-                httpWebRequest.CookieContainer = cok;
-                httpWebRequest.AllowAutoRedirect = false;
-                httpWebRequest.Headers.Add("Authorization", comp.uid);
 
-                using (var streamWriter = new
-
-                StreamWriter(httpWebRequest.GetRequestStream()))
-                {
-                    string json = "{ \"id\":\"" + parser.ConfigParser().uid + "\"}";
-
-                    streamWriter.Write(json);
-                }
-                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                if(httpResponse.StatusCode.ToString()=="OK") conn();
-               
-            }
-            catch (Exception e) { 
-                
-            }
-         
-        }
 
         public void conn()
         {
 
-            // vs = ws://109.237.36.76:25565
-            // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
-            ws = new WebSocket(url: parser.ConfigParser().webSocketUrl, onMessage: OnMessage, onError: OnError);
-            ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", parser.ConfigParser().uid));
-            ws.Connect().Wait();
+            if (logIn() == 0)
+            {
+                MessageBox.Show("Error");
+                return;
+            }
 
-            sendMessage("sendCredentials", "" );
+            ws = new WebSocket(url: "ws://109.237.39.237:25565", onMessage: OnMessage, onError: OnError);
+            ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", "594bd055-a29f-41c6-aac9-3d34ca4b96e6"));
+            ws.Connect().Wait();
+            TimeSpan startTimeSpan = TimeSpan.Zero;
+            TimeSpan periodTimeSpan = TimeSpan.FromMilliseconds(30000);
+
+            System.Threading.Timer timer = new System.Threading.Timer((e) =>
+            {
+                ws.Send("{ \"type\":\"" + "pong" + "\"}");
+            }, null, startTimeSpan, periodTimeSpan);
+
+
+            sendMessage("sendCredentials", "");
+
+
+
         }
 
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
-            throw new NotImplementedException(); 
+            throw new NotImplementedException();
         }
 
         private static Task OnMessage(MessageEventArgs messageEventArgs)
         {
             string text = messageEventArgs.Text.ReadToEnd();
-             result = JsonConvert.DeserializeObject<JToken>(text);
+            result = JsonConvert.DeserializeObject<JToken>(text);
             if (result["type"].Value<String>() == "Connected") return Task.FromResult(0);
             else if (result["type"].Value<String>() == "ping")
             {
-                sendMessage("pong", "");
+                //sendMessage("pong", "");
                 return Task.FromResult(0);
             }
             else if (result["type"].Value<String>() == "Disconnected") { return Task.FromResult(0); }
@@ -84,12 +72,11 @@ namespace ImageSender
 
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
+            else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
-           // else if (result["type"].Value<String>() != "Connected") sendMessage("command_result", "Komanda ne postoji");
-            else {
-                sendMessage("Empty", "Bilo sta");
-                }
-            Logger logger = new Logger( result["type"].Value<String>(), result["user"].Value<String>());
+            else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
+
+            Logger logger = new Logger(result["type"].Value<String>(), result["user"].Value<String>());
             logger.writeLog();
 
             return Task.FromResult(0);
@@ -115,7 +102,7 @@ namespace ImageSender
                     byte[] imageBytes = m.ToArray();
 
                     string base64String = Convert.ToBase64String(imageBytes);
-                
+
                     sendMessage("sendScreenshot", base64String);
 
                 }
@@ -124,31 +111,59 @@ namespace ImageSender
         private static void sendMessage(string type, string message)
         {
             comp = parser.ConfigParser();
-  
-            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
+
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
         }
 
-        private static void sendFile (String path,String fileName)
+        private static void sendFile(String path, String fileName, String type = "sendFile")
         {
-            // String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
-            String abspath = @"C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\Logs\ServiceLog.txt";
+            String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
             byte[] bytes = System.IO.File.ReadAllBytes(abspath);
             string base64String = Convert.ToBase64String(bytes);
-            
-            ws.Send ("{ \"type\":\"" + "sendFile" + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"fileName\":\"" + fileName + "\"}");
-            }
 
-     private static void getFile(String base64String, String path, String fileName)
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\", \"fileName\":\"" + fileName + "\"}");
+        }
+
+        private static void getFile(String base64String, String path, String fileName)
         {
-            String abspath = comp.fileLocations.File1 + "\\" + path +  fileName;
+            String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
             byte[] bytes = Convert.FromBase64String(base64String);
             File.WriteAllBytes(abspath, bytes);
 
             //ovdje trebam vratiti ws ono sto njima treba 
-            ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip +  "\"}");
+            ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\"}");
 
         }
 
+        private static int logIn()
+        {
+            try
+            {
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://109.237.39.237:25565/login");
 
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+                CookieContainer cok = new CookieContainer();
+                httpWebRequest.CookieContainer = cok;
+                httpWebRequest.AllowAutoRedirect = false;
+                httpWebRequest.Headers.Add("Authorization", "594bd055-a29f-41c6-aac9-3d34ca4b96e6");
+
+                using (var streamWriter = new
+
+                StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    string json = "{ \"id\":\"" + "594bd055-a29f-41c6-aac9-3d34ca4b96e6" + "\"}";
+
+                    streamWriter.Write(json);
+                }
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                return 1;
+            }
+            catch (Exception E)
+            {
+                return 0;
+            }
+        }
     }
 }

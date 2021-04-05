@@ -38,3 +38,12 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\n
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.genruntimeconfig.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.csprojAssemblyReference.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor_Windows_Agent.Form1.resources
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor_Windows_Agent.Form2.resources
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.csproj.GenerateResource.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.AssemblyInfoInputs.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.AssemblyInfo.cs
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Release\netcoreapp3.1\Monitor-Windows-Agent.pdb

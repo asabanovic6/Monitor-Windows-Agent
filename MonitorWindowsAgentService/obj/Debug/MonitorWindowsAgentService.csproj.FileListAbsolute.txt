@@ -30,16 +30,11 @@ C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\obj\
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\MonitorWindowsAgentService.exe.config
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\MonitorWindowsAgentService.exe
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\MonitorWindowsAgentService.pdb
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\ImageSender.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\JASONParser.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\PingServer.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\websocket-sharp.clone.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\EventLogger.dll
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\ImageSender.pdb
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\ImageSender.dll.config
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\JASONParser.pdb
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\PingServer.pdb
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\websocket-sharp.clone.xml
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\EventLogger.pdb

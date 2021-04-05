@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.Win32;
+
 namespace MonitorWindowsAgentService
 {
     partial class ProjectInstaller
@@ -50,6 +52,7 @@ namespace MonitorWindowsAgentService
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
             this.serviceProcessInstaller1,
             this.serviceInstaller1});
+
 
         }
 

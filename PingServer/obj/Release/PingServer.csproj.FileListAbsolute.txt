@@ -42,3 +42,25 @@ C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Release\PingSer
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Release\PingServer.csproj.CopyComplete
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Release\PingServer.dll
 C:\Users\lejla\Desktop\SI\Nova instalacija\Instal\PingServer\obj\Release\PingServer.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\PingServer.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\PingServer.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\JASONParser.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Configuration.ConfigurationManager.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Security.AccessControl.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Security.Permissions.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Security.Principal.Windows.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\Topshelf.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\websocket-sharp.clone.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\Newtonsoft.Json.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\JASONParser.pdb
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Configuration.ConfigurationManager.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Security.AccessControl.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Security.Permissions.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\System.Security.Principal.Windows.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\Topshelf.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\websocket-sharp.clone.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\bin\Release\Newtonsoft.Json.xml
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Release\PingServer.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Release\PingServer.csproj.CopyComplete
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Release\PingServer.dll
+C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\PingServer\obj\Release\PingServer.pdb

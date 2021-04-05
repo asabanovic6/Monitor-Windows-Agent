@@ -38,7 +38,6 @@ C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogg
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\bin\Debug\EventLogger.pdb
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\bin\Debug\Topshelf.xml
-C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CoreCompileInputs.cache
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll

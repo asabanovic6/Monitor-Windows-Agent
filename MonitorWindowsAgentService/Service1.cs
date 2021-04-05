@@ -1,5 +1,5 @@
 ﻿using JASONParser;
-using PingServer;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using System.Net;
 using Monitor_Windows_Agent;
-using ImageSender;
+
 using EventLogger;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
@@ -28,33 +28,43 @@ namespace MonitorWindowsAgentService
 {
     public partial class Service1 : ServiceBase
     {
-        private System.Timers.Timer timer1;
+        private System.Timers.Timer timer1,timer2;
         Parser pars = new Parser();
-        imageSender p1 = new imageSender();
         WebSocket ws;
-        private ComputerInfo comp = new ComputerInfo();
+        private ComputerInfo comp=new ComputerInfo();
         private JToken result;
-        private static Bitmap bmpScreenshot;
-        private static Graphics gfxScreenshot;
+      
         public Service1()
         {
             InitializeComponent();
-            Post();
             StartConfig();
-            Logger.Registry_Write(Registry.LocalMachine);
         }
         protected override void OnStart(string[] args)
         {
-            WriteToFile("Service is started at " + DateTime.Now);
-            pars = new Parser();
+           // WriteToFile("Service is started at " +comp.ToString());
+           // pars = new Parser();
             timer1 = new System.Timers.Timer();
             timer1.Elapsed += new ElapsedEventHandler(this.OnElapsedTime);
             timer1.Interval =(int) pars.ConfigParser().keepAlive*1000; //number in milisecinds
             timer1.AutoReset=true;
             timer1.Enabled = true;
             timer1.Start();
+            timer2 = new System.Timers.Timer();
+            timer2.Elapsed += new ElapsedEventHandler(this.SocketPong);
+            timer2.Interval = 25000; //number in milisecinds
+            timer2.AutoReset = true;
+            timer2.Enabled = true;
+            timer2.Start();
         }
-       
+
+        private void SocketPong(object sender, ElapsedEventArgs e)
+        {
+            
+            if(ws!=null)    
+                ws.Send("{ \"type\":\"" + "pong" + "\"}");
+        
+        }
+
         protected override void OnStop()
         {
             WriteToFile("Service is stopped at " + DateTime.Now);
@@ -65,12 +75,15 @@ namespace MonitorWindowsAgentService
             PostJson();
         }
         public void StartConfig() {
-            string uri = pars.ConfigParser().pingUri;
+            //string uri = pars.ConfigParser().pingUri;
             //p1.Post();
-            WriteToFile("Inicijalizovo sam se: " + pars.ConfigParser().webSocketUrl+" u: "+ DateTime.Now);
+            Post();
+            WriteToFile("Inicijalizovo sam se: " + pars.ConfigParser()+" u: "+ DateTime.Now);
 
         }
         public void PostJson() {
+            
+
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(pars.ConfigParser().pingUri);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
@@ -114,39 +127,51 @@ namespace MonitorWindowsAgentService
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://109.237.39.237:25565/login");
+                comp = pars.ConfigParser();
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://si-grupa5.herokuapp.com/login");
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
                 CookieContainer cok = new CookieContainer();
                 httpWebRequest.CookieContainer = cok;
                 httpWebRequest.AllowAutoRedirect = false;
-                httpWebRequest.Headers.Add("Authorization", comp.uid);
+                httpWebRequest.Headers.Add("Authorization", comp.deviceUid);
 
                 using (var streamWriter = new
 
                 StreamWriter(httpWebRequest.GetRequestStream()))
                 {
-                    string json = "{ \"id\":\"" + pars.ConfigParser().uid + "\"}";
+                    string json = "{ \"id\":\"" + comp.deviceUid + "\"}";
 
                     streamWriter.Write(json);
                 }
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 if (httpResponse.StatusCode.ToString() == "OK") conn();
+                //return 1;
 
             }
             catch (Exception e)
             {
-
+                WriteToFile(pars.ConfigParser().deviceUid + "mater usta");
             }
 
         }
         public void conn()
         {
+           /* if (Post() == 0) { 
+                
+            }*/
+
             // vs = ws://109.237.36.76:25565
             // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
             ws = new WebSocket(url: pars.ConfigParser().webSocketUrl, onMessage: OnMessage, onError: OnError);
-            ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", pars.ConfigParser().uid));
+            ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", comp.deviceUid));
             ws.Connect().Wait();
+
+            TimeSpan startTimeSpan = TimeSpan.Zero;
+            TimeSpan periodTimeSpan = TimeSpan.FromSeconds(30);
+
+           
+
             sendMessage("sendCredentials", "");
         }
 
@@ -162,7 +187,6 @@ namespace MonitorWindowsAgentService
             if (result["type"].Value<String>() == "Connected") return Task.FromResult(0);
             else if (result["type"].Value<String>() == "ping")
             {
-                sendMessage("pong", "");
                 return Task.FromResult(0);
             }
             else if (result["type"].Value<String>() == "Disconnected") { return Task.FromResult(0); }
@@ -171,71 +195,65 @@ namespace MonitorWindowsAgentService
 
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
+            else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
-            // else if (result["type"].Value<String>() != "Connected") sendMessage("command_result", "Komanda ne postoji");
-            else
-            {
-                sendMessage("Empty", "Bilo sta");
-            }
+            else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
+
             Logger logger = new Logger(result["type"].Value<String>(), result["user"].Value<String>());
             logger.writeLog();
+
             return Task.FromResult(0);
         }
         
         private void sendScreenshot()
         {
-            try { 
-            
-                System.Windows.Forms.SendKeys.SendWait("{PRTSC}");
-                IDataObject data = Clipboard.GetDataObject();
-              var captureBmp = (Bitmap)data.GetData(DataFormats.Bitmap, true);
-           
-        
-     
-         // var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
-         /*  using (var captureGraphic = Graphics.FromImage(captureBmp))
-           {
-               captureGraphic.CopyFromScreen(0, 0, 0, 0, captureBmp.Size);
-               captureBmp.Save("capture.jpg", ImageFormat.Jpeg);
-           }
-         */
-           //potrebno podesit putanju slike
-           using (Image image = Image.FromFile(@"capture.jpg"))
-           {
-        
-               using (MemoryStream m = new MemoryStream())
-               {
+            try {
 
-                   image.Save(m, image.RawFormat);
-                   byte[] imageBytes = m.ToArray();
+                var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
+                using (var captureGraphic = Graphics.FromImage(captureBmp))
+                {
+                    captureGraphic.CopyFromScreen(0, 0, 0, 0, captureBmp.Size);
+                    captureBmp.Save("capture.jpg", ImageFormat.Jpeg);
+                }
+                //potrebno podesit putanju slike
+                using (Image image = Image.FromFile(@"capture.jpg"))
+                {
 
-                   string base64String = Convert.ToBase64String(imageBytes);
+                    using (MemoryStream m = new MemoryStream())
+                    {
 
-                   sendMessage("sendScreenshot", base64String);
+                        image.Save(m, image.RawFormat);
+                        byte[] imageBytes = m.ToArray();
 
-               }
-           }
-           
-    }
+                        string base64String = Convert.ToBase64String(imageBytes);
+
+                        sendMessage("sendScreenshot", base64String);
+
+                    }
+                }
+
+            }
             catch (Exception e) {
                 sendMessage("sendScreenshot", "error");
                 WriteToFile(e.ToString());
             }
         }
-        private void sendMessage(string type, string message)
+        private  void sendMessage(string type, string message)
         {
             comp = pars.ConfigParser();
-            WriteToFile("usooo");
-            //ws.Send("aaaa");
-            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
+
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
         }
 
-        private void sendFile(String path, String fileName)
+        private void sendFile(String path, String fileName, String type = "sendFile")
         {
-             String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
+            comp = pars.ConfigParser();
+
+            String abspath = comp.fileLocations.File1 + "\\" + path + fileName;
             byte[] bytes = System.IO.File.ReadAllBytes(abspath);
             string base64String = Convert.ToBase64String(bytes);
-            ws.Send("{ \"type\":\"" + "sendFile" + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\", \"fileName\":\"" + fileName + "\"}");
+
+            ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\", \"fileName\":\"" + fileName + "\"}");
         }
 
         private void getFile(String base64String, String path, String fileName)
@@ -245,7 +263,7 @@ namespace MonitorWindowsAgentService
             File.WriteAllBytes(abspath, bytes);
 
             //ovdje trebam vratiti ws ono sto njima treba 
-            ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + comp.ip + "\"}");
+            ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\"}");
 
         }
 
