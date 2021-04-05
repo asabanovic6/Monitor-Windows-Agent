@@ -69,11 +69,12 @@ namespace Monitor_Windows_Agent
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            
-                String url = textBox1.Text + textBox5.Text;
-                JToken result;
-                ComputerInfo comp = new ComputerInfo();
+
+            String url = textBox1.Text + textBox5.Text;
+            JToken result;
+            ComputerInfo comp = new ComputerInfo();
+            try
+            {
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpWebRequest.Method = "GET";
                 try
@@ -94,23 +95,23 @@ namespace Monitor_Windows_Agent
                     comp.mainUri = textBox1.Text;
                     comp.fileUri = textBox4.Text;
                     comp.keepAlive = 30;
-                FileLocations f = new FileLocations();
-                f.File1 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                f.File2 = null;
-                f.File3 = null;
-                f.File4 = null;
-                f.File5 = null;
-                comp.fileLocations = f;
-                
-                string json = JsonConvert.SerializeObject(comp);
-                FileInfo fi = new FileInfo((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
-                if (!fi.Exists)
-                {
-                    fi.Create().Dispose();
-                }
-                File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))+"\\config.json", json);
+                    FileLocations f = new FileLocations();
+                    f.File1 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    f.File2 = null;
+                    f.File3 = null;
+                    f.File4 = null;
+                    f.File5 = null;
+                    comp.fileLocations = f;
+
+                    string json = JsonConvert.SerializeObject(comp);
+                    FileInfo fi = new FileInfo((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+                    if (!fi.Exists)
+                    {
+                        fi.Create().Dispose();
+                    }
+                    File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", json);
                     Form2 form2 = new Form2();
-                    this.Hide(); 
+                    this.Hide();
                     form2.ShowDialog();
                     this.Close();
 
@@ -122,10 +123,17 @@ namespace Monitor_Windows_Agent
                     textBox5.BackColor = Color.LightPink;
 
                 }
+            }
+            catch (Exception E)
+            {
+                textBox1.Focus();
+                textBox1.Clear();
+                textBox1.BackColor = Color.LightPink;
+            }
 
 
-            
-            
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

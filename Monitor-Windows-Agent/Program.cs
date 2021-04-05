@@ -29,8 +29,8 @@ namespace Monitor_Windows_Agent
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
-            /*
+           
+        
             if (!File.Exists((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json"))
             {
                 
@@ -41,7 +41,7 @@ namespace Monitor_Windows_Agent
                 
                 Application.Run(new Form2());
             }
-            */
+           
         }
     }
 }

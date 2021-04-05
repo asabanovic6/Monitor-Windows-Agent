@@ -60,7 +60,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Endpoint - aktivacija:";
+            this.label1.Text = "Endpoint - aktivacija :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -70,7 +70,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(135, 23);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Endpoint - ping:";
+            this.label2.Text = "Endpoint - ping :";
             // 
             // label3
             // 
@@ -79,7 +79,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Web socket:";
+            this.label3.Text = "Endpoint - web socket :";
             // 
             // label4
             // 
@@ -88,7 +88,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(200, 23);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Endpoint - slanje configa:";
+            this.label4.Text = "Endpoint - error handling :";
             // 
             // label5
             // 
@@ -97,7 +97,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 23);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Installation code:";
+            this.label5.Text = "Installation code :";
            
             // 
             // textBox1

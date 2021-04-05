@@ -13,6 +13,7 @@ using EventLogger;
 using System.Net;
 using System.Threading;
 using TerminalLibrary;
+using PingServer;
 
 namespace ImageSender
 {
@@ -29,6 +30,7 @@ namespace ImageSender
         static System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
         static System.Windows.Forms.Timer connTimer = new System.Windows.Forms.Timer();
         private bool timer = false;
+        private PingServer.Ping p = new PingServer.Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
 
         public imageSender (String path)
         {
@@ -135,9 +137,10 @@ namespace ImageSender
             return Task.FromResult(0);
         }
 
-        private  void sendScreenshot()
+        private void sendScreenshot()
         {
-           
+            try
+            {
                 var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
                 using (var captureGraphic = Graphics.FromImage(captureBmp))
                 {
@@ -160,53 +163,71 @@ namespace ImageSender
 
                     }
                 }
-            
+            }
+            catch (Exception E)
+            {
+                ws.Send("{ \"type\":\"" + "error" + "\", \"message\":\"" + "Can't take screenshot" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                p.PostError();
+            }
+
         }
-        private  void sendMessage(string type, string message)
+        private void sendMessage(string type, string message)
         {
-          
-  
+
+
             ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + message + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + "" + "\"}");
         }
 
         public void sendFile(String path, String fileName, String type = "sendFile")
         {
-           
+            try
+            {
                 String abspath = path + fileName;
                 if (fileName == "config.json")
                 {
                     abspath = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json";
                 }
-               
+
                 byte[] bytes = System.IO.File.ReadAllBytes(abspath);
                 string base64String = Convert.ToBase64String(bytes);
 
                 ws.Send("{ \"type\":\"" + type + "\", \"message\":\"" + base64String + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"fileName\":\"" + fileName + "\"}");
-           
+            }
+            catch (Exception E)
+            {
+                ws.Send("{ \"type\":\"" + "error" + "\", \"message\":\"" + "File could not be sent" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                p.PostError();
+            }
         }
 
-     private void getFile(String base64String, String path, String fileName)
+        private void getFile(String base64String, String path, String fileName)
         {
-            
+            try
+            {
                 String abspath = path + fileName;
                 if (fileName == "config.json")
                 {
                     abspath = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json";
                 }
-             
+
                 byte[] bytes = Convert.FromBase64String(base64String);
                 File.WriteAllBytes(abspath, bytes);
 
                 //ovdje trebam vratiti ws ono sto njima treba 
                 ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
-
+            }
+            catch (Exception E)
+            {
+                ws.Send("{ \"type\":\"" + "error" + "\", \"message\":\"" + "File could not be saved" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                p.PostError();
+            }
         }
 
-   private  int logIn ( )
+        private int logIn()
         {
             try
             {
-                var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://"+comp.webSocketUrl +"/login");
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://" + comp.webSocketUrl + "/login");
 
                 httpWebRequest.ContentType = "application/json";
                 httpWebRequest.Method = "POST";
@@ -229,7 +250,7 @@ namespace ImageSender
             }
             catch (Exception E)
             {
-                
+                p.PostError();
                 return 0;
             }
         }

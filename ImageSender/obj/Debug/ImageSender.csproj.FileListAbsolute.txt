@@ -206,3 +206,5 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Topshelf.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Topshelf.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.pdb
