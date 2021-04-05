@@ -26,11 +26,20 @@ namespace Monitor_Windows_Agent
         {
             InitializeComponent();
             iconNotify.MouseClick += iconNotify_MouseClick;
-           
-           // Ping p = new Ping(Form1.path);
+
+            // Ping p = new Ping(Form1.path);
             // p.PostJsonAndKeepAplive();
-            
-           p1 = new imageSender((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))+"\\config.json");
+            Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+            try
+            {
+                p.PostJsonAndKeepAplive();
+            }
+            catch (Exception E)
+            {
+                p.PostError();
+            }
+
+            p1 = new imageSender((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments))+"\\config.json");
             p1.conn();
         }
 

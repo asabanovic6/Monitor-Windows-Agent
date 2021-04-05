@@ -13,9 +13,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JASONParser", "JASONParser\JASONParser.csproj", "{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{EE5DD04A-4ED2-4F60-BD02-2849CCE1FD31}"
-	ProjectSection(SolutionItems) = preProject
-		config.json = config.json
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingServer", "PingServer\PingServer.csproj", "{BDA29D19-C117-425D-8CB9-7CFD8CA59CFC}"
 EndProject

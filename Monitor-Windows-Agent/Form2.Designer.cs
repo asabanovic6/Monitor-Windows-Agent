@@ -463,6 +463,7 @@ namespace Monitor_Windows_Agent
             comp.pingUri = jsonObj.pingUri;
             comp.webSocketUrl = jsonObj.webSocketUrl;
             comp.installationCode = null;
+            comp.mainUri = jsonObj.mainUri;
             FileLocations f = new FileLocations();
             f.File1 = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             f.File2 = this.File2path.Text;
@@ -474,9 +475,9 @@ namespace Monitor_Windows_Agent
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(comp, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
 
-         
+           
             p1.sendFile((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)), "config.json");
-
+            //p1.conn();
         }
         #endregion
 

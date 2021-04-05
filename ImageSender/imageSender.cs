@@ -73,7 +73,8 @@ namespace ImageSender
             }
 
 
-            ws.Send("{ \"type\":\"" + "sendCredentials" + "\", \"message\":\"" + "" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + comp.fileLocations.File2 + "\"}");
+            ws.Send("{ \"type\":\"" + "sendCredentials" + "\", \"message\":\"" + "" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location +
+                "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
             
             return true;
            

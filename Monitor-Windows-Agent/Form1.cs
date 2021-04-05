@@ -112,7 +112,7 @@ namespace Monitor_Windows_Agent
                     File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", json);
                     Form2 form2 = new Form2();
                     this.Hide();
-                    form2.ShowDialog();
+                    form2.Show();
                     this.Close();
 
                 }

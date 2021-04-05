@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_41882B5EC46147D0816E7991AD481074"
+        "MsmKey" = "8:_22426FCA84DD4F9FA19D12422B6E6EC3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -43,6 +43,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -59,6 +67,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -76,6 +92,16 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_45DC54AD80384D7284B48B2696F1E355"
+                {
+                "Name" = "8:.NET Core"
+                "Message" = "8:[VSDNETCOREMSG]"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:https://dotnet.microsoft.com/download/dotnet-core/[NetCoreVerMajorDotMinor]"
+                "IsNETCore" = "11:TRUE"
+                "Architecture" = "2:0"
+                "Runtime" = "2:0"
+                }
             }
         }
         "File"
@@ -288,7 +314,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_025C55149E224651AE9A8E2F1A4E5D77"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_124F79C1303E411CA3DD4D4C7878CB30"
             {
             "Name" = "8:Monitor Windows Agent"
             "Arguments" = "8:"
@@ -296,13 +322,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_41882B5EC46147D0816E7991AD481074"
+            "Target" = "8:_22426FCA84DD4F9FA19D12422B6E6EC3"
             "Folder" = "8:_F94CA81497594246B2F7477460B97594"
             "WorkingFolder" = "8:_96B3C817FAA34B7CBC2AD15AC02A680C"
             "Icon" = "8:_DE2F621921ED48068D1EC239508B955A"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_78C97BA0EB624F109F615CE610121EAC"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7AAE29FC49824C51A7B504866799B5CB"
             {
             "Name" = "8:Monitor Windows Agent"
             "Arguments" = "8:"
@@ -310,7 +336,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_41882B5EC46147D0816E7991AD481074"
+            "Target" = "8:_22426FCA84DD4F9FA19D12422B6E6EC3"
             "Folder" = "8:_11E88469D5FA46E293F55EAA440CE81B"
             "WorkingFolder" = "8:_96B3C817FAA34B7CBC2AD15AC02A680C"
             "Icon" = "8:_DE2F621921ED48068D1EC239508B955A"
@@ -715,7 +741,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_41882B5EC46147D0816E7991AD481074"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_22426FCA84DD4F9FA19D12422B6E6EC3"
             {
             "SourcePath" = "8:..\\Monitor-Windows-Agent\\obj\\Debug\\netcoreapp3.1\\apphost.exe"
             "TargetName" = "8:"
