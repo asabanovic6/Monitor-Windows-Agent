@@ -208,3 +208,7 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.pdb

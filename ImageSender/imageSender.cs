@@ -49,7 +49,7 @@ namespace ImageSender
                 return false;
             }
 
-                ws = new WebSocket(url: "ws://"+ comp.webSocketUrl, onMessage: OnMessage, onError: OnError, onClose: OnClose); //dodati wss 
+                ws = new WebSocket(url: "wss://"+ comp.webSocketUrl, onMessage: OnMessage, onError: OnError, onClose: OnClose); //dodati wss 
                 ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", comp.deviceUid));
                 ws.Connect().Wait();
 

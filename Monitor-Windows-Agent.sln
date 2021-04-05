@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogger", "EventLogger\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal", "Terminal\Terminal.csproj", "{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MWA_Setup", "MWA_Setup\MWA_Setup.vdproj", "{3A406134-58EA-4D4E-90D1-1DBA3DD589B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,8 @@ Global
 		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A406134-58EA-4D4E-90D1-1DBA3DD589B7}.Debug|Any CPU.ActiveCfg = Debug
+		{3A406134-58EA-4D4E-90D1-1DBA3DD589B7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
