@@ -9,13 +9,32 @@ Enable sending files with any extension to the server and enable receiving files
 
 * Create Windows APP and Windows service
 * Create a new branch and switch to it
-* Create a modules for connection to the servers
+* Create a module for ping  server
+* Create model of config file datas  
+* Create class which parse datas from config file to model
+* Create method for creating json object from model
+* Create method to ping server every KeepAlive seconds and send json object 
+* Commit and push on your branch
+* Create a pull request
+
+## Feature 
+
+Exchanging files and  screenshots with the server
+
+### Item 
+Enable sending files with any extension to the server and enable receiving files from the server
+
+#### Task
+
+* Create a new branch and switch to it
+* Create a module for connection to the server
 * Update a module, making connection stable 
 * Create methods for sending files
 * Create methods for receiving files
 * Create a screen capture method
 * Commit and push on your branch
 * Create a pull request
+* Merge branches 
 
 ## Feature 
 
