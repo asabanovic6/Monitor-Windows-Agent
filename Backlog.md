@@ -1,6 +1,6 @@
 ## Feature 
 
-Exchanging files and  screenshots with the server
+Ping server and send json datas
 
 ### Item 
 Enable sending files with any extension to the server and enable receiving files from the server
