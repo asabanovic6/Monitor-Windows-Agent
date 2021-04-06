@@ -35,10 +35,10 @@ Enable that each client request can be found in the Event Viewer written as a lo
 
 ## Feature 
 
-Views
+Activation form 
 
 ### Item 
-Enable forms for activation of agent and forms for tracking configuration file changes
+Create form for activation of agent 
 
 #### Task
 
@@ -46,10 +46,28 @@ Enable forms for activation of agent and forms for tracking configuration file c
 * Creat a form for activation of agent 
 * Create all necessary validations 
 * Handle button to send activation code to server 
+* Create request for sending code and receiving config file 
+* Commit and push on your branch
+* Create a pull request
+* Merge branches 
+
+## Feature 
+
+Views
+
+### Item 
+Form for tracking configuration file changes
+
+#### Task
+
+* Create a new branch and switch to it
 * Create a form for tracking configuration file changes
-* * Create all necessary validations 
+* Fill the form with datas from config file which we recieved from server 
+* Make fields read only except fields for file locations datas 
+* Create all necessary validations 
 * Handle refresh button to update form with new datas
 * Handle submit button to send configuration file to server
+* Enable connection to the server when applications is opened
 * Commit and push on your branch
 * Create a pull request
 * Merge branches 
