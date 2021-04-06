@@ -1,9 +1,9 @@
 ## Feature 
 
-Ping server and send json datas
+Ping to server and send json datas
 
 ### Item 
-Enable sending files with any extension to the server and enable receiving files from the server
+Enable connection to server every "keep alive" second and send json datas to server
 
 #### Task
 
