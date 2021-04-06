@@ -52,9 +52,8 @@ Create form for activation of agent
 * Merge branches 
 
 ## Feature 
+
 Form for tracking configuration file changes
-
-
 
 ### Item 
 Create for tracking configuration file changes and trough the from making connection between server and agent
@@ -69,6 +68,23 @@ Create for tracking configuration file changes and trough the from making connec
 * Handle refresh button to update form with new datas
 * Handle submit button to send configuration file to server
 * Enable connection to the server when applications is opened
+* Commit and push on your branch
+* Create a pull request
+* Merge branches 
+
+## Feature 
+
+Error handling
+
+### Item 
+Enable logging all runtime errors in the database
+
+#### Task
+
+* Create a new branch and switch to it
+* Create a method in module for sending json object with information about device and error to server
+* Find all critical parts of the code where a runtime error is possible and call the method
+* Make fields read only except fields for file locations datas 
 * Commit and push on your branch
 * Create a pull request
 * Merge branches 
