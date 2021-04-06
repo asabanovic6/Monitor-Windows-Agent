@@ -9,7 +9,7 @@ Enable sending files with any extension to the server and enable receiving files
 
 * Create Windows APP and Windows service
 * Create a new branch and switch to it
-* Create a module for connection to the server
+* Create a modules for connection to the servers
 * Update a module, making connection stable 
 * Create methods for sending files
 * Create methods for receiving files
