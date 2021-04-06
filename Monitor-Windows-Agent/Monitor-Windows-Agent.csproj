@@ -6,11 +6,13 @@
     <RootNamespace>Monitor_Windows_Agent</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>Monitor_Windows_Agent.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="Topshelf" Version="4.3.0" />
     <PackageReference Include="websocket-sharp.clone" Version="3.0.0" />
   </ItemGroup>
 
@@ -32,6 +34,9 @@
     </Reference>
     <Reference Include="PingServer">
       <HintPath>..\PingServer\bin\Debug\PingServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Terminal">
+      <HintPath>..\Terminal\bin\Debug\Terminal.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp.clone">
       <HintPath>..\PingServer\bin\Debug\websocket-sharp.clone.dll</HintPath>

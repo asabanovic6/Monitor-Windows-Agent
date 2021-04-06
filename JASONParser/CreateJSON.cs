@@ -9,22 +9,24 @@ namespace Monitor_Windows_Agent
 {
     public class CreateJSON
     {
-        
-        private static Parser parser = new Parser();
-        private static ComputerInfo computer = parser.ConfigParser();
+
+        private static ComputerInfo computer;
         private static ComputerDataJSON dataJSON = new ComputerDataJSON();
   
-
-    public static String getJSON ()
+        public CreateJSON (String path )
         {
-            dataJSON.name = computer.name;
-            dataJSON.location = computer.location;
+                Parser parser = new Parser(path);
+     computer = parser.ConfigParser();
+    }
+    public  String getJSON ()
+        {
+            dataJSON.deviceUid = computer.deviceUid;
             dataJSON.timeStamp = DateTime.Now;
             dataJSON.message = "Djes Huso";
-            dataJSON.cpuUsage = computer.cpuUsage;
-            dataJSON.ramUsage = computer.ramUsage;
-            dataJSON.hddUsage = computer.hddUsage;
-            dataJSON.gpuUsage = computer.gpuUsage;
+            dataJSON.cpuUsage = (Decimal)0.5;
+            dataJSON.ramUsage = (Decimal)0.5;
+            dataJSON.hddUsage = (Decimal)0.5;
+            dataJSON.gpuUsage = (Decimal)0.5;
             String result = JsonConvert.SerializeObject(dataJSON);
             return result;
         }

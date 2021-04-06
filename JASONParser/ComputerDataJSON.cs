@@ -9,8 +9,7 @@ namespace JASONParser
    public class ComputerDataJSON
     {
         public DateTime timeStamp { get; set; }
-        public String name { get; set; }
-        public String location { get; set; }
+       public String deviceUid { get; set; }
         public String  message { get; set; }
    
         public Nullable<Decimal> cpuUsage { get; set; }

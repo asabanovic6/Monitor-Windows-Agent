@@ -12,14 +12,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ImageSender\ImageSender.csproj" />
-    <ProjectReference Include="..\JASONParser\JASONParser.csproj" />
-    <ProjectReference Include="..\PingServer\PingServer.csproj" />
+    <ProjectReference Include="..\Monitor-Windows-Agent\Monitor-Windows-Agent.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="EventLogger">
       <HintPath>..\EventLogger\bin\Debug\EventLogger.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageSender">
+      <HintPath>..\..\SI_proj\Monitor-Windows-Agent\ImageSender\bin\Debug\ImageSender.dll</HintPath>
+    </Reference>
+    <Reference Include="JASONParser">
+      <HintPath>..\..\SI_proj\Monitor-Windows-Agent\JASONParser\bin\Debug\JASONParser.dll</HintPath>
+    </Reference>
+    <Reference Include="PingServer">
+      <HintPath>..\..\SI_proj\Monitor-Windows-Agent\PingServer\bin\Debug\PingServer.dll</HintPath>
     </Reference>
   </ItemGroup>
 

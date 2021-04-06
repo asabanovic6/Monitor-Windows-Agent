@@ -4,23 +4,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monitor-Windows-Agent", "Monitor-Windows-Agent\Monitor-Windows-Agent.csproj", "{A0FB8F20-DF6E-4826-AE9B-A818DDAF7FBD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0} = {A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Moduli", "Moduli", "{6533C050-FD25-48CC-8E84-141BE1536D4C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JASONParser", "JASONParser\JASONParser.csproj", "{D22A0FEF-C14C-4E7B-95F3-35033647AEB9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{EE5DD04A-4ED2-4F60-BD02-2849CCE1FD31}"
-	ProjectSection(SolutionItems) = preProject
-		config.json = config.json
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingServer", "PingServer\PingServer.csproj", "{BDA29D19-C117-425D-8CB9-7CFD8CA59CFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageSender", "ImageSender\ImageSender.csproj", "{37EBCFD7-214C-4A23-9B15-450F15ACC9CF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonitorWindowsService", "MonitorWindowsService\MonitorWindowsService.csproj", "{8339E86F-D2F4-41E0-82B6-0F9A0D3F1603}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDA29D19-C117-425D-8CB9-7CFD8CA59CFC} = {BDA29D19-C117-425D-8CB9-7CFD8CA59CFC}
+		{A0FB8F20-DF6E-4826-AE9B-A818DDAF7FBD} = {A0FB8F20-DF6E-4826-AE9B-A818DDAF7FBD}
+		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0} = {A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}
+		{37EBCFD7-214C-4A23-9B15-450F15ACC9CF} = {37EBCFD7-214C-4A23-9B15-450F15ACC9CF}
+		{D22A0FEF-C14C-4E7B-95F3-35033647AEB9} = {D22A0FEF-C14C-4E7B-95F3-35033647AEB9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogger", "EventLogger\EventLogger.csproj", "{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Terminal", "Terminal\Terminal.csproj", "{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MWA_Setup", "MWA_Setup\MWA_Setup.vdproj", "{3A406134-58EA-4D4E-90D1-1DBA3DD589B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +63,12 @@ Global
 		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A406134-58EA-4D4E-90D1-1DBA3DD589B7}.Debug|Any CPU.ActiveCfg = Debug
+		{3A406134-58EA-4D4E-90D1-1DBA3DD589B7}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +78,7 @@ Global
 		{BDA29D19-C117-425D-8CB9-7CFD8CA59CFC} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 		{37EBCFD7-214C-4A23-9B15-450F15ACC9CF} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 		{A6C0883A-12DF-4BEF-B4DA-9672483A9DA0} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
+		{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89} = {6533C050-FD25-48CC-8E84-141BE1536D4C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F068B141-8891-44FF-BCDB-E46328BA78DA}

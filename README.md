@@ -25,9 +25,12 @@ Deinstaliranje servisa se vrši komandom:
 monitorwindowsservice.exe uninstall
 ```
 # Features
-1. Korisnik ima mogućnost čitanja podataka iz .txt file-a.
-2. Korisnik ima mogućnost slanja file-a prema serveru, kao i primanje file-a od servera.
-3. Korisnik ima mogućnost da se svaki zahtjev prikaže u Event Vieweru u vidu logova u kojima se nalazi podatak o klijentu koji zahtjeva neki upit, te podatak o tipu upita koji se zahtijeva. 
+1. Pinganje servera i slanje json objekta prilikom pinganja 
+2. Razmjena datoteka i slanje screenshota ka serveru 
+3. Prikazivanje zahtjeva u Event Vieweru u vidu logova o upitima
+4. Aktivacijska forma 
+5. Forma za praćenje izmjena nad konfiguracijskom datotekom
+6. Upravljanje errorima
 # Contribute
 1. Dodjeljivanje radnih zadataka (preuzimanje) se radi na nivou Itema, a razvoj softvera se obavlja na nivou Taska.
   Za svaki Item osoba koja je preuzela da radi taj Item kreira novi Branch na Repozitorij koristeći opciju kreiranja brancha za Issue.

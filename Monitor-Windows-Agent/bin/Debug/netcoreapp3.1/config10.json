@@ -1,0 +1,19 @@
+{
+  "name": "Desktop PC 1",
+  "location": "Mostar - Braće Fejić",
+  "deviceUid": "40fff164-0657-4c20-b0d0-40794b42bd3e",
+  "keepAlive": 30.0,
+  "webSocketUrl": "109.237.39.237:25565",
+  "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
+  "mainUri": null,
+  "fileUri": "//",
+  "installationCode": null,
+  "fileLocations": {
+    "File1": "C:\\Users\\Amina\\Documents",
+    "File2": "",
+    "File3": "",
+    "File4": "",
+    "File5": ""
+  }
+}
+
