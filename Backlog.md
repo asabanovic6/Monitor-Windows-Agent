@@ -9,10 +9,11 @@ Enable sending files with any extension to the server and enable receiving files
 
 * Create Windows APP and Windows service
 * Create a new branch and switch to it
-* Creating a module for connection to the server
-* Creating methods for sending files
-* Creating methods for receiving files
-* Creating a screen capture method
+* Create a module for connection to the server
+* Update a module, making connection stable 
+* Create methods for sending files
+* Create methods for receiving files
+* Create a screen capture method
 * Commit and push on your branch
 * Create a pull request
 
@@ -26,8 +27,29 @@ Enable that each client request can be found in the Event Viewer written as a lo
 #### Task
 
 * Create a new branch and switch to it
-* Creating a new module for developing Event Logger methods 
-* Creating methods in Event Logger
+* Create a new module for developing Event Logger methods 
+* Create methods in Event Logger
+* Commit and push on your branch
+* Create a pull request
+* Merge branches 
+
+## Feature 
+
+Views
+
+### Item 
+Enable forms for activation of agent and forms for tracking configuration file changes
+
+#### Task
+
+* Create a new branch and switch to it
+* Creat a form for activation of agent 
+* Create all necessary validations 
+* Handle button to send activation code to server 
+* Create a form for tracking configuration file changes
+* * Create all necessary validations 
+* Handle refresh button to update form with new datas
+* Handle submit button to send configuration file to server
 * Commit and push on your branch
 * Create a pull request
 * Merge branches 
