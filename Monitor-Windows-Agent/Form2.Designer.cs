@@ -79,11 +79,11 @@ namespace Monitor_Windows_Agent
             this.CancelBtn = new System.Windows.Forms.Button();
             this.Refresh = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // iconNotify
@@ -91,14 +91,13 @@ namespace Monitor_Windows_Agent
             this.iconNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("iconNotify.Icon")));
             this.iconNotify.Text = "notifyIcon1";
             this.iconNotify.Visible = true;
-         //  this.iconNotify.DoubleClick += new System.EventHandler(this.iconNotify_DoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(15, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 20);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
@@ -116,7 +115,7 @@ namespace Monitor_Windows_Agent
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(15, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
+            this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Location:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -126,7 +125,7 @@ namespace Monitor_Windows_Agent
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Keep alive:";
             // 
@@ -349,33 +348,19 @@ namespace Monitor_Windows_Agent
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.submitBtn);
             this.groupBox1.Controls.Add(this.CancelBtn);
             this.groupBox1.Controls.Add(this.Refresh);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(15, 15);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(783, 401);
+            this.groupBox1.Size = new System.Drawing.Size(788, 401);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Configuration form";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBoxName);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBoxKeepAlive);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBoxLocation);
-            this.panel1.Location = new System.Drawing.Point(26, 36);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(342, 285);
-            this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -401,24 +386,40 @@ namespace Monitor_Windows_Agent
             this.panel2.Size = new System.Drawing.Size(367, 285);
             this.panel2.TabIndex = 1;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBoxName);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBoxKeepAlive);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.textBoxLocation);
+            this.panel1.Location = new System.Drawing.Point(26, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(342, 285);
+            this.panel1.TabIndex = 0;
+            // 
             // Form2
             // 
+            this.AcceptButton = this.button4;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 426);
+            this.ClientSize = new System.Drawing.Size(840, 481);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-           // this.Resize += new System.EventHandler(this.Form2_Resize);
             this.groupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

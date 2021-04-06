@@ -15,7 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_22426FCA84DD4F9FA19D12422B6E6EC3"
+        "MsmKey" = "8:_ABB6A04C750A4C6C9AE767A88EFD3311"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -50,6 +50,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -74,6 +82,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -314,7 +330,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_124F79C1303E411CA3DD4D4C7878CB30"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A58CAC7E4911478B865A50B3D93A9ACB"
             {
             "Name" = "8:Monitor Windows Agent"
             "Arguments" = "8:"
@@ -322,13 +338,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_22426FCA84DD4F9FA19D12422B6E6EC3"
+            "Target" = "8:_ABB6A04C750A4C6C9AE767A88EFD3311"
             "Folder" = "8:_F94CA81497594246B2F7477460B97594"
             "WorkingFolder" = "8:_96B3C817FAA34B7CBC2AD15AC02A680C"
             "Icon" = "8:_DE2F621921ED48068D1EC239508B955A"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_7AAE29FC49824C51A7B504866799B5CB"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_FB90220944A84648803220ED5333FC59"
             {
             "Name" = "8:Monitor Windows Agent"
             "Arguments" = "8:"
@@ -336,7 +352,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_22426FCA84DD4F9FA19D12422B6E6EC3"
+            "Target" = "8:_ABB6A04C750A4C6C9AE767A88EFD3311"
             "Folder" = "8:_11E88469D5FA46E293F55EAA440CE81B"
             "WorkingFolder" = "8:_96B3C817FAA34B7CBC2AD15AC02A680C"
             "Icon" = "8:_DE2F621921ED48068D1EC239508B955A"
@@ -741,7 +757,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_22426FCA84DD4F9FA19D12422B6E6EC3"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_ABB6A04C750A4C6C9AE767A88EFD3311"
             {
             "SourcePath" = "8:..\\Monitor-Windows-Agent\\obj\\Debug\\netcoreapp3.1\\apphost.exe"
             "TargetName" = "8:"
