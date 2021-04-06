@@ -52,11 +52,12 @@ Create form for activation of agent
 * Merge branches 
 
 ## Feature 
+Form for tracking configuration file changes
 
-Views
+
 
 ### Item 
-Form for tracking configuration file changes
+Create for tracking configuration file changes and trough the from making connection between server and agent
 
 #### Task
 
