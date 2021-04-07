@@ -45,6 +45,7 @@ Global
 		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Debug|Any CPU.ActiveCfg = Debug
 		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Debug|Any CPU.Build.0 = Debug
 		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Release|Any CPU.ActiveCfg = Release
+		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

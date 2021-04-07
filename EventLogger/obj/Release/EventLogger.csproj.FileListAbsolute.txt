@@ -15,3 +15,11 @@ C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Release\EventLo
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.dll
 C:\Users\Dalee\Desktop\si2\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\bin\Release\EventLogger.dll
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\bin\Release\EventLogger.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\bin\Release\Topshelf.dll
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\bin\Release\Topshelf.xml
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.dll
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.pdb

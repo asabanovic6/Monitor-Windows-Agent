@@ -83,11 +83,12 @@ namespace MonitorWindowsAgentService
                 comp.location = result["location"].Value<String>();
                
                 string json = JsonConvert.SerializeObject(comp);
-                File.WriteAllText(@"C:\Program Files (x86)\Grupa2\Monitor Service", json);
+                File.WriteAllText(@"C:\Program Files (x86)\Grupa2\Monitor Service\config.json", json);
                 Post();
             }
-            catch (System.Net.WebException)
+            catch (System.Net.WebException e)
             {
+                WriteToFile(e.ToString());
                 Post();
 
             }
