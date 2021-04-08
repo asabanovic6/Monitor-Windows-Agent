@@ -43,7 +43,7 @@ namespace MonitorWindowsAgentService
             // serviceInstaller1
             // 
             this.serviceInstaller1.Description = "Monitor Windows Agent Service";
-            this.serviceInstaller1.DisplayName = "MonitorWindowsAgentService";
+            this.serviceInstaller1.DisplayName = "Monitor Windows Agent Service";
             this.serviceInstaller1.ServiceName = "MonitorWindowsAgentService";
             // 
             // ProjectInstaller

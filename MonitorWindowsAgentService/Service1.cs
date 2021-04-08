@@ -1,5 +1,4 @@
 ﻿using JASONParser;
-
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +14,6 @@ using System.Runtime.InteropServices;
 using Newtonsoft.Json;
 using System.Net;
 using Monitor_Windows_Agent;
-
 using EventLogger;
 using Microsoft.Win32;
 using Newtonsoft.Json.Linq;
@@ -33,7 +31,7 @@ namespace MonitorWindowsAgentService
         WebSocket ws;
         private ComputerInfo comp=new ComputerInfo();
         private JToken result;
-      
+        private System.Timers.Timer _timer = new System.Timers.Timer();
         public Service1()
         {
             InitializeComponent();
@@ -41,9 +39,6 @@ namespace MonitorWindowsAgentService
         }
         protected override void OnStart(string[] args)
         {
-           //
-           //WriteToFile("Service is started at " +comp.ToString());
-           // pars = new Parser();
             timer1 = new System.Timers.Timer();
             timer1.Elapsed += new ElapsedEventHandler(this.OnElapsedTime);
             timer1.Interval =(int) pars.ConfigParser().keepAlive*1000; //number in milisecinds
@@ -57,13 +52,11 @@ namespace MonitorWindowsAgentService
             timer2.Enabled = true;
             timer2.Start();
         }
+       
         private void GetStartValue() {
             comp = pars.ConfigParser();
             String url = comp.mainUri + comp.installationCode;
             JToken result;
-            //ComputerInfo comp = new ComputerInfo();
-            //WriteToFile(url+"aaa");
-
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.Method = "GET";
             try
@@ -76,7 +69,6 @@ namespace MonitorWindowsAgentService
                     String responseString = reader.ReadToEnd();
                     
                     result = JsonConvert.DeserializeObject<JToken>(responseString);
-                    WriteToFile(result.ToString());
                 }
                 comp.deviceUid = result["deviceUid"].Value<String>();
                 comp.name = result["name"].Value<String>();
@@ -88,7 +80,6 @@ namespace MonitorWindowsAgentService
             }
             catch (System.Net.WebException e)
             {
-                WriteToFile(e.ToString());
                 Post();
 
             }
@@ -97,8 +88,7 @@ namespace MonitorWindowsAgentService
         }
         private void SocketPong(object sender, ElapsedEventArgs e)
         {
-            
-            if(ws!=null)    
+            if (ws!=null)    
                 ws.Send("{ \"type\":\"" + "pong" + "\"}");
         
         }
@@ -113,16 +103,11 @@ namespace MonitorWindowsAgentService
             PostJson();
         }
         public void StartConfig() {
-            //string uri = pars.ConfigParser().pingUri;
-            //p1.Post();
-            // Post();
-            GetStartValue();
             
-            //  WriteToFile("Inicijalizovo sam se: " + pars.ConfigParser()+" u: "+ DateTime.Now);
-
+            GetStartValue();
+    
         }
         public void PostJson() {
-            
 
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(pars.ConfigParser().pingUri);
             httpWebRequest.ContentType = "application/json";
@@ -191,26 +176,18 @@ namespace MonitorWindowsAgentService
             }
             catch (Exception e)
             {
-                WriteToFile(pars.ConfigParser().deviceUid + " mater usta");
             }
 
         }
         public void conn()
         {
-           /* if (Post() == 0) { 
-                
-            }*/
-
-            // vs = ws://109.237.36.76:25565
-            // ws = new WebSocket(url: "ws://si-grupa5.herokuapp.com", onMessage: OnMessage, onError: OnError);
+     
             ws = new WebSocket(url: pars.ConfigParser().webSocketUrl, onMessage: OnMessage, onError: OnError);
             ws.SetCookie(new WebSocketSharp.Net.Cookie("cookie", comp.deviceUid));
             ws.Connect().Wait();
 
             TimeSpan startTimeSpan = TimeSpan.Zero;
             TimeSpan periodTimeSpan = TimeSpan.FromSeconds(30);
-
-           
 
             sendMessage("sendCredentials", "");
         }

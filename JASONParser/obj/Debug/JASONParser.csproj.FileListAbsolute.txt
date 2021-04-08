@@ -246,7 +246,6 @@ C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Debug\System.
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.xml
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Debug\websocket-sharp.clone.xml
-C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CoreCompileInputs.cache
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.dll

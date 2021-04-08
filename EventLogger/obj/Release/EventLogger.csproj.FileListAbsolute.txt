@@ -23,3 +23,4 @@ C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\Event
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.dll
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csprojAssemblyReference.cache

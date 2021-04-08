@@ -1023,9 +1023,9 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Monitor Service"
-        "ProductCode" = "8:{153F8D11-BAC5-4412-BD7F-C7F62E5FAF61}"
-        "PackageCode" = "8:{F77FA6AE-B693-47BE-942C-D11618A6D2BE}"
-        "UpgradeCode" = "8:{8152BB68-13E6-48E2-B872-3E3FF9B12199}"
+        "ProductCode" = "8:{8DB21811-5E96-4533-B7A2-BB20A58314E0}"
+        "PackageCode" = "8:{70BF3CE3-4A0A-4D18-B092-D7ACAF5A8899}"
+        "UpgradeCode" = "8:{C433B695-F8BB-4399-9A0A-BD0525A3A703}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"

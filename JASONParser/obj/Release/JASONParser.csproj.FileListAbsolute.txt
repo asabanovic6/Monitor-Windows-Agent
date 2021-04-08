@@ -82,3 +82,4 @@ C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Release\JASON
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.csproj.CopyComplete
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.dll
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Release\JASONParser.csprojAssemblyReference.cache

@@ -1,0 +1,6 @@
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at MonitorWindowsAgentService.Service1.GetStartValue() in C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\MonitorWindowsAgentService\Service1.cs:line 85
+System.Net.WebException: The remote server returned an error: (404) Not Found.
+   at System.Net.HttpWebRequest.GetResponse()
+   at MonitorWindowsAgentService.Service1.GetStartValue() in C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\MonitorWindowsAgentService\Service1.cs:line 85
