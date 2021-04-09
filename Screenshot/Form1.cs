@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,8 @@ namespace Screenshot
         public Form1()
         {
             InitializeComponent();
+            RegistryKey reg = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            reg.SetValue("Screenshot", Application.ExecutablePath.ToString());
             makeFolder();
             this.notifyIcon1.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip();
             this.notifyIcon1.ContextMenuStrip.Items.Add("Exit", null, closeApp);
@@ -103,7 +106,6 @@ namespace Screenshot
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            notifyIcon1.Visible = true;
             Hide();
         }
 
@@ -111,7 +113,17 @@ namespace Screenshot
         {
             Show();
             this.WindowState = FormWindowState.Normal;
-            notifyIcon1.Visible = false;
         }
+
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Show();
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+       
     }
 }
