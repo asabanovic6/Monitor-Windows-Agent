@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Screenshot", "Screenshot\Screenshot.csproj", "{CF9C06DD-8529-4E6C-B496-51AAED9EBF4D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ScreenshotApp", "ScreenshotApp\ScreenshotApp.vdproj", "{FD0F9788-D4D0-4BC8-AE3A-76B3E3DCC8E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF9C06DD-8529-4E6C-B496-51AAED9EBF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9C06DD-8529-4E6C-B496-51AAED9EBF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9C06DD-8529-4E6C-B496-51AAED9EBF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9C06DD-8529-4E6C-B496-51AAED9EBF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD0F9788-D4D0-4BC8-AE3A-76B3E3DCC8E6}.Debug|Any CPU.ActiveCfg = Debug
+		{FD0F9788-D4D0-4BC8-AE3A-76B3E3DCC8E6}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD0BBF11-E3E3-4265-8CCA-896ABE48C1E7}
+	EndGlobalSection
+EndGlobal
