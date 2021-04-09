@@ -8,3 +8,13 @@ C:\Users\Vedad\source\repos\Screenshot\Screenshot\obj\Release\Screenshot.csproj.
 C:\Users\Vedad\source\repos\Screenshot\Screenshot\obj\Release\Screenshot.csproj.CoreCompileInputs.cache
 C:\Users\Vedad\source\repos\Screenshot\Screenshot\obj\Release\Screenshot.exe
 C:\Users\Vedad\source\repos\Screenshot\Screenshot\obj\Release\Screenshot.pdb
+C:\Users\lejla\Desktop\SI\error\Screenshot\bin\Release\Screenshot.exe.config
+C:\Users\lejla\Desktop\SI\error\Screenshot\bin\Release\Screenshot.exe
+C:\Users\lejla\Desktop\SI\error\Screenshot\bin\Release\Screenshot.pdb
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.csprojAssemblyReference.cache
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.Form1.resources
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.Properties.Resources.resources
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.csproj.GenerateResource.cache
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.csproj.CoreCompileInputs.cache
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.exe
+C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Release\Screenshot.pdb

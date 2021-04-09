@@ -62,6 +62,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -86,6 +94,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -93,6 +109,20 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_8969C6BE328D42978A624D7BAB437320"
+            {
+            "Name" = "8:Primary output from Screenshot (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_C2B9D3E0E1924A5DBAF1266842586959"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_7D363DC3_6321_4245_8214_8E49B5628D31"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_9D681804CC2F485F85BF534BB8FDE9C1"
             {
             "Name" = "8:Primary output from Screenshot (Active)"
@@ -231,21 +261,21 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ScreenshotApp"
-        "ProductCode" = "8:{4D87E9F4-3BBD-440A-8805-DEF4065E1B04}"
-        "PackageCode" = "8:{9528E65A-7825-406B-BE73-B6F90660304B}"
-        "UpgradeCode" = "8:{766C663F-8ABE-464B-9D8B-E40A5267A21A}"
+        "ProductCode" = "8:{70947D2F-59A9-4026-923C-C6C993669881}"
+        "PackageCode" = "8:{74CDB86A-BECC-4C03-956E-6E7775546EE6}"
+        "UpgradeCode" = "8:{7447A7F5-4291-4D9C-A1BE-26A67F4A95BA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Grupa2"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:ScreenshotApp"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Default Company Name"
+        "ARPCONTACT" = "8:Grupa2"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -767,7 +797,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C2B9D3E0E1924A5DBAF1266842586959"
             {
-            "SourcePath" = "8:..\\Screenshot\\obj\\Release\\Screenshot.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B849FBB7013B4E268984403C3E8BA1BA"
