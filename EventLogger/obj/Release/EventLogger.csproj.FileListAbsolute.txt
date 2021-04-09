@@ -33,3 +33,12 @@ C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Release\EventLogger.csproj.CoreC
 C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
 C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Release\EventLogger.dll
 C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Release\EventLogger.pdb
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\bin\Release\EventLogger.dll
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\bin\Release\EventLogger.pdb
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\bin\Release\Topshelf.dll
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\bin\Release\Topshelf.xml
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.csprojAssemblyReference.cache
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.dll
+C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.pdb

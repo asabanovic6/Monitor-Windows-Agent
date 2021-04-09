@@ -176,7 +176,7 @@ namespace MonitorWindowsAgentService
             }
             catch (Exception e)
             {
-                PostError();
+                PostError(0); // bit ce update-ovano
             }
 
         }
@@ -195,7 +195,7 @@ namespace MonitorWindowsAgentService
 
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
-            PostError();
+            PostError(0); // bit ce update-ovano
             throw new NotImplementedException();
         }
 
@@ -253,7 +253,7 @@ namespace MonitorWindowsAgentService
 
             }
             catch (Exception e) {
-                PostError();
+                PostError(0); // bit ce update-ovano
                 sendMessage("sendScreenshot", "error");
                 WriteToFile(e.ToString());
             }
@@ -287,9 +287,9 @@ namespace MonitorWindowsAgentService
 
         }
 
-        public void PostError()
+        public void PostError(int code)
         {
-            string errorData = "{ \"code\":\"" + 0 + "\", \"message\":\"" + "Doslo je do greske!" + "\", \"deviceUid\":\"" + pars.ConfigParser().deviceUid + "\", \"errorTime\":\"" + DateTime.Now + "\"}";
+            string errorData = "{ \"code\":\"" + code + "\", \"message\":\"" + "Doslo je do greske!" + "\", \"deviceUid\":\"" + pars.ConfigParser().deviceUid + "\", \"errorTime\":\"" + DateTime.Now + "\"}";
             byte[] bytes = Encoding.UTF8.GetBytes(errorData);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(comp.errorUri);
             httpWebRequest.Method = "POST";
