@@ -59,3 +59,12 @@ C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLo
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.dll
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.pdb
+C:\Users\lejla\Desktop\SI\error\EventLogger\bin\Debug\EventLogger.dll
+C:\Users\lejla\Desktop\SI\error\EventLogger\bin\Debug\EventLogger.pdb
+C:\Users\lejla\Desktop\SI\error\EventLogger\bin\Debug\Topshelf.dll
+C:\Users\lejla\Desktop\SI\error\EventLogger\bin\Debug\Topshelf.xml
+C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache
+C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Debug\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
+C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Debug\EventLogger.dll
+C:\Users\lejla\Desktop\SI\error\EventLogger\obj\Debug\EventLogger.pdb

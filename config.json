@@ -5,6 +5,7 @@
   "keepAlive": 30.0,
   "webSocketUrl": "ws://si-grupa5.herokuapp.com",
   "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
+  "errorUri": "https://si-2021.167.99.244.168.nip.io:3000/errorLog",
   "mainUri": "https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/",
   "fileUri": "ws",
   "installationCode": "davor",

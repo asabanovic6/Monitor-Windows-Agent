@@ -176,6 +176,7 @@ namespace MonitorWindowsAgentService
             }
             catch (Exception e)
             {
+                PostError();
             }
 
         }
@@ -194,6 +195,7 @@ namespace MonitorWindowsAgentService
 
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
+            PostError();
             throw new NotImplementedException();
         }
 
@@ -251,6 +253,7 @@ namespace MonitorWindowsAgentService
 
             }
             catch (Exception e) {
+                PostError();
                 sendMessage("sendScreenshot", "error");
                 WriteToFile(e.ToString());
             }
@@ -282,6 +285,26 @@ namespace MonitorWindowsAgentService
             //ovdje trebam vratiti ws ono sto njima treba 
             ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"ip\":\"" + "ip" + "\"}");
 
+        }
+
+        public void PostError()
+        {
+            string errorData = "{ \"code\":\"" + 0 + "\", \"message\":\"" + "Doslo je do greske!" + "\", \"deviceUid\":\"" + pars.ConfigParser().deviceUid + "\", \"errorTime\":\"" + DateTime.Now + "\"}";
+            byte[] bytes = Encoding.UTF8.GetBytes(errorData);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(comp.errorUri);
+            httpWebRequest.Method = "POST";
+            httpWebRequest.ContentLength = bytes.Length;
+            httpWebRequest.ContentType = "application/json";
+            using (Stream requestStream = httpWebRequest.GetRequestStream())
+            {
+                requestStream.Write(bytes, 0, bytes.Count());
+            }
+            var httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            if (httpWebResponse.StatusCode != HttpStatusCode.OK)
+            {
+                string message = String.Format("POST failed. Received HTTP {0}", httpWebResponse.StatusCode);
+                throw new ApplicationException(message);
+            }
         }
 
     }
