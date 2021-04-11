@@ -247,7 +247,7 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ScreenshotApp"
-        "ProductCode" = "8:{09A1BAE4-1003-427B-8FB5-118DEB44887B}"
+        "ProductCode" = "8:{ADEE981A-D0D3-4348-8C2C-9D55A1D6BCDC}"
         "PackageCode" = "8:{1F4485A4-A9E9-4B9D-8C26-42ECEF595C55}"
         "UpgradeCode" = "8:{7447A7F5-4291-4D9C-A1BE-26A67F4A95BA}"
         "AspNetVersion" = "8:4.0.30319.0"
@@ -769,7 +769,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C2B9D3E0E1924A5DBAF1266842586959"
             {
-            "SourcePath" = "8:..\\Screenshot\\obj\\Debug\\Screenshot.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B849FBB7013B4E268984403C3E8BA1BA"

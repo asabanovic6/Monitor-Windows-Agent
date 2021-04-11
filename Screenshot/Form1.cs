@@ -71,6 +71,8 @@ namespace Screenshot
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button3.Enabled = true;
+            button2.Enabled = false;
             timer1.Stop();
 
         }
@@ -85,7 +87,8 @@ namespace Screenshot
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            button2.Enabled = true;
+            button3.Enabled = false;
             timer1.Start();
         }
 
