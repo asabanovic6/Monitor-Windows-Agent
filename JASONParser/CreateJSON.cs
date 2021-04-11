@@ -19,7 +19,7 @@ namespace Monitor_Windows_Agent
         {
             dataJSON.deviceUid = computer.deviceUid;
             dataJSON.timeStamp = DateTime.Now;
-            dataJSON.message = "Djes Huso";
+            dataJSON.message = "Djes";
             dataJSON.cpuUsage = (Decimal)0.5;
             dataJSON.ramUsage = (Decimal)0.5;
             dataJSON.hddUsage = (Decimal)0.5;
