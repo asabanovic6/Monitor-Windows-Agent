@@ -368,20 +368,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D93A7816DD3D4AD9BD318EFE393C6172"
-            {
-            "Name" = "8:ScreenshotApp"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_C2B9D3E0E1924A5DBAF1266842586959"
-            "Folder" = "8:_2017067CAEE646F1B9D3E25B5F770A55"
-            "WorkingFolder" = "8:_B849FBB7013B4E268984403C3E8BA1BA"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {
@@ -783,7 +769,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_C2B9D3E0E1924A5DBAF1266842586959"
             {
-            "SourcePath" = "8:..\\Screenshot\\obj\\Release\\Screenshot.exe"
+            "SourcePath" = "8:..\\Screenshot\\obj\\Debug\\Screenshot.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B849FBB7013B4E268984403C3E8BA1BA"

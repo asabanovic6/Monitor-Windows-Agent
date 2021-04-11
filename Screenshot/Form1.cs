@@ -41,6 +41,7 @@ namespace Screenshot
 
         private void screenshot(object sender, EventArgs e)
         {
+            makeFolder();
             Bitmap memoryImage;
 
             memoryImage = new Bitmap(1920, 1080);
