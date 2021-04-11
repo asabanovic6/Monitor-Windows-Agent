@@ -21,6 +21,7 @@ using WebSocketSharp;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
+using TerminalLibrary;
 
 namespace MonitorWindowsAgentService
 {
@@ -31,7 +32,6 @@ namespace MonitorWindowsAgentService
         WebSocket ws;
         private ComputerInfo comp=new ComputerInfo();
         private JToken result;
-        private System.Timers.Timer _timer = new System.Timers.Timer();
         public Service1()
         {
             InitializeComponent();
@@ -62,7 +62,6 @@ namespace MonitorWindowsAgentService
             try
             {
                 var httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-                //WriteToFile(httpWebResponse.Headers.ToString());
                 using (Stream stream = httpWebResponse.GetResponseStream())
                 {
                     StreamReader reader = new StreamReader(stream, Encoding.UTF8);
@@ -73,17 +72,15 @@ namespace MonitorWindowsAgentService
                 comp.deviceUid = result["deviceUid"].Value<String>();
                 comp.name = result["name"].Value<String>();
                 comp.location = result["location"].Value<String>();
-               
+                comp.installationCode = result["installationCode"].Value<String>();
                 string json = JsonConvert.SerializeObject(comp);
                 File.WriteAllText(@"C:\Program Files (x86)\Grupa2\Monitor Service\config.json", json);
                 Post();
             }
-            catch (System.Net.WebException e)
+            catch (Exception e)
             {
-                Post();
-
+                PostError(0);
             }
-
 
         }
         private void SocketPong(object sender, ElapsedEventArgs e)
@@ -103,8 +100,10 @@ namespace MonitorWindowsAgentService
             PostJson();
         }
         public void StartConfig() {
-            
-            GetStartValue();
+            comp = pars.ConfigParser();
+            if (comp.installationCode != null)
+                GetStartValue();
+            else Post();
     
         }
         public void PostJson() {
@@ -196,7 +195,7 @@ namespace MonitorWindowsAgentService
         private Task OnError(WebSocketSharp.ErrorEventArgs arg)
         {
             PostError(0); // bit ce update-ovano
-            throw new NotImplementedException();
+            return Task.FromResult(0);
         }
 
         private  Task OnMessage(MessageEventArgs messageEventArgs)
@@ -210,9 +209,14 @@ namespace MonitorWindowsAgentService
             }
             else if (result["type"].Value<String>() == "Disconnected") { return Task.FromResult(0); }
 
-            if (result["type"].Value<String>() == "command") sendMessage("command_result", "radi");
+            if (result["type"].Value<String>() == "command") 
+                {
+                    String ret = TerminalCommand.RunCommand(result["command"].Value<String>(), result["path"].Value<String>());
+                    ret += comp.deviceUid + "\"}";
+                    ws.Send(ret);
+                }
 
-            else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
+                else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
@@ -227,35 +231,22 @@ namespace MonitorWindowsAgentService
         private void sendScreenshot()
         {
             try {
-
-                var captureBmp = new Bitmap(1920, 1080, PixelFormat.Format32bppArgb);
-                using (var captureGraphic = Graphics.FromImage(captureBmp))
+                using (Image image = Image.FromFile(@"C:\MyScreenshot\screenshot.jpg"))
                 {
-                    captureGraphic.CopyFromScreen(0, 0, 0, 0, captureBmp.Size);
-                    captureBmp.Save("capture.jpg", ImageFormat.Jpeg);
-                }
-                //potrebno podesit putanju slike
-                using (Image image = Image.FromFile(@"capture.jpg"))
-                {
-
                     using (MemoryStream m = new MemoryStream())
                     {
-
                         image.Save(m, image.RawFormat);
                         byte[] imageBytes = m.ToArray();
-
                         string base64String = Convert.ToBase64String(imageBytes);
-
+                        WriteToFile(base64String);
                         sendMessage("sendScreenshot", base64String);
-
                     }
                 }
 
             }
             catch (Exception e) {
-                PostError(0); // bit ce update-ovano
-                sendMessage("sendScreenshot", "error");
-                WriteToFile(e.ToString());
+                ws.Send("{ \"type\":\"" + "error" + "\", \"message\":\"" + "Can't take screenshot" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                PostError(0);
             }
         }
         private  void sendMessage(string type, string message)

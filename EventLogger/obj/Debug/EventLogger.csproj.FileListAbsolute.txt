@@ -77,3 +77,4 @@ C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Debug\EventLogger.cspr
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Debug\EventLogger.csproj.CopyComplete
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Debug\EventLogger.dll
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Debug\EventLogger.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\EventLogger\obj\Debug\EventLogger.csprojAssemblyReference.cache

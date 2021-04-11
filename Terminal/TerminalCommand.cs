@@ -5,7 +5,7 @@ namespace TerminalLibrary
 {
     public class TerminalCommand
     {
-        public string RunCommand(string command, string path)
+        public static string RunCommand(string command, string path)
         {
             var process = new Process();
             process.StartInfo.UseShellExecute = false;
@@ -22,7 +22,7 @@ namespace TerminalLibrary
             return JsonConvert.SerializeObject(str);
         }
 
-        private string GetNewPath(string command, string message, string path)
+        private static string GetNewPath(string command, string message, string path)
         {
             if (command.Trim().Split(' ')[0].ToLower().Equals("cd") && message.Equals(string.Empty)) return path + "\\" + command.Trim().Split(' ')[1];
             else if (command.Trim().Split(' ')[0].ToLower().Equals("cd..") && message.Equals(string.Empty)) return path.Remove(path.LastIndexOf('\\'));
