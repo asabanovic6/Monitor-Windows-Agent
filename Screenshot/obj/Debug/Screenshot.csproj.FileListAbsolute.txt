@@ -17,3 +17,13 @@ C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Debug\Screenshot.csproj.GenerateR
 C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Debug\Screenshot.csproj.CoreCompileInputs.cache
 C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Debug\Screenshot.exe
 C:\Users\lejla\Desktop\SI\error\Screenshot\obj\Debug\Screenshot.pdb
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\bin\Debug\Screenshot.exe.config
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\bin\Debug\Screenshot.exe
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\bin\Debug\Screenshot.pdb
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.csprojAssemblyReference.cache
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.Form1.resources
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.Properties.Resources.resources
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.csproj.GenerateResource.cache
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.csproj.CoreCompileInputs.cache
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.exe
+C:\Users\Vedad\Desktop\screen\Monitor-Windows-Agent\Screenshot\obj\Debug\Screenshot.pdb

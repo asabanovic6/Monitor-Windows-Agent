@@ -44,7 +44,7 @@ namespace Screenshot
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(369, 173);
+            this.button2.Location = new System.Drawing.Point(373, 244);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(143, 64);
             this.button2.TabIndex = 1;
@@ -68,11 +68,11 @@ namespace Screenshot
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(369, 256);
+            this.button3.Location = new System.Drawing.Point(373, 161);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 65);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Reset";
+            this.button3.Text = "Start";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
