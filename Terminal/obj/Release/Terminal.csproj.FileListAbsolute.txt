@@ -14,3 +14,4 @@ C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.csproj.CopyComplete
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.dll
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.csprojAssemblyReference.cache

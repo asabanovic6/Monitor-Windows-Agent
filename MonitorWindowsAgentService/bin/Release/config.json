@@ -1,18 +1,12 @@
-{
-  "name": "Desktop PC 2",
-  "location": "Sarajevo - SCC",
-  "deviceUid": "d3143e54-d497-402f-82ef-b1b213c1d172",
-  "keepAlive": 30.0,
-  "webSocketUrl": "ws://si-grupa5.herokuapp.com",
-  "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
-  "mainUri": "https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/",
-  "fileUri": "ws",
-  "installationCode": "davor",
-  "fileLocations": {
-    "File1": "C:\\\\",
-    "File2": "C:\\\\",
-    "File3": "C:\\\\",
-    "File4": "C:\\\\",
-    "File5": "C:\\\\"
-  }
-}
+{"name":"Desktop PC 22",
+"location":"Mostar - Mepas Mall",
+"deviceUid":"856f0301-ea19-48da-a35b-70e26294c75a",
+"keepAlive":30.0,
+"webSocketUrl":"ws://si-grupa5.herokuapp.com",
+"pingUri":"https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
+"errorUri":"https://si-2021.167.99.244.168.nip.io:3000/errorLog",
+"mainUri":"https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/",
+"fileUri":"ws",
+"installationCode":"davor1",
+"fileLocations":
+{"File1":"C:\\\\","File2":"C:\\\\","File3":"C:\\\\","File4":"C:\\\\","File5":"C:\\\\"}}

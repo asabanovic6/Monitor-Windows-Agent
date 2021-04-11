@@ -126,6 +126,10 @@
       <Project>{d22a0fef-c14c-4e7b-95f3-35033647aeb9}</Project>
       <Name>JASONParser</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Terminal\Terminal.csproj">
+      <Project>{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}</Project>
+      <Name>Terminal</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Shell32">

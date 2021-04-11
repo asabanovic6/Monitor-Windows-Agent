@@ -251,3 +251,5 @@ C:\Users\Belmin\Desktop\SI_noviii\FEATURE\MonitorWindowsAgentService\obj\Debug\M
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\MonitorWindowsAgentService\obj\Debug\MonitorWindowsAgentService.csproj.CopyComplete
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\MonitorWindowsAgentService\obj\Debug\MonitorWindowsAgentService.exe
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\MonitorWindowsAgentService\obj\Debug\MonitorWindowsAgentService.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\Terminal.dll
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\MonitorWindowsAgentService\bin\Debug\Terminal.pdb
