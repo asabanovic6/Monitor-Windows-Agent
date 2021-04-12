@@ -51,7 +51,7 @@ namespace Monitor_Windows_Agent
             }
             iconNotify.Visible = true;
         }
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        protected override void OnFormClosing (FormClosingEventArgs e)
         {
             e.Cancel = false;
             

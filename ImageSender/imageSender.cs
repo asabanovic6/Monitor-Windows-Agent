@@ -12,7 +12,7 @@ using Newtonsoft.Json.Linq;
 using EventLogger;
 using System.Net;
 using System.Threading;
-using TerminalLibrary;
+using Terminal;
 using PingServer;
 
 namespace ImageSender

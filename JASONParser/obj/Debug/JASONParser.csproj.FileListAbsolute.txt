@@ -186,3 +186,7 @@ C:\Users\Adnan\Documents\GitHub\Monitor-Windows-Agent\JASONParser\obj\Debug\JASO
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Topshelf.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Terminal.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Terminal.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Terminal.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\JASONParser\bin\Debug\Terminal.pdb

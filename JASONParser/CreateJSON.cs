@@ -4,6 +4,7 @@ using System.Text;
 using JASONParser;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Terminal;
 
 namespace Monitor_Windows_Agent
 {
@@ -12,7 +13,6 @@ namespace Monitor_Windows_Agent
 
         private static ComputerInfo computer;
         private static ComputerDataJSON dataJSON = new ComputerDataJSON();
-  
         public CreateJSON (String path )
         {
                 Parser parser = new Parser(path);
@@ -23,10 +23,10 @@ namespace Monitor_Windows_Agent
             dataJSON.deviceUid = computer.deviceUid;
             dataJSON.timeStamp = DateTime.Now;
             dataJSON.message = "Djes Huso";
-            dataJSON.cpuUsage = (Decimal)0.5;
-            dataJSON.ramUsage = (Decimal)0.5;
-            dataJSON.hddUsage = (Decimal)0.5;
-            dataJSON.gpuUsage = (Decimal)0.5;
+            dataJSON.cpuUsage = TerminalCommand.getCPUUsage();
+            dataJSON.ramUsage = TerminalCommand.getRAMUsege();
+            dataJSON.hddUsage = TerminalCommand.getHDDUsage();
+            dataJSON.gpuUsage = TerminalCommand.getGPUUsage();
             String result = JsonConvert.SerializeObject(dataJSON);
             return result;
         }

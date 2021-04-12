@@ -42,7 +42,7 @@ namespace Monitor_Windows_Agent
             }
             
         }
-        protected override void OnFormClosing(FormClosingEventArgs e)
+        protected  override void OnFormClosing(FormClosingEventArgs e)
         {
             e.Cancel = true;
             this.WindowState = FormWindowState.Minimized;
@@ -70,7 +70,7 @@ namespace Monitor_Windows_Agent
         private void button1_Click(object sender, EventArgs e)
         {
 
-            String url = textBox1.Text + textBox5.Text;
+            String url = textBox4.Text+ "/api/device/GetDeviceByInstallationCode/" + textBox5.Text;
             JToken result;
             ComputerInfo comp = new ComputerInfo();
             try
@@ -90,10 +90,10 @@ namespace Monitor_Windows_Agent
                     comp.name = result["name"].Value<String>();
                     comp.location = result["location"].Value<String>();
                     comp.webSocketUrl = textBox3.Text;
-                    comp.pingUri = textBox2.Text;
+                    comp.pingUri = textBox4.Text + ":3000/liveStatus";
                     comp.installationCode = null;
-                    comp.mainUri = textBox1.Text;
-                    comp.fileUri = textBox4.Text;
+                    comp.mainUri = textBox4.Text + "/api/device/GetDeviceByInstallationCode/";
+                    comp.fileUri = textBox4.Text+ ":3000/errorLog";
                     comp.keepAlive = 30;
                     FileLocations f = new FileLocations();
                     f.File1 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -126,9 +126,9 @@ namespace Monitor_Windows_Agent
             }
             catch (Exception E)
             {
-                textBox1.Focus();
-                textBox1.Clear();
-                textBox1.BackColor = Color.LightPink;
+                textBox4.Focus();
+                textBox4.Clear();
+                textBox4.BackColor = Color.LightPink;
             }
 
 
