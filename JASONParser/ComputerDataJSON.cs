@@ -12,10 +12,10 @@ namespace JASONParser
        public String deviceUid { get; set; }
         public String  message { get; set; }
    
-        public Nullable<Decimal> cpuUsage { get; set; }
-        public Nullable<Decimal> ramUsage { get; set; }
-        public Nullable<Decimal> hddUsage { get; set; }
-        public Nullable<Decimal> gpuUsage { get; set; }
+        public double cpuUsage { get; set; }
+        public double ramUsage { get; set; }
+        public double hddUsage { get; set; }
+        public double gpuUsage { get; set; }
 
 
     }
