@@ -189,3 +189,5 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Topshelf.xml
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\obj\Debug\PingServer.csprojAssemblyReference.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Terminal.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Terminal.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Terminal.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\PingServer\bin\Debug\Terminal.pdb
