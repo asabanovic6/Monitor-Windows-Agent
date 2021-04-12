@@ -107,3 +107,22 @@ Enable logging all runtime errors in the database
 * Commit and push on your branch
 * Create a pull request
 * Merge branches 
+
+## Feature 
+
+Get usability for cpu, ram, hdd and gpu of computer
+
+### Item 
+Allow the application to send CPU, RAM, GPU, and HDD usage data to that server
+
+#### Task
+
+* Create a new branch and switch to it
+* Create a method in module for get CPU usage
+* Create a method in module for get GPU usage
+* Create a method in module for get HDD usage
+* Create a method in module for get RAM usage
+* Call the created methods and create json object which we send to the server
+* Commit and push on your branch
+* Create a pull request
+* Merge branches 
