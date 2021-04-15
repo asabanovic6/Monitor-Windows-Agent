@@ -12,8 +12,11 @@ namespace JASONParser
         public String webSocketUrl { get; set; }
         public String pingUri { get; set; }
         public String mainUri { get; set; }
+        public String errorUri { get; set; }
         public String fileUri { get; set; }
       public String installationCode { get; set; }
+
+        public String path { get; set; }
         public FileLocations fileLocations { get; set; }
 
 

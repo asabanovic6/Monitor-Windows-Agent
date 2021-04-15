@@ -34,7 +34,7 @@ namespace Monitor_Windows_Agent
         /// </summary>
         private void Fill()
         {
-            var json = File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+            var json = System.IO.File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
@@ -432,7 +432,7 @@ namespace Monitor_Windows_Agent
         }
         private void Button_Refresh_Click(object sender, System.EventArgs e)
         {
-            var json = File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+            var json = System.IO.File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
@@ -447,7 +447,7 @@ namespace Monitor_Windows_Agent
         private void Button_Click(object sender, System.EventArgs e)
         {
             //zamijeniti prve dvije linije koda sa pozivom parsera
-            var json = File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+            var json = System.IO.File.ReadAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
          
             //jsonObj["name"] = this.textBoxName.Text;
@@ -462,20 +462,22 @@ namespace Monitor_Windows_Agent
             comp.location= jsonObj.location;
             comp.deviceUid = jsonObj.deviceUid;
             comp.fileUri= jsonObj.fileUri;
+            comp.errorUri = jsonObj.errorUri;
             comp.pingUri = jsonObj.pingUri;
             comp.webSocketUrl = jsonObj.webSocketUrl;
             comp.installationCode = null;
             comp.mainUri = jsonObj.mainUri;
+            comp.path = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             FileLocations f = new FileLocations();
-            f.File1 = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
-            f.File2 = this.File2path.Text;
-            f.File3 = this.File3path.Text;
-            f.File4 = this.File4path.Text;
-            f.File5 = this.File5path.Text;
+            f.File1.path = this.File1path.Text;
+            f.File2.path = this.File2path.Text;
+            f.File3.path = this.File3path.Text;
+            f.File4 .path= this.File4path.Text;
+            f.File5.path = this.File5path.Text;
             comp.fileLocations = f;
             
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(comp, Newtonsoft.Json.Formatting.Indented);
-            File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
+            System.IO.File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
 
            
             p1.sendFile((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)), "config.json");

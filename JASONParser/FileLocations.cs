@@ -8,10 +8,10 @@ namespace JASONParser
 {
     public class FileLocations
     {
-        public String File1 { get; set; }
-        public String File2 { get; set; }
-        public String File3 { get; set; }
-        public String File4 { get; set; }
-        public String File5 { get; set; }
+        public File File1 { get; set; }
+        public File File2 { get; set; }
+        public File File3 { get; set; }
+        public File File4 { get; set; }
+        public File File5 { get; set; }
     }
 }

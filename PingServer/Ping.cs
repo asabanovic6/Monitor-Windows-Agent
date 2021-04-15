@@ -29,7 +29,7 @@ namespace PingServer
         {
             Parser pars = new Parser(path);
             this.uri = pars.ConfigParser().pingUri;
-            this.uriError = pars.ConfigParser().fileUri;
+            this.uriError = pars.ConfigParser().errorUri;
             this.miliSec = (int)(pars.ConfigParser().keepAlive * 1000);
 
             this.errorData = "{ \"code\":\"" + 0 + "\", \"message\":\"" + "Doslo je do greske!" + "\", \"deviceUid\":\"" + pars.ConfigParser().deviceUid + "\", \"errorTime\":\"" + DateTime.Now + "\"}";

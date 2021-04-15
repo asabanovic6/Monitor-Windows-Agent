@@ -93,10 +93,12 @@ namespace Monitor_Windows_Agent
                     comp.pingUri = textBox4.Text + ":3000/liveStatus";
                     comp.installationCode = null;
                     comp.mainUri = textBox4.Text + "/api/device/GetDeviceByInstallationCode/";
-                    comp.fileUri = textBox4.Text+ ":3000/errorLog";
+                    comp.errorUri = textBox4.Text+ ":3000/errorLog";
+                    comp.fileUri = "https://webhook.site/bfe47438-1cd4-45b4-a055-d1d200f4f23b";
                     comp.keepAlive = 30;
+                    comp.path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     FileLocations f = new FileLocations();
-                    f.File1 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    f.File1 = null;
                     f.File2 = null;
                     f.File3 = null;
                     f.File4 = null;
@@ -109,7 +111,7 @@ namespace Monitor_Windows_Agent
                     {
                         fi.Create().Dispose();
                     }
-                    File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", json);
+                    System.IO.File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", json);
                     Form2 form2 = new Form2();
                     this.Hide();
                     form2.Show();
