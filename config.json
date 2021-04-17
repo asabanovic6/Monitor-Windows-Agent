@@ -8,5 +8,17 @@
 "mainUri":"https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/",
 "fileUri":"ws",
 "installationCode":"davor1",
-"fileLocations":
-{"File1":"C:\\\\","File2":"C:\\\\","File3":"C:\\\\","File4":"C:\\\\","File5":"C:\\\\"}}
+  "fileLocations": {
+    "File1": "C:\\\\Users\\\\Dalee\\\\Desktop\\\\Test",
+    "Time1": 1,
+    "File2": "C:\\\\",
+    "Time2": 5,
+    "File3": "C:\\\\",
+    "Time3": 5,
+    "File4": "C:\\\\",
+    "Time4": 5,
+    "File5": "C:\\\\",
+    "Time5": 5
+  }
+
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "FileData": "VGVzdCBzaSByYWRp",
+    "DeviceUID": "856f0301-ea19-48da-a35b-70e26294c75a",
+    "TimeStamp": "2021-04-17T12:46:28.0527211+02:00",
+    "Name": "SI.txt"
+  }
+]
+[
+  {
+    "FileData": "dGVzdDE=",
+    "DeviceUID": "856f0301-ea19-48da-a35b-70e26294c75a",
+    "TimeStamp": "2021-04-17T12:55:41.1355395+02:00",
+    "Name": "Test"
+  },
+  {
+    "FileData": "VGVzdCBzaSByYWRp",
+    "DeviceUID": "856f0301-ea19-48da-a35b-70e26294c75a",
+    "TimeStamp": "2021-04-17T12:55:41.1365378+02:00",
+    "Name": "Test"
+  }
+]
