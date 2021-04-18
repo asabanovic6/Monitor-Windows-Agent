@@ -651,13 +651,11 @@ namespace Monitor_Windows_Agent
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(comp, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
             Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
-            try
-            {
-                if (f.File1.path != null && f.File1.minutes != null)
-                {
+          
+                
                     p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
-                }
-                if (f.File2.path != null && f.File2.minutes != null)
+                
+               /* if (f.File2.path != null && f.File2.minutes != null)
                 {
                     p.PostFilesAndKeepAlive(f.File2.path, double.Parse(this.textBox6.Text));
                 }
@@ -673,13 +671,8 @@ namespace Monitor_Windows_Agent
                 {
                     p.PostFilesAndKeepAlive(f.File5.path, double.Parse(this.textBox9.Text));
 
-                }
-            }
-            catch (Exception E)
-            {
-                p.PostError();
-            }
-
+                } */
+           
             p1.sendFile((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)), "config.json");
             //p1.conn();
         }

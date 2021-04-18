@@ -10,6 +10,7 @@ using JASONParser;
 using System.Security.Policy;
 using System.Threading;
 using System.Runtime.CompilerServices;
+using Newtonsoft.Json.Linq;
 
 namespace PingServer
 {
@@ -112,68 +113,64 @@ namespace PingServer
 
         }
 
-        private   string getJSON(String folderPath)
+        private   JArray getJSON(String folderPath)
         {
 
-            string s = "[";
+            JArray a = new JArray();
             if (IsDirectory(folderPath))
             {
-                try
-                {
+                
                     DirectoryInfo directoryInfo = new DirectoryInfo(folderPath);
-                    var subdirectories = directoryInfo.EnumerateDirectories();
-                    //OVDJE PREUREDITI KOD DA RADI SA OVIM PODFOLDERIMA
-                    /*
-                     foreach (var subdirectory in subdirectories)
-                     {
-
-                         getFiles(subdirectory.FullName);
-                     } */
+                   
 
                     var files = directoryInfo.EnumerateFiles();
-
+                  
                     foreach (var file in files)
                     {
-
+                   
                         byte[] bytes = System.IO.File.ReadAllBytes(file.FullName);
-                        string base64String = Convert.ToBase64String(bytes);
-                        s += "{ \"FileData\":\"" + base64String + "\", \"DeviceUID\":\"" + pars.ConfigParser().deviceUid + "\", \"TimeStamp\":\"" + DateTime.Now + "\", \"Name\":\"" + file.Name + "\"},";
+                        String fileString = Convert.ToBase64String(bytes);
+                        JObject jo = new JObject();
+                        jo.Add("FileData", fileString);
+                        jo.Add("DeviceUID", pars.ConfigParser().deviceUid);
+                        jo.Add("TimeStamp", DateTime.Now);
+                        jo.Add("Name", file.Name);
+                        a.Add(jo);
                     }
                  
-                }
-                catch (Exception e)
-                {
-                    PostError();
-                }
-                s = s.Remove(s.Length - 1, 1);
+                
+      
                
             }
             else
             {
+
                 byte[] bytes = System.IO.File.ReadAllBytes(folderPath);
-                string base64String = Convert.ToBase64String(bytes);
-                s += "{ \"FileData\":\"" + base64String + "\", \"DeviceUID\":\"" + "fc548ecb-12ec-4ad5-8672-9d5a9565ff60" + "\", \"TimeStamp\":\"" + DateTime.Now + "\", \"Name\":\"" + Path.GetFileName(folderPath) + "\"},";
+                String fileString = Convert.ToBase64String(bytes);
+                JObject jo = new JObject();
+                jo.Add("FileData", fileString);
+                jo.Add("DeviceUID", pars.ConfigParser().deviceUid);
+                jo.Add("TimeStamp", DateTime.Now);
+                jo.Add("Name", Path.GetFileName(folderPath));
+                a.Add(jo);
             }
-            s += "]";
-            return s;
+            return a;
 
         }
         private   void PostFiles(String path)
         {
-            byte[] bytes = Encoding.UTF8.GetBytes(getJSON(path));
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(uriFile);
-            httpWebRequest.Method = "POST";
-            httpWebRequest.ContentLength = bytes.Length;
             httpWebRequest.ContentType = "application/json";
-            using (Stream requestStream = httpWebRequest.GetRequestStream())
+            httpWebRequest.Method = "POST";
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
-                requestStream.Write(bytes, 0, bytes.Count());
+
+                streamWriter.Write(getJSON(path));
             }
-            var httpWebResponse = (HttpWebResponse)httpWebRequest.GetResponse();
-            if (httpWebResponse.StatusCode != HttpStatusCode.OK)
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                string message = String.Format("POST failed. Received HTTP {0}", httpWebResponse.StatusCode);
-                throw new ApplicationException(message);
+                var result = streamReader.ReadToEnd();
             }
         }
         public  void PostFilesAndKeepAlive(String path, double keepAlive)
