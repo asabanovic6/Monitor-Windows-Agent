@@ -19,12 +19,5 @@ namespace JASONParser
         public FileLocations fileLocations { get; set; }
 
 
-        //public Nullable<Decimal> cpuUsage { get; set; }
-        //public Nullable<Decimal> ramUsage { get; set; }
-        //public Nullable<Decimal> hddUsage { get; set; }
-        // public Nullable<Decimal> gpuUsage { get; set; }
-
-
-
     }
 }

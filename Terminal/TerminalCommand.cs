@@ -1,5 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.Win32;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Threading;
 
 namespace TerminalLibrary
 {
@@ -12,14 +18,48 @@ namespace TerminalLibrary
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.FileName = "powershell.exe";
             process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            process.StartInfo.CreateNoWindow = true;
             process.StartInfo.Verb = "runas";
             process.StartInfo.WorkingDirectory = path;
-            process.StartInfo.Arguments = command;
-            process.Start();
-            string message = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
-            string str = "{'message': '" + message + "', 'path': '" + GetNewPath(command, message, path) + "'}";
-            return JsonConvert.SerializeObject(str);
+
+            RegistryKey myKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            myKey.SetValue("MonitorWindowsAgentService", @"‪C:\Program Files (x86)\Grupa2\Monitor Service\MonitorWindowsAgentService.exe");
+
+            List<string> args = command.Split(' ').ToList();
+
+            if (args[0] == "shutdown" && args[1] == "-r")
+            {
+
+                var root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+
+                var key = root.OpenSubKey(@"Software\Microsoft\Windows NT\CurrentVersion\Winlogon", true);
+
+                var username = args[2];
+                var password = args[3];
+
+             
+                    key.SetValue("DefaultUserName", username, RegistryValueKind.String);
+                    key.SetValue("DefaultPassword", password, RegistryValueKind.String);
+                    key.SetValue("AutoAdminLogon", "1", RegistryValueKind.String);
+
+                    process.StartInfo.Arguments = args[0] + " " + args[1];
+                    process.Start();
+                    process.WaitForExit();
+
+               
+
+            }
+            else
+            {
+                process.StartInfo.Arguments = command;
+                process.Start();
+                string message = process.StandardOutput.ReadToEnd();
+                process.WaitForExit();
+
+                return ("{ \"type\":\"" + "command_result" + "\", \"message\":\"" + message + "\", \"path\":\"" + GetNewPath(command, message, path) + "\", \"deviceUid\":\"");
+            }
+
+            return "Prazno";
         }
 
         private static string GetNewPath(string command, string message, string path)
@@ -27,6 +67,91 @@ namespace TerminalLibrary
             if (command.Trim().Split(' ')[0].ToLower().Equals("cd") && message.Equals(string.Empty)) return path + "\\" + command.Trim().Split(' ')[1];
             else if (command.Trim().Split(' ')[0].ToLower().Equals("cd..") && message.Equals(string.Empty)) return path.Remove(path.LastIndexOf('\\'));
             return path;
+        }
+        public static double getRAMUsege()
+        {
+            PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available MBytes", true);
+            double availableMemory = ramCounter.NextValue();
+
+            Process[] proc = Process.GetProcesses();
+            long used = 0;
+            for (int i = 0; i < proc.Length; i++)
+            {
+                used += proc[i].PrivateMemorySize64;
+            }
+
+            double usedMemory = Convert.ToDouble(used) / 1024d / 1024d;
+            double percentage = usedMemory / (availableMemory + usedMemory);
+
+            return Math.Round(percentage, 2);
+        }
+        public static double getCPUUsage()
+        {
+            PerformanceCounter cpuUsage = new PerformanceCounter("Processor", "% Processor Time", "_Total"); ;
+            cpuUsage.NextValue();
+            Thread.Sleep(1000);
+            return cpuUsage.NextValue() / 100;
+        }
+
+        public static double getHDDUsage()
+        {
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            double usage = 0.0;
+            foreach (DriveInfo d in allDrives)
+            {
+                if (d.Name.Equals("C:\\"))
+                {
+                    if (d.IsReady == true)
+                    {
+                        usage = (d.TotalSize - d.TotalFreeSpace) / (float)d.TotalSize;
+                    }
+                }
+            }
+
+            return Math.Round(usage, 2);
+        }
+
+
+
+        public static double getGPUUsage()
+        {
+            try
+            {
+                var category = new PerformanceCounterCategory("GPU Engine");
+                var counterNames = category.GetInstanceNames();
+                var gpuCounters = new List<PerformanceCounter>();
+                var result = 0f;
+
+                foreach (string counterName in counterNames)
+                {
+                    if (counterName.EndsWith("engtype_3D"))
+                    {
+                        foreach (PerformanceCounter counter in category.GetCounters(counterName))
+                        {
+                            if (counter.CounterName == "Utilization Percentage")
+                            {
+                                gpuCounters.Add(counter);
+                            }
+                        }
+                    }
+                }
+
+                gpuCounters.ForEach(x =>
+                {
+                    _ = x.NextValue();
+                });
+
+                gpuCounters.ForEach(x =>
+                {
+                    result += x.NextValue();
+                });
+
+                return result / 10;
+            }
+            catch
+            {
+                return 0f;
+            }
         }
     }
 }

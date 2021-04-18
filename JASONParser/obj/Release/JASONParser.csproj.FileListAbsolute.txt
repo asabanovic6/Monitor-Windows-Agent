@@ -127,3 +127,5 @@ C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Release\JASONParser.cs
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Release\JASONParser.csproj.CopyComplete
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Release\JASONParser.dll
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Release\JASONParser.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Release\Terminal.dll
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Release\Terminal.pdb

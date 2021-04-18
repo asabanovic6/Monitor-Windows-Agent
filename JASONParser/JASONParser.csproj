@@ -89,5 +89,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Terminal\Terminal.csproj">
+      <Project>{CBEFA2F6-C4F3-4BDD-AC5C-42794F208E89}</Project>
+      <Name>Terminal</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

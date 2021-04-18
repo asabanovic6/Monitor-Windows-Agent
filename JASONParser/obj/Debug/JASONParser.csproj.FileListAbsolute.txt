@@ -294,3 +294,6 @@ C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Debug\JASONParser.cspr
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Debug\JASONParser.csproj.CopyComplete
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Debug\JASONParser.dll
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\JASONParser\obj\Debug\JASONParser.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Debug\Terminal.dll
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\bin\Debug\Terminal.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\JASONParser\obj\Debug\JASONParser.csprojAssemblyReference.cache

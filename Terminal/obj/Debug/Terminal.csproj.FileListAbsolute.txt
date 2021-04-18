@@ -41,3 +41,4 @@ C:\Users\Belmin\Desktop\SI_noviii\FEATURE\Terminal\obj\Debug\Terminal.csproj.Cor
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\Terminal\obj\Debug\Terminal.csproj.CopyComplete
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\Terminal\obj\Debug\Terminal.dll
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\Terminal\obj\Debug\Terminal.pdb
+C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.csprojAssemblyReference.cache

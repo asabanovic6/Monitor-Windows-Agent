@@ -92,7 +92,7 @@ namespace MonitorWindowsAgentService
         public void FileSender(String pathFile)
         {
 
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://webhook.site/ebef1b50-4739-4ab3-a76a-0d462127e8e2");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(comp.fileUri);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
@@ -242,12 +242,18 @@ namespace MonitorWindowsAgentService
                     ws.Send(ret);
                 }
 
-                else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
+            else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
+            else if (result["type"].Value<String>() == "systemInfo")
+            {
+                //   MessageBox.Show(getGPUInfo());
+                //   ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + getGPUInfo() +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
+                //  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + "Cao jasmine" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
 
+            }
             Logger logger = new Logger(result["type"].Value<String>(), result["user"].Value<String>());
             logger.writeLog();
 
