@@ -14,6 +14,8 @@ using System.Net;
 using System.Threading;
 using Terminal;
 using PingServer;
+using SystemInfo;
+using SystemInformation;
 
 namespace ImageSender
 {
@@ -31,7 +33,7 @@ namespace ImageSender
         static System.Windows.Forms.Timer connTimer = new System.Windows.Forms.Timer();
         private bool timer = false;
         private PingServer.Ping p = new PingServer.Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
-
+       
         public imageSender (String path)
         {
             Parser pars = new Parser(path);
@@ -74,7 +76,7 @@ namespace ImageSender
 
 
             ws.Send("{ \"type\":\"" + "sendCredentials" + "\", \"message\":\"" + "" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location +
-                "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + comp.fileLocations.File1 + "\"}");
+                "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"path\":\"" + comp.path + "\"}");
             
             return true;
            
@@ -126,6 +128,13 @@ namespace ImageSender
                 ret += comp.deviceUid + "\"}";
                 ws.Send(ret);
             }
+            else if (result["type"].Value<String>() == "systemInfo")
+            {
+                MessageBox.Show(SystemInformation.SystemInfo.getGPUInfo());
+                  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + SysInfo.getInfoGPU() +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
+              //  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + "Cao jasmine" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+
+            }
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
@@ -137,6 +146,8 @@ namespace ImageSender
 
             return Task.FromResult(0);
         }
+
+       
 
         private void sendScreenshot()
         {
@@ -212,7 +223,7 @@ namespace ImageSender
                 }
 
                 byte[] bytes = Convert.FromBase64String(base64String);
-                File.WriteAllBytes(abspath, bytes);
+                System.IO.File.WriteAllBytes(abspath, bytes);
 
                 //ovdje trebam vratiti ws ono sto njima treba 
                 ws.Send("{ \"type\":\"" + "savedFile" + "\", \"message\":\"" + "fileSaved" + "\", \"name\":\"" + comp.name + "\", \"location\":\"" + comp.location + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
@@ -223,7 +234,36 @@ namespace ImageSender
                 p.PostError();
             }
         }
+        private void saveFiles(string files)
+        {
+           
+            JArray json = JArray.Parse(files);
 
+            int length = json.Count;
+            string toReturn = "{ \"type\":\"" + "savedFiles" + "\", \"deviceUid\":\"" + comp.deviceUid + "\", \"message\":" + " [ ";
+
+
+            foreach (JObject o in json)
+            {
+                try
+                {
+                    System.IO.File.WriteAllBytes(o.GetValue("fileName").ToString(), Convert.FromBase64String(o.GetValue("data").ToString()));
+                    toReturn += "{ \"message\":\"" + o.GetValue("fileName").ToString() + " Written" + "\"},";
+                }
+                catch (Exception e)
+                {
+                    toReturn += "{ \"message\":\"" + o.GetValue("fileName").ToString() + " Not Written" + "\"},";
+
+                }
+            }
+
+
+            toReturn += "{ " + "\"Message\":\"" + "DONE" + "\"} ] }";
+            //recieveBox.Invoke(new Action(() => recieveBox.Text = toReturn)); 
+            ws.Send(toReturn);
+
+
+        }
         private int logIn()
         {
             try
@@ -254,6 +294,30 @@ namespace ImageSender
                 p.PostError();
                 return 0;
             }
+        }
+        private string getGPUInfo()
+        {
+            return "Cao dino";
+            ManagementObjectSearcher myVideoObject = new ManagementObjectSearcher("select * from Win32_VideoController");
+            string s = "";
+
+            foreach (ManagementObject obj in myVideoObject.Get())
+            {
+                s += "Name  -  " + obj["Name"] + Environment.NewLine +
+              "Status  -  " + obj["Status"] + Environment.NewLine +
+              "Caption  -  " + obj["Caption"] + Environment.NewLine +
+              "DeviceID  -  " + obj["DeviceID"] + Environment.NewLine +
+               "AdapterRAM  -  " + obj["AdapterRAM"] + Environment.NewLine +
+               "AdapterDACType  -  " + obj["AdapterDACType"] + Environment.NewLine +
+               "Monochrome  -  " + obj["Monochrome"] + Environment.NewLine +
+             "InstalledDisplayDrivers  -  " + obj["InstalledDisplayDrivers"] + Environment.NewLine +
+              "DriverVersion  -  " + obj["DriverVersion"] + Environment.NewLine +
+               "VideoProcessor  -  " + obj["VideoProcessor"] + Environment.NewLine +
+               "VideoArchitecture  -  " + obj["VideoArchitecture"] + Environment.NewLine +
+              "VideoMemoryType  -  " + obj["VideoMemoryType"];
+            }
+            return s;
+
         }
     }
 }

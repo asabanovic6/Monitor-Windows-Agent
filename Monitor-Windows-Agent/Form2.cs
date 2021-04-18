@@ -32,7 +32,7 @@ namespace Monitor_Windows_Agent
             Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             try
             {
-                p.PostJsonAndKeepAplive();
+                p.PostJsonAndKeepAlive();
             }
             catch (Exception E)
             {

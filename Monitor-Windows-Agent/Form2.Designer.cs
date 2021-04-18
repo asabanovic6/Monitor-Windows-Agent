@@ -3,6 +3,7 @@ using JASONParser;
 using System;
 using System.IO;
 using ImageSender;
+using PingServer;
 
 namespace Monitor_Windows_Agent
 {
@@ -39,11 +40,17 @@ namespace Monitor_Windows_Agent
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
             this.textBoxLocation.Text = jsonObj.location;
-            this.File1path.Text = jsonObj.fileLocations.File1;
-            this.File2path.Text = jsonObj.fileLocations.File2;
-            this.File3path.Text = jsonObj.fileLocations.File3;
-            this.File4path.Text = jsonObj.fileLocations.File4;
-            this.File5path.Text = jsonObj.fileLocations.File5;
+            this.textBox1.Text = jsonObj.path;
+            this.File1path.Text = jsonObj.fileLocations.File1.path;
+            this.File2path.Text = jsonObj.fileLocations.File2.path;
+            this.File3path.Text = jsonObj.fileLocations.File3.path;
+            this.File4path.Text = jsonObj.fileLocations.File4.path;
+            this.File5path.Text = jsonObj.fileLocations.File5.path;
+            this.textBox5.Text = jsonObj.fileLocations.File1.minutes;
+            this.textBox6.Text = jsonObj.fileLocations.File2.minutes;
+            this.textBox7.Text = jsonObj.fileLocations.File3.minutes;
+            this.textBox8.Text = jsonObj.fileLocations.File4.minutes;
+            this.textBox9.Text = jsonObj.fileLocations.File5.minutes;
 
         }
         private void InitializeComponent()
@@ -140,6 +147,16 @@ namespace Monitor_Windows_Agent
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 4;
             this.label4.Text = "Keep alive:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 161);
+            this.label3.Name = "label2";
+            this.label3.Size = new System.Drawing.Size(69, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Path:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label7
             // 
@@ -311,7 +328,7 @@ namespace Monitor_Windows_Agent
             // textBoxLocation
             // 
             this.textBoxLocation.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxLocation.Location = new System.Drawing.Point(125, 66);
+            this.textBoxLocation.Location = new System.Drawing.Point(125, 67);
             this.textBoxLocation.Name = "textBoxLocation";
             this.textBoxLocation.ReadOnly = true;
             this.textBoxLocation.Size = new System.Drawing.Size(225, 27);
@@ -321,11 +338,20 @@ namespace Monitor_Windows_Agent
             // textBoxKeepAlive
             // 
             this.textBoxKeepAlive.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBoxKeepAlive.Location = new System.Drawing.Point(125, 107);
+            this.textBoxKeepAlive.Location = new System.Drawing.Point(125, 114);
             this.textBoxKeepAlive.Name = "textBoxKeepAlive";
             this.textBoxKeepAlive.ReadOnly = true;
             this.textBoxKeepAlive.Size = new System.Drawing.Size(225, 27);
             this.textBoxKeepAlive.TabIndex = 25;
+            // 
+            // textBoxName
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox1.Location = new System.Drawing.Point(125, 161);
+            this.textBox1.Name = "textBoxName";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(225, 27);
+            this.textBox1.TabIndex = 1;
             // 
             // submitBtn
             // 
@@ -561,11 +587,17 @@ namespace Monitor_Windows_Agent
             this.textBoxName.Text = jsonObj.name;
             this.textBoxKeepAlive.Text = jsonObj.keepAlive;
             this.textBoxLocation.Text = jsonObj.location;
-            this.File1path.Text = jsonObj.fileLocations.File1;
-            this.File2path.Text = jsonObj.fileLocations.File2;
-            this.File3path.Text = jsonObj.fileLocations.File3;
-            this.File4path.Text = jsonObj.fileLocations.File4;
-            this.File5path.Text = jsonObj.fileLocations.File5;
+            this.textBox1.Text = jsonObj.path;
+            this.File1path.Text = jsonObj.fileLocations.File1.path;
+            this.File2path.Text = jsonObj.fileLocations.File2.path;
+            this.File3path.Text = jsonObj.fileLocations.File3.path;
+            this.File4path.Text = jsonObj.fileLocations.File4.path;
+            this.File5path.Text = jsonObj.fileLocations.File5.path;
+            this.textBox5.Text = jsonObj.fileLocations.File1.minutes;
+            this.textBox6.Text = jsonObj.fileLocations.File2.minutes;
+            this.textBox7.Text = jsonObj.fileLocations.File3.minutes;
+            this.textBox8.Text = jsonObj.fileLocations.File4.minutes;
+            this.textBox9.Text = jsonObj.fileLocations.File5.minutes;
 
         }
         private void Button_Click(object sender, System.EventArgs e)
@@ -593,17 +625,42 @@ namespace Monitor_Windows_Agent
             comp.mainUri = jsonObj.mainUri;
             comp.path = (Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
             FileLocations f = new FileLocations();
-            f.File1.path = this.File1path.Text;
-            f.File2.path = this.File2path.Text;
-            f.File3.path = this.File3path.Text;
-            f.File4 .path= this.File4path.Text;
-            f.File5.path = this.File5path.Text;
+            JASONParser.File newFile = new JASONParser.File();
+            newFile.path = this.File1path.Text;
+            newFile.minutes = double.Parse(this.textBox5.Text);
+            f.File1 = newFile;
+            JASONParser.File newFile2 = new JASONParser.File();
+            newFile2.path = this.File2path.Text;
+            newFile2.minutes = double.Parse(this.textBox6.Text);
+            f.File2 = newFile2;
+            JASONParser.File newFile3 = new JASONParser.File();
+            newFile3.path = this.File3path.Text;
+            newFile3.minutes = double.Parse(this.textBox7.Text);
+            f.File3 = newFile3;
+            JASONParser.File newFile4 = new JASONParser.File();
+            newFile4.path = this.File4path.Text;
+            newFile4.minutes = double.Parse(this.textBox8.Text);
+            f.File4 = newFile4;
+            JASONParser.File newFile5 = new JASONParser.File();
+            newFile5.path = this.File5path.Text;
+            newFile5.minutes = double.Parse(this.textBox9.Text);
+            f.File5 = newFile5;
+
             comp.fileLocations = f;
             
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(comp, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
+            Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
+            try
+            {
+                p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
 
-           
+            }
+            catch (Exception E)
+            {
+                p.PostError();
+            }
+
             p1.sendFile((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)), "config.json");
             //p1.conn();
         }

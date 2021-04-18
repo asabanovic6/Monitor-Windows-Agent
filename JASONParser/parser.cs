@@ -19,7 +19,7 @@ namespace JASONParser
         
         public  ComputerInfo ConfigParser()
         {
-            var json = File.ReadAllText(path); 
+            var json = System.IO.File.ReadAllText(path); 
 
             var item = JsonConvert.DeserializeObject<ComputerInfo>(json);
 

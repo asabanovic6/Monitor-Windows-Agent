@@ -9,6 +9,6 @@ namespace JASONParser
 public  class File
     {
         public String path { get; set; }
-        public decimal minutes { get; set; }
+        public Nullable<double> minutes { get; set; }
     }
 }

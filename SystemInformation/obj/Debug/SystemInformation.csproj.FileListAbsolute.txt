@@ -1,0 +1,6 @@
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\SystemInformation\bin\Debug\SystemInformation.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\SystemInformation\bin\Debug\SystemInformation.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\SystemInformation\obj\Debug\SystemInformation.csprojAssemblyReference.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\SystemInformation\obj\Debug\SystemInformation.csproj.CoreCompileInputs.cache
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\SystemInformation\obj\Debug\SystemInformation.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\SystemInformation\obj\Debug\SystemInformation.pdb
