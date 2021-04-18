@@ -19,22 +19,23 @@ namespace PingServer
 
 
         private string uri { get; set; }
-        private  string uriFile { get; set; }
+        private static  string uriFile { get; set; }
         private int miliSec { get; set; }
         private static CreateJSON create;
         private string uriError { get; set; }
         private string errorData { get; set; }
         private int tim { get; set; }
+        private static Parser pars { get; set; }
         //Ova metoda je jedina public i nju trebamo pozvati u Program.cs iz main-a 
 
         public Ping(String path)
         {
-            Parser pars = new Parser(path);
+            pars = new Parser(path);
             this.uri = pars.ConfigParser().pingUri;
             this.uriError = pars.ConfigParser().errorUri;
             this.miliSec = (int)(pars.ConfigParser().keepAlive * 1000);
-            this.uriFile = pars.ConfigParser().fileUri;
-            this.errorData = "{ \"code\":\"" + 0 + "\", \"message\":\"" + "Doslo je do greske!" + "\", \"deviceUid\":\"" + pars.ConfigParser().deviceUid + "\", \"errorTime\":\"" + DateTime.Now + "\"}";
+            uriFile = pars.ConfigParser().fileUri;
+          this.errorData = "{ \"code\":\"" + 0 + "\", \"message\":\"" + "Doslo je do greske!" + "\", \"deviceUid\":\"" + pars.ConfigParser().deviceUid + "\", \"errorTime\":\"" + DateTime.Now + "\"}";
             this.tim = 0;
             create = new CreateJSON(path);
         }
@@ -111,7 +112,7 @@ namespace PingServer
 
         }
 
-        private  string getJSON(String folderPath)
+        private   string getJSON(String folderPath)
         {
 
             string s = "[";
@@ -136,7 +137,7 @@ namespace PingServer
 
                         byte[] bytes = System.IO.File.ReadAllBytes(file.FullName);
                         string base64String = Convert.ToBase64String(bytes);
-                        s += "{ \"FileData\":\"" + base64String + "\", \"DeviceUID\":\"" + "fc548ecb-12ec-4ad5-8672-9d5a9565ff60" + "\", \"TimeStamp\":\"" + DateTime.Now + "\", \"Name\":\"" + file.Name + "\"},";
+                        s += "{ \"FileData\":\"" + base64String + "\", \"DeviceUID\":\"" + pars.ConfigParser().deviceUid + "\", \"TimeStamp\":\"" + DateTime.Now + "\", \"Name\":\"" + file.Name + "\"},";
                     }
                  
                 }
@@ -157,7 +158,7 @@ namespace PingServer
             return s;
 
         }
-        private  void PostFiles(String path)
+        private   void PostFiles(String path)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(getJSON(path));
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(uriFile);

@@ -14,7 +14,6 @@ using System.Net;
 using System.Threading;
 using Terminal;
 using PingServer;
-using SystemInfo;
 using SystemInformation;
 
 namespace ImageSender
@@ -130,8 +129,8 @@ namespace ImageSender
             }
             else if (result["type"].Value<String>() == "systemInfo")
             {
-                MessageBox.Show(SystemInformation.SystemInfo.getGPUInfo());
-                  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + SysInfo.getInfoGPU() +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
+             //   MessageBox.Show(getGPUInfo());
+               //   ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + getGPUInfo() +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
               //  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + "Cao jasmine" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
 
             }
@@ -295,29 +294,6 @@ namespace ImageSender
                 return 0;
             }
         }
-        private string getGPUInfo()
-        {
-            return "Cao dino";
-            ManagementObjectSearcher myVideoObject = new ManagementObjectSearcher("select * from Win32_VideoController");
-            string s = "";
-
-            foreach (ManagementObject obj in myVideoObject.Get())
-            {
-                s += "Name  -  " + obj["Name"] + Environment.NewLine +
-              "Status  -  " + obj["Status"] + Environment.NewLine +
-              "Caption  -  " + obj["Caption"] + Environment.NewLine +
-              "DeviceID  -  " + obj["DeviceID"] + Environment.NewLine +
-               "AdapterRAM  -  " + obj["AdapterRAM"] + Environment.NewLine +
-               "AdapterDACType  -  " + obj["AdapterDACType"] + Environment.NewLine +
-               "Monochrome  -  " + obj["Monochrome"] + Environment.NewLine +
-             "InstalledDisplayDrivers  -  " + obj["InstalledDisplayDrivers"] + Environment.NewLine +
-              "DriverVersion  -  " + obj["DriverVersion"] + Environment.NewLine +
-               "VideoProcessor  -  " + obj["VideoProcessor"] + Environment.NewLine +
-               "VideoArchitecture  -  " + obj["VideoArchitecture"] + Environment.NewLine +
-              "VideoMemoryType  -  " + obj["VideoMemoryType"];
-            }
-            return s;
-
-        }
+       
     }
 }

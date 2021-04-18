@@ -653,8 +653,27 @@ namespace Monitor_Windows_Agent
             Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
             try
             {
-                p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
+                if (f.File1.path != null && f.File1.minutes != null)
+                {
+                    p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
+                }
+                if (f.File2.path != null && f.File2.minutes != null)
+                {
+                    p.PostFilesAndKeepAlive(f.File2.path, double.Parse(this.textBox6.Text));
+                }
+                if (f.File3.path != null && f.File3.minutes != null)
+                {
+                    p.PostFilesAndKeepAlive(f.File3.path, double.Parse(this.textBox7.Text));
+                }
+                if (f.File4.path != null && f.File4.minutes != null)
+                {
+                    p.PostFilesAndKeepAlive(f.File4.path, double.Parse(this.textBox8.Text));
+                }
+                if (f.File5.path != null && f.File5.minutes != null)
+                {
+                    p.PostFilesAndKeepAlive(f.File5.path, double.Parse(this.textBox9.Text));
 
+                }
             }
             catch (Exception E)
             {

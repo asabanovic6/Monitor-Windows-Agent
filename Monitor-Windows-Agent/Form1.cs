@@ -94,7 +94,7 @@ namespace Monitor_Windows_Agent
                     comp.installationCode = null;
                     comp.mainUri = textBox4.Text + "/api/device/GetDeviceByInstallationCode/";
                     comp.errorUri = textBox4.Text+ ":3000/errorLog";
-                    comp.fileUri = "https://webhook.site/bfe47438-1cd4-45b4-a055-d1d200f4f23b";
+                    comp.fileUri = textBox4.Text + "/api/device/uploadFile";
                     comp.keepAlive = 30;
                     comp.path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     FileLocations f = new FileLocations();

@@ -8,13 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using PingServer;
 using ImageSender;
-
+using JASONParser;
 
 namespace Monitor_Windows_Agent
 {
     public partial class Form2 : Form
     {
         public static imageSender p1;
+        private Parser pars = new Parser((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
         private void iconNotify_MouseClick(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -33,6 +34,8 @@ namespace Monitor_Windows_Agent
             try
             {
                 p.PostJsonAndKeepAlive();
+               
+               
             }
             catch (Exception E)
             {
