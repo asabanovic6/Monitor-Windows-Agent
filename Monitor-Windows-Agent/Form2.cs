@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using PingServer;
 using ImageSender;
 using JASONParser;
+using Microsoft.Win32;
 
 namespace Monitor_Windows_Agent
 {
@@ -27,7 +28,7 @@ namespace Monitor_Windows_Agent
         {
             InitializeComponent();
             iconNotify.MouseClick += iconNotify_MouseClick;
-
+            SetAutoLogOff();
             // Ping p = new Ping(Form1.path);
             // p.PostJsonAndKeepAplive();
             Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
@@ -171,6 +172,14 @@ namespace Monitor_Windows_Agent
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        private static void SetAutoLogOff()
+        {
+            var root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+
+            var key = root.OpenSubKey(@"Software\Microsoft\Windows NT\CurrentVersion\Winlogon", true);
+
+            key.SetValue("AutoAdminLogon", "0", RegistryValueKind.String);
         }
     }
 }

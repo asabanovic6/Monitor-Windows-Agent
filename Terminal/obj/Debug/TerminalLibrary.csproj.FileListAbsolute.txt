@@ -6,3 +6,4 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.csproj.CopyComplete
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.csprojAssemblyReference.cache
