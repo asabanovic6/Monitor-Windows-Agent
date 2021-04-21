@@ -214,3 +214,5 @@ C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\PingServer.p
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\Terminal.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\SystemInformation.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\SystemInformation.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\SystemInformation.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\ImageSender\bin\Debug\SystemInformation.pdb
