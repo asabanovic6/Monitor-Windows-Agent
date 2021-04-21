@@ -20,7 +20,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\net
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csprojAssemblyReference.cache
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.CoreCompileInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.AssemblyInfoInputs.cache
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.AssemblyInfo.cs
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.CopyComplete
@@ -365,3 +364,6 @@ C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\net
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Terminal.pdb
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Terminal.dll
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Terminal.pdb
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.CoreCompileInputs.cache

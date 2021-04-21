@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using ImageSender;
 using PingServer;
+using System.Drawing;
 
 namespace Monitor_Windows_Agent
 {
@@ -68,15 +69,10 @@ namespace Monitor_Windows_Agent
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.File1path = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.File2path = new System.Windows.Forms.TextBox();
             this.File3path = new System.Windows.Forms.TextBox();
             this.File4path = new System.Windows.Forms.TextBox();
             this.File5path = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -208,28 +204,18 @@ namespace Monitor_Windows_Agent
             this.File1path.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.File1path.Location = new System.Drawing.Point(63, 17);
             this.File1path.Name = "File1path";
-            this.File1path.ReadOnly = true;
+            this.File1path.ReadOnly = false;
             this.File1path.Size = new System.Drawing.Size(241, 27);
             this.File1path.TabIndex = 11;
             this.File1path.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(310, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 26);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+        
             // 
             // File2path
             // 
             this.File2path.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.File2path.Location = new System.Drawing.Point(63, 63);
             this.File2path.Name = "File2path";
-            this.File2path.ReadOnly = true;
+            this.File2path.ReadOnly = false;
             this.File2path.Size = new System.Drawing.Size(241, 27);
             this.File2path.TabIndex = 13;
             // 
@@ -238,7 +224,7 @@ namespace Monitor_Windows_Agent
             this.File3path.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.File3path.Location = new System.Drawing.Point(63, 110);
             this.File3path.Name = "File3path";
-            this.File3path.ReadOnly = true;
+            this.File3path.ReadOnly = false;
             this.File3path.Size = new System.Drawing.Size(241, 27);
             this.File3path.TabIndex = 14;
             // 
@@ -247,7 +233,7 @@ namespace Monitor_Windows_Agent
             this.File4path.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.File4path.Location = new System.Drawing.Point(63, 154);
             this.File4path.Name = "File4path";
-            this.File4path.ReadOnly = true;
+            this.File4path.ReadOnly = false;
             this.File4path.Size = new System.Drawing.Size(241, 27);
             this.File4path.TabIndex = 15;
             // 
@@ -256,53 +242,10 @@ namespace Monitor_Windows_Agent
             this.File5path.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.File5path.Location = new System.Drawing.Point(63, 199);
             this.File5path.Name = "File5path";
-            this.File5path.ReadOnly = true;
+            this.File5path.ReadOnly = false;
             this.File5path.Size = new System.Drawing.Size(241, 27);
             this.File5path.TabIndex = 16;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.Location = new System.Drawing.Point(310, 63);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(42, 27);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "...";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Location = new System.Drawing.Point(310, 110);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 27);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.SystemColors.Control;
-            this.button4.Location = new System.Drawing.Point(310, 154);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(42, 27);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
-            this.button5.Location = new System.Drawing.Point(310, 199);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 27);
-            this.button5.TabIndex = 20;
-            this.button5.Text = "...";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+        
             // 
             // textBox2
             // 
@@ -420,13 +363,8 @@ namespace Monitor_Windows_Agent
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.File2path);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.File3path);
-            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.File4path);
             this.panel2.Controls.Add(this.File5path);
             this.panel2.Location = new System.Drawing.Point(433, 36);
@@ -554,7 +492,7 @@ namespace Monitor_Windows_Agent
             // 
             // Form2
             // 
-            this.AcceptButton = this.button4;
+           
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1407, 601);
@@ -651,28 +589,61 @@ namespace Monitor_Windows_Agent
             string output = Newtonsoft.Json.JsonConvert.SerializeObject(comp, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", output);
             Ping p = new Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
-          
-                
-                    p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
-                
-               /* if (f.File2.path != null && f.File2.minutes != null)
-                {
-                    p.PostFilesAndKeepAlive(f.File2.path, double.Parse(this.textBox6.Text));
-                }
-                if (f.File3.path != null && f.File3.minutes != null)
-                {
-                    p.PostFilesAndKeepAlive(f.File3.path, double.Parse(this.textBox7.Text));
-                }
-                if (f.File4.path != null && f.File4.minutes != null)
-                {
-                    p.PostFilesAndKeepAlive(f.File4.path, double.Parse(this.textBox8.Text));
-                }
-                if (f.File5.path != null && f.File5.minutes != null)
-                {
-                    p.PostFilesAndKeepAlive(f.File5.path, double.Parse(this.textBox9.Text));
 
-                } */
-           
+            if (Directory.Exists(File1path.Text) || System.IO.File.Exists(File1path.Text)) {
+                File1path.BackColor = Color.White;
+                if (File1path.Text != "" && textBox5.Text != "0") p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
+            }
+            else
+            {
+                File1path.Focus();
+                File1path.Clear();
+                File1path.BackColor = Color.LightPink;
+            }
+            if (Directory.Exists(File2path.Text) || System.IO.File.Exists(File2path.Text))
+            {
+                File2path.BackColor = Color.White;
+                if (File2path.Text != "" && textBox6.Text != "0") p.PostFilesAndKeepAlive(f.File2.path, double.Parse(this.textBox6.Text));
+            }
+            else
+            {
+                File2path.Focus();
+                File2path.Clear();
+                File2path.BackColor = Color.LightPink;
+            }
+            if (Directory.Exists(File3path.Text) || System.IO.File.Exists(File3path.Text))
+            {
+                File3path.BackColor = Color.White;
+                if (File3path.Text != "" && textBox7.Text != "0") p.PostFilesAndKeepAlive(f.File3.path, double.Parse(this.textBox7.Text));
+            }
+            else
+            {
+                File3path.Focus();
+                File3path.Clear();
+                File3path.BackColor = Color.LightPink;
+            }
+            if (Directory.Exists(File4path.Text) || System.IO.File.Exists(File4path.Text))
+            {
+                File4path.BackColor = Color.White;
+                if (File4path.Text != "" && textBox8.Text != "0") p.PostFilesAndKeepAlive(f.File4.path, double.Parse(this.textBox8.Text));
+            }
+            else
+            {
+                File4path.Focus();
+                File4path.Clear();
+                File4path.BackColor = Color.LightPink;
+            }
+            if (Directory.Exists(File5path.Text) || System.IO.File.Exists(File5path.Text))
+            {
+                File5path.BackColor = Color.White;
+                if (File5path.Text != "" && textBox9.Text != "0") p.PostFilesAndKeepAlive(f.File5.path, double.Parse(this.textBox9.Text));
+            }
+            else
+            {
+                File5path.Focus();
+                File5path.Clear();
+                File5path.BackColor = Color.LightPink;
+            }
             p1.sendFile((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)), "config.json");
             //p1.conn();
         }
@@ -689,15 +660,10 @@ namespace Monitor_Windows_Agent
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox File1path;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox File2path;
         private System.Windows.Forms.TextBox File3path;
         private System.Windows.Forms.TextBox File4path;
         private System.Windows.Forms.TextBox File5path;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;

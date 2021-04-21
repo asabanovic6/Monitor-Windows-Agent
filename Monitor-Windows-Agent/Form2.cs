@@ -10,6 +10,8 @@ using PingServer;
 using ImageSender;
 using JASONParser;
 using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
+using Microsoft.WindowsAPICodePack.Dialogs.Controls;
 
 namespace Monitor_Windows_Agent
 {
@@ -84,35 +86,7 @@ namespace Monitor_Windows_Agent
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK) File1path.Text = fbd.SelectedPath;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK) File2path.Text = fbd.SelectedPath;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK) File3path.Text = fbd.SelectedPath;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK) File4path.Text = fbd.SelectedPath;
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK) File5path.Text = fbd.SelectedPath;
-        }
+     
 
         private void button6_Click(object sender, EventArgs e)
         {

