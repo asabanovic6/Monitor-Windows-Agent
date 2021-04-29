@@ -74,7 +74,7 @@ namespace Monitor_Windows_Agent
             JToken result;
             ComputerInfo comp = new ComputerInfo();
             try
-            {
+             {
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpWebRequest.Method = "GET";
                 try
@@ -121,25 +121,25 @@ namespace Monitor_Windows_Agent
                     this.Close();
 
                 }
-                catch (System.Net.WebException)
-                {
-                    textBox5.Focus();
-                    textBox5.Clear();
-                    textBox5.BackColor = Color.LightPink;
+                    catch (System.Net.WebException)
+                    {
+                        textBox5.Focus();
+                        textBox5.Clear();
+                        textBox5.BackColor = Color.LightPink;
 
+                    }
                 }
+                catch (Exception E)
+                {
+                    textBox4.Focus();
+                    textBox4.Clear();
+                    textBox4.BackColor = Color.LightPink;
+                } 
+
+
+
+
             }
-            catch (Exception E)
-            {
-                textBox4.Focus();
-                textBox4.Clear();
-                textBox4.BackColor = Color.LightPink;
-            }
-
-
-
-
-        }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
