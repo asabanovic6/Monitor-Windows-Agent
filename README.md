@@ -32,6 +32,7 @@ monitorwindowsservice.exe uninstall
 5. Forma za praćenje izmjena nad konfiguracijskom datotekom
 6. Upravljanje errorima
 7. Slanje podataka o iskoristivosti CPU,GPU,RAM i HDD prema serveru
+8. Pinganje servera i slanje foldera i file-ova prilikom pinganja 
 # Contribute
 1. Dodjeljivanje radnih zadataka (preuzimanje) se radi na nivou Itema, a razvoj softvera se obavlja na nivou Taska.
   Za svaki Item osoba koja je preuzela da radi taj Item kreira novi Branch na Repozitorij koristeći opciju kreiranja brancha za Issue.
