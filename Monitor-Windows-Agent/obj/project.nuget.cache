@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lhytyX2/Q/bEyrv9U8UxW1mnQoaJ411OGIDV5wu22MhjJuqsQnnD3GR/nEFKhkQj7cL9OAYHyb+vzv7D6uP7Sg==",
+  "dgSpecHash": "XcaW7cy2WC9sjdAvsh46w6nZm5xGQqkrK3lYbIgc/A2XHhiUIN7Z5wYXSfImgLQCPMcCwKvoLXdrlFL+qDBYCA==",
   "success": true,
   "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
   "expectedPackageFiles": [
@@ -34,7 +34,9 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\topshelf\\4.3.0\\topshelf.4.3.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\topshelf.serviceinstaller\\4.3.0\\topshelf.serviceinstaller.4.3.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\websocket-sharp.clone\\3.0.0\\websocket-sharp.clone.3.0.0.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\websocket-sharp.clone\\3.0.0\\websocket-sharp.clone.3.0.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\windowsapicodepack-core\\1.1.1\\windowsapicodepack-core.1.1.1.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\windowsapicodepack-shell\\1.1.1\\windowsapicodepack-shell.1.1.1.nupkg.sha512"
   ],
   "logs": [
     {
@@ -43,6 +45,26 @@
       "warningLevel": 1,
       "message": "Package 'websocket-sharp.clone 3.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "websocket-sharp.clone",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WindowsAPICodePack-Core 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "WindowsAPICodePack-Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WindowsAPICodePack-Shell 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "WindowsAPICodePack-Shell",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
       ]

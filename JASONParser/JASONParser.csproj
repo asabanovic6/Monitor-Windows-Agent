@@ -85,6 +85,7 @@
     <Compile Include="ComputerDataJSON.cs" />
     <Compile Include="ComputerInfo.cs" />
     <Compile Include="CreateJSON.cs" />
+    <Compile Include="File.cs" />
     <Compile Include="FileLocations.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

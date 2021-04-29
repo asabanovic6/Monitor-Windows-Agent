@@ -93,14 +93,19 @@ namespace Monitor_Windows_Agent
                     comp.pingUri = textBox4.Text + ":3000/liveStatus";
                     comp.installationCode = null;
                     comp.mainUri = textBox4.Text + "/api/device/GetDeviceByInstallationCode/";
-                    comp.fileUri = textBox4.Text+ ":3000/errorLog";
+                    comp.errorUri = textBox4.Text+ ":3000/errorLog";
+                    comp.fileUri = textBox4.Text + "/api/device/uploadFile";
                     comp.keepAlive = 30;
+                    comp.path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     FileLocations f = new FileLocations();
-                    f.File1 = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                    f.File2 = null;
-                    f.File3 = null;
-                    f.File4 = null;
-                    f.File5 = null;
+                    JASONParser.File f1 = new JASONParser.File();
+                    f1.path = "";
+                    f1.minutes = 0;
+                    f.File1= f1;
+                    f.File2 = f1;
+                    f.File3 = f1;
+                    f.File4 = f1;
+                    f.File5 = f1;
                     comp.fileLocations = f;
 
                     string json = JsonConvert.SerializeObject(comp);
@@ -109,7 +114,7 @@ namespace Monitor_Windows_Agent
                     {
                         fi.Create().Dispose();
                     }
-                    File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", json);
+                    System.IO.File.WriteAllText((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json", json);
                     Form2 form2 = new Form2();
                     this.Hide();
                     form2.Show();
