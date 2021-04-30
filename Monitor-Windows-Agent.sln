@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemInformation", "System
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MWA_Setup", "MWA_Setup\MWA_Setup.vdproj", "{065C45DB-B122-4D0C-990F-9BCA5806BFB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{D4A7B37C-E1C5-45FF-A2B8-3D58B4F455FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{84C83092-FD65-4ECF-9569-EFF0FB7C76F2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{065C45DB-B122-4D0C-990F-9BCA5806BFB1}.Debug|Any CPU.ActiveCfg = Debug
 		{065C45DB-B122-4D0C-990F-9BCA5806BFB1}.Release|Any CPU.ActiveCfg = Release
+		{D4A7B37C-E1C5-45FF-A2B8-3D58B4F455FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A7B37C-E1C5-45FF-A2B8-3D58B4F455FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A7B37C-E1C5-45FF-A2B8-3D58B4F455FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A7B37C-E1C5-45FF-A2B8-3D58B4F455FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
