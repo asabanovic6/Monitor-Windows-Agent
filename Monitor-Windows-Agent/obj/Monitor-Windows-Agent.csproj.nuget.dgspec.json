@@ -1,43 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {}
+    "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+    "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj",
+        "projectUniqueName": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj",
         "projectName": "ImageSender",
-        "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+        "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+    "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj",
+        "projectUniqueName": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj",
         "projectName": "JASONParser",
-        "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+        "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
       },
       "frameworks": {
         "net472": {}
       }
     },
-    "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
+    "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+        "projectUniqueName": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
         "projectName": "Monitor-Windows-Agent",
-        "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
-        "packagesPath": "C:\\Users\\Adnan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
+        "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
+        "packagesPath": "C:\\Users\\amelp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Adnan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\amelp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -51,14 +48,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
-                "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
+              "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj": {
+                "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\ImageSender\\ImageSender.csproj"
               },
-              "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
-                "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
+              "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj": {
+                "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\JASONParser\\JASONParser.csproj"
               },
-              "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
-                "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+              "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+                "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
               }
             }
           }
@@ -104,12 +101,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -118,15 +109,15 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
+    "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
+        "projectUniqueName": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj",
         "projectName": "PingServer",
-        "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
+        "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\PingServer\\PingServer.csproj"
       },
       "frameworks": {
         "net472": {}

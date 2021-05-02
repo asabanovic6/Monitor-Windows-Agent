@@ -21,7 +21,39 @@ namespace UnitTestProject
         }
 
        
-
+        [TestMethod]
+        public void RAMUsageTest()
+        {
+            double usage = TerminalCommand.getRAMUsege();
+            Assert.IsTrue(0 <= usage && usage <= 1);
+        }
         
+        [TestMethod]
+        public void CPUUsageTest()
+        {
+            double usage = TerminalCommand.getCPUUsage();
+            Assert.IsTrue(0 <= usage && usage <= 1);
+        }
+
+        [TestMethod]
+        public void GPUUsageTest()
+        {
+            double usage = TerminalCommand.getGPUUsage();
+            Assert.IsTrue(0 <= usage && usage <= 1);
+        }
+
+        [TestMethod]
+        public void SystemInfoTest1()
+        {
+            String info = TerminalCommand.SystemInfo("shutdown -r monitor windows", "C://");
+            Assert.AreEqual("Nesto", info);
+        }
+
+        [TestMethod]
+        public void SystemInfoTest2()
+        {
+            String info = TerminalCommand.SystemInfo("shutdown a", "C://");
+            Assert.AreNotEqual("Nesto", info);
+        }
     }
 }

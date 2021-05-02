@@ -1969,23 +1969,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adnan\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\amelp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+      "projectUniqueName": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
       "projectName": "MonitorWindowsService",
-      "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
-      "packagesPath": "C:\\Users\\Adnan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
+      "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+      "packagesPath": "C:\\Users\\amelp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Adnan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\amelp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1999,8 +1995,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
-              "projectPath": "C:\\Users\\Adnan\\Documents\\GitHub\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj"
+            "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
+              "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj"
             }
           }
         }
@@ -2034,12 +2030,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[3.1.13, 3.1.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -2048,7 +2038,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
