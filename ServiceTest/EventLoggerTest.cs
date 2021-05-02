@@ -11,7 +11,6 @@ namespace ServiceTest
         public void CreateMessageTest()
         {
             Logger l = new Logger("", "");
-            //l.createLog();
             l.createMessage();
             l.deleteLog();
         }

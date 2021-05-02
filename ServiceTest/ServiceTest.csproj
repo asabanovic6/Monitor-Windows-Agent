@@ -52,6 +52,7 @@
     <Compile Include="JASONParserTest.cs" />
     <Compile Include="EventLoggerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TerminalClassTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
