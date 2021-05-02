@@ -15,3 +15,11 @@ C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.dll
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.pdb
 C:\Users\Dalee\Desktop\proba\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.csprojAssemblyReference.cache
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\bin\Release\Terminal.dll
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\bin\Release\Terminal.pdb
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\bin\Release\Newtonsoft.Json.dll
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\bin\Release\Newtonsoft.Json.xml
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.csproj.CopyComplete
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.dll
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\Terminal\obj\Release\Terminal.pdb

@@ -42,3 +42,11 @@ C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.cs
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.dll
 C:\Users\Belmin\Desktop\SI_noviii\FEATURE\EventLogger\obj\Release\EventLogger.pdb
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\bin\Release\EventLogger.dll
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\bin\Release\EventLogger.pdb
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\bin\Release\Topshelf.dll
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\bin\Release\Topshelf.xml
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CoreCompileInputs.cache
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.csproj.CopyComplete
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.dll
+C:\Users\Dalee\Desktop\sprint6\Monitor-Windows-Agent\EventLogger\obj\Release\EventLogger.pdb

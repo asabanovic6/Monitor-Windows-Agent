@@ -153,5 +153,63 @@ namespace TerminalLibrary
                 return 0f;
             }
         }
+        public static string SystemInfo(string command, string path)
+        {
+            var process = new Process();
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.StartInfo.FileName = "powershell.exe";
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+            process.StartInfo.CreateNoWindow = true;
+            process.StartInfo.Verb = "runas";
+            process.StartInfo.WorkingDirectory = path;
+
+            RegistryKey myKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            myKey.SetValue("MonitorWindowsAgentService", @"‪C:\Program Files (x86)\Grupa2\Monitor Service\MonitorWindowsAgentService.exe");
+
+            List<string> args = command.Split(' ').ToList();
+
+            if (args[0] == "shutdown" && args[1] == "-r")
+            {
+
+                var root = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64);
+
+                var key = root.OpenSubKey(@"Software\Microsoft\Windows NT\CurrentVersion\Winlogon", true);
+
+                var username = args[2];
+                var password = args[3];
+
+                try
+                {
+                    key.SetValue("DefaultUserName", username, RegistryValueKind.String);
+                    key.SetValue("DefaultPassword", password, RegistryValueKind.String);
+                    key.SetValue("AutoAdminLogon", "1", RegistryValueKind.String);
+
+                    process.StartInfo.Arguments = args[0] + " " + args[1];
+                    process.Start();
+                    process.WaitForExit();
+
+                    System.Diagnostics.Debug.WriteLine("Successfully saved!");
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("Error during save");
+                }
+
+            }
+            else
+            {
+                process.StartInfo.Arguments = command;
+                process.Start();
+                string message = process.StandardOutput.ReadToEnd();
+                process.WaitForExit();
+
+                return message;
+                // string str = "{'message': '" + message + "', 'path': '" + GetNewPath(command, message, path) + "', 'type': '" + "command_result"+ "'}";
+                // return JsonConvert.SerializeObject(str); 
+            }
+
+            return "Nesto";
+        }
     }
 }

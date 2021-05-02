@@ -249,9 +249,8 @@ namespace MonitorWindowsAgentService
             else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
             else if (result["type"].Value<String>() == "systemInfo")
             {
-                //   MessageBox.Show(getGPUInfo());
-                //   ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + getGPUInfo() +  "\", \"deviceUid\":\"" + comp.deviceUid +  "\"}");
-                //  ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + "Cao jasmine" + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                String ret = TerminalCommand.SystemInfo("systeminfo", @"C:\Program Files (x86)\Grupa2\Monitor Service\config.json");
+                ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + ret + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
 
             }
             Logger logger = new Logger(result["type"].Value<String>(), result["user"].Value<String>());
