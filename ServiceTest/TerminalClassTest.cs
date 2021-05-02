@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using JASONParser;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,13 +22,42 @@ namespace ServiceTest
 
 
         [TestMethod]
-        public void GetUsageTest()
+        public void RAMUsageTest()
         {
+            ComputerDataJSON cmp = new ComputerDataJSON();
+            cmp.ramUsage = (decimal)TerminalCommand.getRAMUsege();
+            decimal data = cmp.ramUsage;
+            Assert.IsTrue(data > 0 && data < 1);
             
-            Assert.IsTrue(TerminalCommand.getRAMUsege() > 0 && TerminalCommand.getRAMUsege() < 1);
-            Assert.IsTrue(TerminalCommand.getCPUUsage() > 0 && TerminalCommand.getCPUUsage() < 1);
-            Assert.IsTrue(TerminalCommand.getHDDUsage() > 0 && TerminalCommand.getHDDUsage() < 1);
-            Assert.IsTrue(TerminalCommand.getGPUUsage() > 0 && TerminalCommand.getGPUUsage() < 1);
+        }
+
+        [TestMethod]
+        public void CPUUsageTest()
+        {
+            ComputerDataJSON cmp = new ComputerDataJSON();
+            cmp.cpuUsage = (decimal)TerminalCommand.getCPUUsage();
+            decimal data = cmp.cpuUsage;
+            Assert.IsTrue(data > 0 && data < 1);
+        }
+
+        [TestMethod]
+        public void HDDUsageTest()
+        {
+            ComputerDataJSON cmp = new ComputerDataJSON();
+            cmp.hddUsage = (decimal)TerminalCommand.getHDDUsage();
+            decimal data = cmp.hddUsage;
+            Assert.IsTrue(data > 0 && data < 1);
+
+        }
+
+        [TestMethod]
+        public void GPUUsageTest()
+        {
+            ComputerDataJSON cmp = new ComputerDataJSON();
+            cmp.gpuUsage = (decimal)TerminalCommand.getGPUUsage();
+            decimal data = cmp.gpuUsage;
+            Assert.IsTrue(data > 0 && data < 1);
+
         }
 
     }

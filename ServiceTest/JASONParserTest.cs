@@ -25,7 +25,6 @@ namespace ServiceTest
         [TestMethod, ExpectedException(typeof(NullReferenceException))]
         public void CreateJSONTest()
         {
-            //CreateJSON info = new CreateJSON();
             Assert.AreNotEqual("", CreateJSON.getJSON());
         }
     }

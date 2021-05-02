@@ -12,7 +12,7 @@ namespace ServiceTest
         {
             Logger l = new Logger("", "");
             l.createMessage();
-            l.deleteLog();
+            
         }
     }
 }
