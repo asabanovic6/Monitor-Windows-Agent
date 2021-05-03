@@ -1969,19 +1969,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\amelp\\.nuget\\packages\\": {}
+    "C:\\Users\\LENOVO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
       "projectName": "MonitorWindowsService",
-      "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
-      "packagesPath": "C:\\Users\\amelp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
+      "projectPath": "C:\\Users\\LENOVO\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\MonitorWindowsService.csproj",
+      "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LENOVO\\Desktop\\Monitor-Windows-Agent\\MonitorWindowsService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\amelp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1995,8 +1995,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
-              "projectPath": "C:\\Users\\amelp\\OneDrive\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj"
+            "C:\\Users\\LENOVO\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj": {
+              "projectPath": "C:\\Users\\LENOVO\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj"
             }
           }
         }
@@ -2038,7 +2038,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -160,7 +160,7 @@ namespace Terminal
                     result += x.NextValue();
                 });
 
-                return result / 10;
+                return result / 100;
             }
             catch
             {

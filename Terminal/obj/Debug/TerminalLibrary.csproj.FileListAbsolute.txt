@@ -16,3 +16,12 @@ C:\Users\amelp\OneDrive\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Termina
 C:\Users\amelp\OneDrive\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.csproj.CopyComplete
 C:\Users\amelp\OneDrive\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.dll
 C:\Users\amelp\OneDrive\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Terminal.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Terminal.pdb
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Newtonsoft.Json.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\bin\Debug\Newtonsoft.Json.xml
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.csprojAssemblyReference.cache
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\TerminalLibrary.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.dll
+C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Terminal\obj\Debug\Terminal.pdb

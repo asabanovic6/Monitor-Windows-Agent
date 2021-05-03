@@ -2,12 +2,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using EventLogger;
+using PingServer;
+using NUnit.Framework;
 
 namespace UnitTestProject
 {
     [TestClass]
     public class JSONParserTest
     {
+        Logger logger;
         ComputerInfo computer;
         #region Parser.ConfigParser() test
         static IEnumerable<object[]> ConfigData        {
@@ -32,28 +36,42 @@ namespace UnitTestProject
         {
             Parser parser = new Parser(filepath);
             computer = parser.ConfigParser();
-            Assert.AreEqual(computer.name, name);
-            Assert.AreEqual(computer.location, location);
-            Assert.AreEqual(computer.deviceUid, deviceUId);
-            Assert.AreEqual(computer.keepAlive, keepAlive);
-            Assert.AreEqual(computer.webSocketUrl, webSocketUri);
-            Assert.AreEqual(computer.pingUri, pingUri);
-            Assert.AreEqual(computer.mainUri, mainUri);
-            Assert.AreEqual(computer.errorUri, errorUri);
-            Assert.AreEqual(computer.fileUri, fileUri);
-            Assert.AreEqual(computer.installationCode, installationCode);
-            Assert.AreEqual(computer.path, path);
-            Assert.AreEqual(computer.fileLocations.File1.path, name1);
-            Assert.AreEqual(computer.fileLocations.File1.minutes, minutes1);
-            Assert.AreEqual(computer.fileLocations.File2.path, name2);
-            Assert.AreEqual(computer.fileLocations.File2.minutes, minutes2);
-            Assert.AreEqual(computer.fileLocations.File3.path, name3);
-            Assert.AreEqual(computer.fileLocations.File3.minutes, minutes3);
-            Assert.AreEqual(computer.fileLocations.File4.path, name4);
-            Assert.AreEqual(computer.fileLocations.File4.minutes, minutes4);
-            Assert.AreEqual(computer.fileLocations.File5.path, name5);
-            Assert.AreEqual(computer.fileLocations.File5.minutes, minutes5);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.name, name);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.location, location);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.deviceUid, deviceUId);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.keepAlive, keepAlive);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.webSocketUrl, webSocketUri);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.pingUri, pingUri);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.mainUri, mainUri);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.errorUri, errorUri);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileUri, fileUri);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.installationCode, installationCode);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.path, path);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File1.path, name1);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File1.minutes, minutes1);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File2.path, name2);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File2.minutes, minutes2);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File3.path, name3);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File3.minutes, minutes3);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File4.path, name4);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File4.minutes, minutes4);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File5.path, name5);
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual(computer.fileLocations.File5.minutes, minutes5);
         }
         #endregion
+        [TestMethod]
+        public void PingTest1()
+        {
+            string path = "..\\..\\testConfig.json";
+            Ping p = new Ping(path);
+            NUnit.Framework.Assert.That(() => p.PostJsonAndKeepAlive(), Throws.Nothing);
+        }
+        /*[TestMethod]
+        public void PingTest2()
+        {
+            string path = "..\\..\\testConfig.json";
+            Ping p = new Ping(path);
+            NUnit.Framework.Assert.That(() => p.PostError(), Throws.Nothing);
+        }*/
     }
 }

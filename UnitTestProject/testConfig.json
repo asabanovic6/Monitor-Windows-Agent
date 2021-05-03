@@ -1,0 +1,35 @@
+﻿{
+  "name": "test masina",
+  "location": "test lokacija",
+  "deviceUid": "9f83691e-43ff-4438-b112-8fc0f9e420a6",
+  "keepAlive": 30.0,
+  "webSocketUrl": "si-grupa5.herokuapp.com",
+  "pingUri": "https://si-2021.167.99.244.168.nip.io:3000/liveStatus",
+  "mainUri": "https://si-2021.167.99.244.168.nip.io/api/device/GetDeviceByInstallationCode/",
+  "errorUri": "https://si-2021.167.99.244.168.nip.io:3000/errorLog",
+  "fileUri": "https://si-2021.167.99.244.168.nip.io/api/device/uploadFile",
+  "installationCode": null,
+  "path": "C:\\Users\\Amina\\Documents",
+  "fileLocations": {
+    "File1": {
+      "path": "C:\\Users\\Amina\\Desktop\\TestniFolder",
+      "minutes": 5.0
+    },
+    "File2": {
+      "path": "C:\\Users\\Amina\\Desktop\\TestniFolder\\TestniFile1.txt",
+      "minutes": 3.0
+    },
+    "File3": {
+      "path": "",
+      "minutes": 0.0
+    },
+    "File4": {
+      "path": "",
+      "minutes": 0.0
+    },
+    "File5": {
+      "path": "",
+      "minutes": 0.0
+    }
+  }
+}
