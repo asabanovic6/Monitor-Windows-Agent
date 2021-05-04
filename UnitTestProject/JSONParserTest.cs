@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using EventLogger;
 using PingServer;
 using NUnit.Framework;
+using Monitor_Windows_Agent;
 
 namespace UnitTestProject
 {
@@ -66,12 +67,27 @@ namespace UnitTestProject
             Ping p = new Ping(path);
             NUnit.Framework.Assert.That(() => p.PostJsonAndKeepAlive(), Throws.Nothing);
         }
-        /*[TestMethod]
+        [TestMethod]
+        public void TestGetJSON()
+        {
+            CreateJSON create = new CreateJSON("..\\..\\configTest.json");
+            Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual("\"message\":\"Djes Huso\"", create.getJSON().Split(',')[2]);
+        }
+        [TestMethod]
         public void PingTest2()
         {
+            CreateJSON create = new CreateJSON("..\\..\\configTest.json");
+            string path = "..\\..\\configTest.json";
+            Ping p = new Ping(path);
+            NUnit.Framework.Assert.That(() => p.PostFilesAndKeepAlive(path,5), Throws.Nothing);
+        }
+        [TestMethod]
+        public void PingTest3()
+        {
+            
             string path = "..\\..\\testConfig.json";
             Ping p = new Ping(path);
             NUnit.Framework.Assert.That(() => p.PostError(), Throws.Nothing);
-        }*/
+        }
     }
 }
