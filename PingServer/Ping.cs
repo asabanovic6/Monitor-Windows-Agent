@@ -54,11 +54,6 @@ namespace PingServer
             }, null, startTimeSpan, periodTimeSpan);
         }
 
-        public void PostJsonAndKeepAliveForService()
-        {
-            PostJson(uri, create.getJSON());
-        }
-
         private static void PostJson(string uri, String postData)
         {
 

@@ -594,7 +594,7 @@ namespace Monitor_Windows_Agent
                 File1path.BackColor = Color.White;
                 if (File1path.Text != "" && textBox5.Text != "0") p.PostFilesAndKeepAlive(f.File1.path, double.Parse(this.textBox5.Text));
             }
-            else
+            else if (!(Directory.Exists(File1path.Text) || System.IO.File.Exists(File1path.Text)) && File1path.Text != "")
             {
                 File1path.Focus();
                 File1path.Clear();
@@ -605,7 +605,7 @@ namespace Monitor_Windows_Agent
                 File2path.BackColor = Color.White;
                 if (File2path.Text != "" && textBox6.Text != "0") p.PostFilesAndKeepAlive(f.File2.path, double.Parse(this.textBox6.Text));
             }
-            else
+            else if (!(Directory.Exists(File2path.Text) || System.IO.File.Exists(File2path.Text)) && File2path.Text != "")
             {
                 File2path.Focus();
                 File2path.Clear();
@@ -616,7 +616,7 @@ namespace Monitor_Windows_Agent
                 File3path.BackColor = Color.White;
                 if (File3path.Text != "" && textBox7.Text != "0") p.PostFilesAndKeepAlive(f.File3.path, double.Parse(this.textBox7.Text));
             }
-            else
+            else if (!(Directory.Exists(File3path.Text) || System.IO.File.Exists(File3path.Text)) && File3path.Text != "")
             {
                 File3path.Focus();
                 File3path.Clear();
@@ -627,7 +627,7 @@ namespace Monitor_Windows_Agent
                 File4path.BackColor = Color.White;
                 if (File4path.Text != "" && textBox8.Text != "0") p.PostFilesAndKeepAlive(f.File4.path, double.Parse(this.textBox8.Text));
             }
-            else
+            else if (!(Directory.Exists(File4path.Text) || System.IO.File.Exists(File4path.Text)) && File4path.Text != "")
             {
                 File4path.Focus();
                 File4path.Clear();
@@ -638,7 +638,7 @@ namespace Monitor_Windows_Agent
                 File5path.BackColor = Color.White;
                 if (File5path.Text != "" && textBox9.Text != "0") p.PostFilesAndKeepAlive(f.File5.path, double.Parse(this.textBox9.Text));
             }
-            else
+            else if (!(Directory.Exists(File5path.Text) || System.IO.File.Exists(File5path.Text)) && File5path.Text != "")
             {
                 File5path.Focus();
                 File5path.Clear();
