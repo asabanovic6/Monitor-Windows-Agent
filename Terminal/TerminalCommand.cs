@@ -37,16 +37,16 @@ namespace TerminalLibrary
                 var username = args[2];
                 var password = args[3];
 
-             
-                    key.SetValue("DefaultUserName", username, RegistryValueKind.String);
-                    key.SetValue("DefaultPassword", password, RegistryValueKind.String);
-                    key.SetValue("AutoAdminLogon", "1", RegistryValueKind.String);
 
-                    process.StartInfo.Arguments = args[0] + " " + args[1];
-                    process.Start();
-                    process.WaitForExit();
+                key.SetValue("DefaultUserName", username, RegistryValueKind.String);
+                key.SetValue("DefaultPassword", password, RegistryValueKind.String);
+                key.SetValue("AutoAdminLogon", "1", RegistryValueKind.String);
 
-               
+                process.StartInfo.Arguments = args[0] + " " + args[1];
+                process.Start();
+                process.WaitForExit();
+
+
 
             }
             else
@@ -194,6 +194,7 @@ namespace TerminalLibrary
                 catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine("Error during save");
+
                 }
 
             }

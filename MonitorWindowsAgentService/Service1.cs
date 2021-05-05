@@ -249,8 +249,19 @@ namespace MonitorWindowsAgentService
             else if (result["type"].Value<String>() != "Connected") sendMessage("empty", "Komanda ne postoji");
             else if (result["type"].Value<String>() == "systemInfo")
             {
-                String ret = TerminalCommand.SystemInfo("systeminfo", @"C:\Program Files (x86)\Grupa2\Monitor Service\config.json");
-                ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + ret + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                //Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+                //@"C:\Program Files (x86)\Grupa2\Monitor Service\config.json"
+                try
+                {
+                    String ret = TerminalCommand.SystemInfo("systeminfo", AppDomain.CurrentDomain.BaseDirectory);
+                    WriteToFile(ret);
+                    ws.Send("{ \"type\":\"" + "sendInfo" + "\", \"message\":\"" + ret + "\", \"deviceUid\":\"" + comp.deviceUid + "\"}");
+                }
+                catch (Exception e)
+                {
+                    WriteToFile(e.ToString());
+                }
+
 
             }
             Logger logger = new Logger(result["type"].Value<String>(), result["user"].Value<String>());

@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorWindowsAgentService"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Monitor Service", "Monitor Service\Monitor Service.vdproj", "{2414A780-E2D8-4E4D-A100-0C181315A31A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceTest", "ServiceTest\ServiceTest.csproj", "{574BBDBE-14A8-4AF8-96D5-95630904397F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Debug|Any CPU.Build.0 = Debug
 		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Release|Any CPU.ActiveCfg = Release
 		{2414A780-E2D8-4E4D-A100-0C181315A31A}.Release|Any CPU.Build.0 = Release
+		{574BBDBE-14A8-4AF8-96D5-95630904397F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{574BBDBE-14A8-4AF8-96D5-95630904397F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{574BBDBE-14A8-4AF8-96D5-95630904397F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{574BBDBE-14A8-4AF8-96D5-95630904397F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

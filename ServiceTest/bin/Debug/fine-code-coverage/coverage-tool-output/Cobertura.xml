@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage line-rate="0.5847457627118644" branch-rate="0.38235294117647056" lines-covered="138" lines-valid="236" branches-covered="13" branches-valid="34" complexity="48" version="0" timestamp="1619981620">
+  <sources />
+  <packages>
+    <package name="EventLogger" line-rate="0.3333333333333333" branch-rate="0" complexity="12">
+      <classes>
+        <class name="EventLogger.Logger" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\EventLogger\Logger.cs" line-rate="0.3333333333333333" branch-rate="0" complexity="10">
+          <methods>
+            <method name=".ctor" signature="(System.String,System.String)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="1" branch="false" />
+                <line number="18" hits="1" branch="false" />
+                <line number="19" hits="1" branch="false" />
+                <line number="20" hits="1" branch="false" />
+                <line number="21" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="Registry_Write" signature="(Microsoft.Win32.RegistryKey)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="31" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="createLog" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="36" hits="0" branch="false" />
+                <line number="39" hits="0" branch="false" />
+                <line number="40" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="deleteLog" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="0" branch="false" />
+                <line number="44" hits="0" branch="false" />
+                <line number="45" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="readLog" signature="()" line-rate="0" branch-rate="1" complexity="3">
+              <lines>
+                <line number="48" hits="0" branch="false" />
+                <line number="49" hits="0" branch="false" />
+                <line number="51" hits="0" branch="false" />
+                <line number="52" hits="0" branch="false" />
+                <line number="53" hits="0" branch="false" />
+                <line number="54" hits="0" branch="false" />
+                <line number="55" hits="0" branch="false" />
+                <line number="56" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="createMessage" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="59" hits="1" branch="false" />
+                <line number="60" hits="1" branch="false" />
+                <line number="61" hits="1" branch="false" />
+                <line number="62" hits="1" branch="false" />
+                <line number="63" hits="1" branch="false" />
+                <line number="64" hits="1" branch="false" />
+                <line number="65" hits="1" branch="false" />
+                <line number="66" hits="1" branch="false" />
+                <line number="67" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="writeLog" signature="()" line-rate="0" branch-rate="0" complexity="3">
+              <lines>
+                <line number="70" hits="0" branch="false" />
+                <line number="73" hits="0" branch="true" condition-coverage="0% (0/2)" />
+                <line number="77" hits="0" branch="false" />
+                <line number="78" hits="0" branch="false" />
+                <line number="80" hits="0" branch="false" />
+                <line number="82" hits="0" branch="false" />
+                <line number="84" hits="0" branch="false" />
+                <line number="86" hits="0" branch="false" />
+                <line number="88" hits="0" branch="false" />
+                <line number="89" hits="0" branch="false" />
+                <line number="96" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="1" branch="false" />
+            <line number="17" hits="1" branch="false" />
+            <line number="18" hits="1" branch="false" />
+            <line number="19" hits="1" branch="false" />
+            <line number="20" hits="1" branch="false" />
+            <line number="21" hits="1" branch="false" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="31" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="36" hits="0" branch="false" />
+            <line number="39" hits="0" branch="false" />
+            <line number="40" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="44" hits="0" branch="false" />
+            <line number="45" hits="0" branch="false" />
+            <line number="48" hits="0" branch="false" />
+            <line number="49" hits="0" branch="false" />
+            <line number="51" hits="0" branch="false" />
+            <line number="52" hits="0" branch="false" />
+            <line number="53" hits="0" branch="false" />
+            <line number="54" hits="0" branch="false" />
+            <line number="55" hits="0" branch="false" />
+            <line number="56" hits="0" branch="false" />
+            <line number="59" hits="1" branch="false" />
+            <line number="60" hits="1" branch="false" />
+            <line number="61" hits="1" branch="false" />
+            <line number="62" hits="1" branch="false" />
+            <line number="63" hits="1" branch="false" />
+            <line number="64" hits="1" branch="false" />
+            <line number="65" hits="1" branch="false" />
+            <line number="66" hits="1" branch="false" />
+            <line number="67" hits="1" branch="false" />
+            <line number="70" hits="0" branch="false" />
+            <line number="73" hits="0" branch="true" condition-coverage="0% (0/2)" />
+            <line number="77" hits="0" branch="false" />
+            <line number="78" hits="0" branch="false" />
+            <line number="80" hits="0" branch="false" />
+            <line number="82" hits="0" branch="false" />
+            <line number="84" hits="0" branch="false" />
+            <line number="86" hits="0" branch="false" />
+            <line number="88" hits="0" branch="false" />
+            <line number="89" hits="0" branch="false" />
+            <line number="96" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="JASONParser" line-rate="0.3125" branch-rate="1" complexity="3">
+      <classes>
+        <class name="JASONParser.ComputerDataJSON" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\JASONParser\ComputerDataJSON.cs" line-rate="0.5714285714285714" branch-rate="1" complexity="NaN">
+          <methods>
+            <method name="timeStamp" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="timeStamp" signature="(System.DateTime)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="deviceUid" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="deviceUid" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="message" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="message" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="cpuUsage" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="15" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="cpuUsage" signature="(System.Decimal)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="15" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="ramUsage" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="16" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="ramUsage" signature="(System.Decimal)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="16" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="hddUsage" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="hddUsage" signature="(System.Decimal)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="gpuUsage" signature="()" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="18" hits="2" branch="false" />
+              </lines>
+            </method>
+            <method name="gpuUsage" signature="(System.Decimal)" line-rate="1" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="18" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="13" hits="0" branch="false" />
+            <line number="15" hits="2" branch="false" />
+            <line number="16" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="JASONParser.ComputerInfo" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\JASONParser\ComputerInfo.cs" line-rate="0" branch-rate="1" complexity="NaN">
+          <methods>
+            <method name="name" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="name" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="8" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="location" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="9" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="location" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="9" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="deviceUid" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="10" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="deviceUid" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="10" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="keepAlive" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="keepAlive" signature="(System.Decimal)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="webSocketUrl" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="webSocketUrl" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="pingUri" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="pingUri" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="errorUri" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="errorUri" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="mainUri" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="mainUri" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="fileUri" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="fileUri" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="installationCode" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="18" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="installationCode" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="18" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="fileLocations" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="fileLocations" signature="(JASONParser.FileLocations)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="0" branch="false" />
+            <line number="9" hits="0" branch="false" />
+            <line number="10" hits="0" branch="false" />
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="13" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="JASONParser.FileLocations" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\JASONParser\FileLocations.cs" line-rate="0" branch-rate="1" complexity="NaN">
+          <methods>
+            <method name="File1" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File1" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="11" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time1" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time1" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="12" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File2" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File2" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="13" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time2" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="14" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time2" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="14" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File3" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File3" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="15" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time3" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time3" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="16" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File4" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File4" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="17" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time4" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="18" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time4" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="18" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File5" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="File5" signature="(System.String)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="19" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time5" signature="()" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="20" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="Time5" signature="(System.Int32)" line-rate="0" branch-rate="1" complexity="NaN">
+              <lines>
+                <line number="20" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="false" />
+            <line number="12" hits="0" branch="false" />
+            <line number="13" hits="0" branch="false" />
+            <line number="14" hits="0" branch="false" />
+            <line number="15" hits="0" branch="false" />
+            <line number="16" hits="0" branch="false" />
+            <line number="17" hits="0" branch="false" />
+            <line number="18" hits="0" branch="false" />
+            <line number="19" hits="0" branch="false" />
+            <line number="20" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="JASONParser.Parser" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\JASONParser\Parser.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="ConfigParser" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="2" branch="false" />
+                <line number="17" hits="2" branch="false" />
+                <line number="18" hits="2" branch="false" />
+                <line number="20" hits="2" branch="false" />
+                <line number="22" hits="2" branch="false" />
+                <line number="23" hits="2" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="2" branch="false" />
+            <line number="17" hits="2" branch="false" />
+            <line number="18" hits="2" branch="false" />
+            <line number="20" hits="2" branch="false" />
+            <line number="22" hits="2" branch="false" />
+            <line number="23" hits="2" branch="false" />
+          </lines>
+        </class>
+        <class name="Monitor_Windows_Agent.CreateJSON" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\JASONParser\CreateJSON.cs" line-rate="0.35714285714285715" branch-rate="1" complexity="2">
+          <methods>
+            <method name="getJSON" signature="()" line-rate="0.18181818181818182" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="1" branch="false" />
+                <line number="21" hits="1" branch="false" />
+                <line number="22" hits="0" branch="false" />
+                <line number="23" hits="0" branch="false" />
+                <line number="24" hits="0" branch="false" />
+                <line number="25" hits="0" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="27" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="29" hits="0" branch="false" />
+                <line number="30" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="false" />
+                <line number="15" hits="1" branch="false" />
+                <line number="16" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="1" branch="false" />
+            <line number="15" hits="1" branch="false" />
+            <line number="16" hits="1" branch="false" />
+            <line number="20" hits="1" branch="false" />
+            <line number="21" hits="1" branch="false" />
+            <line number="22" hits="0" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="24" hits="0" branch="false" />
+            <line number="25" hits="0" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="27" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="29" hits="0" branch="false" />
+            <line number="30" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="ServiceTest" line-rate="0.8974358974358975" branch-rate="0.5" complexity="12">
+      <classes>
+        <class name="ServiceTest.EventLoggerTest" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\ServiceTest\EventLoggerTest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="CreateMessageTest" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="false" />
+                <line number="13" hits="1" branch="false" />
+                <line number="14" hits="1" branch="false" />
+                <line number="16" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="1" branch="false" />
+            <line number="13" hits="1" branch="false" />
+            <line number="14" hits="1" branch="false" />
+            <line number="16" hits="1" branch="false" />
+          </lines>
+        </class>
+        <class name="ServiceTest.JASONParserTest" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\ServiceTest\JASONParserTest.cs" line-rate="0.75" branch-rate="1" complexity="2">
+          <methods>
+            <method name="ReadingDirectoryTest" signature="()" line-rate="0.8" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="1" branch="false" />
+                <line number="20" hits="1" branch="false" />
+                <line number="21" hits="1" branch="false" />
+                <line number="22" hits="1" branch="false" />
+                <line number="23" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="CreateJSONTest" signature="()" line-rate="0.6666666666666666" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="1" branch="false" />
+                <line number="28" hits="1" branch="false" />
+                <line number="29" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="1" branch="false" />
+            <line number="20" hits="1" branch="false" />
+            <line number="21" hits="1" branch="false" />
+            <line number="22" hits="1" branch="false" />
+            <line number="23" hits="0" branch="false" />
+            <line number="27" hits="1" branch="false" />
+            <line number="28" hits="1" branch="false" />
+            <line number="29" hits="0" branch="false" />
+          </lines>
+        </class>
+        <class name="ServiceTest.TerminalClassTest" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\ServiceTest\TerminalClassTest.cs" line-rate="0.9259259259259259" branch-rate="0.5" complexity="9">
+          <methods>
+            <method name="RunCommandTest" signature="()" line-rate="0.6666666666666666" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="1" branch="false" />
+                <line number="20" hits="1" branch="false" />
+                <line number="21" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="RAMUsageTest" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="26" hits="1" branch="false" />
+                <line number="27" hits="1" branch="false" />
+                <line number="28" hits="1" branch="false" />
+                <line number="29" hits="1" branch="false" />
+                <line number="30" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="32" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="CPUUsageTest" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="36" hits="1" branch="false" />
+                <line number="37" hits="1" branch="false" />
+                <line number="38" hits="1" branch="false" />
+                <line number="39" hits="1" branch="false" />
+                <line number="40" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="41" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="HDDUsageTest" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="45" hits="1" branch="false" />
+                <line number="46" hits="1" branch="false" />
+                <line number="47" hits="1" branch="false" />
+                <line number="48" hits="1" branch="false" />
+                <line number="49" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="51" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="GPUUsageTest" signature="()" line-rate="0.8333333333333334" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="55" hits="1" branch="false" />
+                <line number="56" hits="1" branch="false" />
+                <line number="57" hits="1" branch="false" />
+                <line number="58" hits="1" branch="false" />
+                <line number="59" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="61" hits="0" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="1" branch="false" />
+            <line number="20" hits="1" branch="false" />
+            <line number="21" hits="0" branch="false" />
+            <line number="26" hits="1" branch="false" />
+            <line number="27" hits="1" branch="false" />
+            <line number="28" hits="1" branch="false" />
+            <line number="29" hits="1" branch="false" />
+            <line number="30" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="32" hits="1" branch="false" />
+            <line number="36" hits="1" branch="false" />
+            <line number="37" hits="1" branch="false" />
+            <line number="38" hits="1" branch="false" />
+            <line number="39" hits="1" branch="false" />
+            <line number="40" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="41" hits="1" branch="false" />
+            <line number="45" hits="1" branch="false" />
+            <line number="46" hits="1" branch="false" />
+            <line number="47" hits="1" branch="false" />
+            <line number="48" hits="1" branch="false" />
+            <line number="49" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="51" hits="1" branch="false" />
+            <line number="55" hits="1" branch="false" />
+            <line number="56" hits="1" branch="false" />
+            <line number="57" hits="1" branch="false" />
+            <line number="58" hits="1" branch="false" />
+            <line number="59" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="61" hits="0" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Terminal" line-rate="0.7019230769230769" branch-rate="0.375" complexity="21">
+      <classes>
+        <class name="TerminalLibrary.TerminalCommand" filename="C:\Users\Korisnik\Desktop\Monitor-Windows-Agent\Terminal\TerminalCommand.cs" line-rate="0.7019230769230769" branch-rate="0.375" complexity="13">
+          <methods>
+            <method name="RunCommand" signature="(System.String,System.String)" line-rate="0.30303030303030304" branch-rate="0" complexity="NaN">
+              <lines>
+                <line number="15" hits="1" branch="false" />
+                <line number="16" hits="1" branch="false" />
+                <line number="17" hits="1" branch="false" />
+                <line number="18" hits="1" branch="false" />
+                <line number="19" hits="1" branch="false" />
+                <line number="20" hits="1" branch="false" />
+                <line number="21" hits="1" branch="false" />
+                <line number="22" hits="1" branch="false" />
+                <line number="23" hits="1" branch="false" />
+                <line number="25" hits="1" branch="false" />
+                <line number="26" hits="0" branch="false" />
+                <line number="28" hits="0" branch="false" />
+                <line number="30" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="31" hits="0" branch="false" />
+                <line number="33" hits="0" branch="false" />
+                <line number="35" hits="0" branch="false" />
+                <line number="37" hits="0" branch="false" />
+                <line number="38" hits="0" branch="false" />
+                <line number="41" hits="0" branch="false" />
+                <line number="42" hits="0" branch="false" />
+                <line number="43" hits="0" branch="false" />
+                <line number="45" hits="0" branch="false" />
+                <line number="46" hits="0" branch="false" />
+                <line number="47" hits="0" branch="false" />
+                <line number="51" hits="0" branch="false" />
+                <line number="53" hits="0" branch="false" />
+                <line number="54" hits="0" branch="false" />
+                <line number="55" hits="0" branch="false" />
+                <line number="56" hits="0" branch="false" />
+                <line number="57" hits="0" branch="false" />
+                <line number="59" hits="0" branch="false" />
+                <line number="62" hits="0" branch="false" />
+                <line number="63" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="GetNewPath" signature="(System.String,System.String,System.String)" line-rate="0" branch-rate="0" complexity="NaN">
+              <lines>
+                <line number="66" hits="0" branch="false" />
+                <line number="67" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="68" hits="0" branch="true" condition-coverage="0% (0/4)" />
+                <line number="69" hits="0" branch="false" />
+                <line number="70" hits="0" branch="false" />
+              </lines>
+            </method>
+            <method name="getRAMUsege" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="72" hits="1" branch="false" />
+                <line number="73" hits="1" branch="false" />
+                <line number="74" hits="1" branch="false" />
+                <line number="76" hits="1" branch="false" />
+                <line number="77" hits="1" branch="false" />
+                <line number="78" hits="380" branch="true" condition-coverage="100% (2/2)" />
+                <line number="79" hits="189" branch="false" />
+                <line number="80" hits="189" branch="false" />
+                <line number="81" hits="189" branch="false" />
+                <line number="83" hits="1" branch="false" />
+                <line number="84" hits="1" branch="false" />
+                <line number="86" hits="1" branch="false" />
+                <line number="87" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="getCPUUsage" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="89" hits="1" branch="false" />
+                <line number="90" hits="2" branch="false" />
+                <line number="91" hits="1" branch="false" />
+                <line number="92" hits="1" branch="false" />
+                <line number="93" hits="1" branch="false" />
+                <line number="94" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="getHDDUsage" signature="()" line-rate="1" branch-rate="0.5" complexity="4">
+              <lines>
+                <line number="97" hits="1" branch="false" />
+                <line number="98" hits="1" branch="false" />
+                <line number="99" hits="1" branch="false" />
+                <line number="100" hits="5" branch="false" />
+                <line number="101" hits="1" branch="false" />
+                <line number="102" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="103" hits="1" branch="false" />
+                <line number="104" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="105" hits="1" branch="false" />
+                <line number="106" hits="1" branch="false" />
+                <line number="107" hits="1" branch="false" />
+                <line number="108" hits="1" branch="false" />
+                <line number="109" hits="1" branch="false" />
+                <line number="111" hits="1" branch="false" />
+                <line number="112" hits="1" branch="false" />
+              </lines>
+            </method>
+            <method name="getGPUUsage" signature="()" line-rate="0.90625" branch-rate="0.8333333333333334" complexity="6">
+              <lines>
+                <line number="117" hits="1" branch="false" />
+                <line number="119" hits="1" branch="false" />
+                <line number="120" hits="1" branch="false" />
+                <line number="121" hits="1" branch="false" />
+                <line number="122" hits="1" branch="false" />
+                <line number="123" hits="1" branch="false" />
+                <line number="125" hits="361" branch="false" />
+                <line number="126" hits="179" branch="false" />
+                <line number="127" hits="179" branch="true" condition-coverage="100% (2/2)" />
+                <line number="128" hits="51" branch="false" />
+                <line number="129" hits="357" branch="false" />
+                <line number="130" hits="102" branch="false" />
+                <line number="131" hits="102" branch="true" condition-coverage="100% (2/2)" />
+                <line number="132" hits="51" branch="false" />
+                <line number="133" hits="51" branch="false" />
+                <line number="134" hits="51" branch="false" />
+                <line number="135" hits="102" branch="false" />
+                <line number="136" hits="51" branch="false" />
+                <line number="137" hits="179" branch="false" />
+                <line number="139" hits="1" branch="true" condition-coverage="50% (1/2)" />
+                <line number="140" hits="52" branch="false" />
+                <line number="141" hits="52" branch="false" />
+                <line number="142" hits="52" branch="false" />
+                <line number="144" hits="1" branch="false" />
+                <line number="145" hits="52" branch="false" />
+                <line number="146" hits="52" branch="false" />
+                <line number="147" hits="52" branch="false" />
+                <line number="149" hits="1" branch="false" />
+                <line number="151" hits="0" branch="false" />
+                <line number="152" hits="0" branch="false" />
+                <line number="153" hits="0" branch="false" />
+                <line number="155" hits="1" branch="false" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="1" branch="false" />
+            <line number="16" hits="1" branch="false" />
+            <line number="17" hits="1" branch="false" />
+            <line number="18" hits="1" branch="false" />
+            <line number="19" hits="1" branch="false" />
+            <line number="20" hits="1" branch="false" />
+            <line number="21" hits="1" branch="false" />
+            <line number="22" hits="1" branch="false" />
+            <line number="23" hits="1" branch="false" />
+            <line number="25" hits="1" branch="false" />
+            <line number="26" hits="0" branch="false" />
+            <line number="28" hits="0" branch="false" />
+            <line number="30" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="31" hits="0" branch="false" />
+            <line number="33" hits="0" branch="false" />
+            <line number="35" hits="0" branch="false" />
+            <line number="37" hits="0" branch="false" />
+            <line number="38" hits="0" branch="false" />
+            <line number="41" hits="0" branch="false" />
+            <line number="42" hits="0" branch="false" />
+            <line number="43" hits="0" branch="false" />
+            <line number="45" hits="0" branch="false" />
+            <line number="46" hits="0" branch="false" />
+            <line number="47" hits="0" branch="false" />
+            <line number="51" hits="0" branch="false" />
+            <line number="53" hits="0" branch="false" />
+            <line number="54" hits="0" branch="false" />
+            <line number="55" hits="0" branch="false" />
+            <line number="56" hits="0" branch="false" />
+            <line number="57" hits="0" branch="false" />
+            <line number="59" hits="0" branch="false" />
+            <line number="62" hits="0" branch="false" />
+            <line number="63" hits="0" branch="false" />
+            <line number="66" hits="0" branch="false" />
+            <line number="67" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="68" hits="0" branch="true" condition-coverage="0% (0/4)" />
+            <line number="69" hits="0" branch="false" />
+            <line number="70" hits="0" branch="false" />
+            <line number="72" hits="1" branch="false" />
+            <line number="73" hits="1" branch="false" />
+            <line number="74" hits="1" branch="false" />
+            <line number="76" hits="1" branch="false" />
+            <line number="77" hits="1" branch="false" />
+            <line number="78" hits="380" branch="true" condition-coverage="100% (2/2)" />
+            <line number="79" hits="189" branch="false" />
+            <line number="80" hits="189" branch="false" />
+            <line number="81" hits="189" branch="false" />
+            <line number="83" hits="1" branch="false" />
+            <line number="84" hits="1" branch="false" />
+            <line number="86" hits="1" branch="false" />
+            <line number="87" hits="1" branch="false" />
+            <line number="89" hits="1" branch="false" />
+            <line number="90" hits="2" branch="false" />
+            <line number="91" hits="1" branch="false" />
+            <line number="92" hits="1" branch="false" />
+            <line number="93" hits="1" branch="false" />
+            <line number="94" hits="1" branch="false" />
+            <line number="97" hits="1" branch="false" />
+            <line number="98" hits="1" branch="false" />
+            <line number="99" hits="1" branch="false" />
+            <line number="100" hits="5" branch="false" />
+            <line number="101" hits="1" branch="false" />
+            <line number="102" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="103" hits="1" branch="false" />
+            <line number="104" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="105" hits="1" branch="false" />
+            <line number="106" hits="1" branch="false" />
+            <line number="107" hits="1" branch="false" />
+            <line number="108" hits="1" branch="false" />
+            <line number="109" hits="1" branch="false" />
+            <line number="111" hits="1" branch="false" />
+            <line number="112" hits="1" branch="false" />
+            <line number="117" hits="1" branch="false" />
+            <line number="119" hits="1" branch="false" />
+            <line number="120" hits="1" branch="false" />
+            <line number="121" hits="1" branch="false" />
+            <line number="122" hits="1" branch="false" />
+            <line number="123" hits="1" branch="false" />
+            <line number="125" hits="361" branch="false" />
+            <line number="126" hits="179" branch="false" />
+            <line number="127" hits="179" branch="true" condition-coverage="100% (2/2)" />
+            <line number="128" hits="51" branch="false" />
+            <line number="129" hits="357" branch="false" />
+            <line number="130" hits="102" branch="false" />
+            <line number="131" hits="102" branch="true" condition-coverage="100% (2/2)" />
+            <line number="132" hits="51" branch="false" />
+            <line number="133" hits="51" branch="false" />
+            <line number="134" hits="51" branch="false" />
+            <line number="135" hits="102" branch="false" />
+            <line number="136" hits="51" branch="false" />
+            <line number="137" hits="179" branch="false" />
+            <line number="139" hits="1" branch="true" condition-coverage="50% (1/2)" />
+            <line number="140" hits="52" branch="false" />
+            <line number="141" hits="52" branch="false" />
+            <line number="142" hits="52" branch="false" />
+            <line number="144" hits="1" branch="false" />
+            <line number="145" hits="52" branch="false" />
+            <line number="146" hits="52" branch="false" />
+            <line number="147" hits="52" branch="false" />
+            <line number="149" hits="1" branch="false" />
+            <line number="151" hits="0" branch="false" />
+            <line number="152" hits="0" branch="false" />
+            <line number="153" hits="0" branch="false" />
+            <line number="155" hits="1" branch="false" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
