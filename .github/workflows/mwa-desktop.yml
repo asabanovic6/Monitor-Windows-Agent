@@ -78,17 +78,20 @@ jobs:
         dotnet-version: '5.0.x'
       
     - name: Build app
-      run: dotnet build --configuration Debug Monitor-Windows-Agent.sln
+      run: dotnet build  Debug Monitor-Windows-Agent.sln --configuration Release
 
     # Test
-    - name: use this action, test solution dir
+    - name: Running tests
       uses: zyborg/dotnet-tests-report@v1
       with:
           project_path: UnitTestProject
           report_name: my_project_tests
           report_title: My Project Tests
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      
+          
+    # Publish
+    - name: Publishing
+      run: dotnet publish --configuration Release --no-restore --output ./publishMWA --self-contained true --runtime win-x86 -p:PublishTrimmed=true
       
 
    
