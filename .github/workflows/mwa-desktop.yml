@@ -42,7 +42,7 @@ name:  Monitor Agent Desktop
 on:
   push:
     branches:
-      - master
+      - main
 
 
 jobs:
