@@ -85,22 +85,16 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test $env:Test_Project_Path
+      run: dotnet test 
+      working-directory: UnitTestProject
 
-    # Restore the application
-    - name:  Restore the Wpf application to populate the obj folder
-      run: msbuild $env:Solution_Path /t:Restore /p:Configuration=$env:Configuration /p:RuntimeIdentifier=$env:RuntimeIdentifier
-      env:
-        Configuration: Debug
-        RuntimeIdentifier: win-${{ matrix.targetplatform }}
 
     # Build the Windows Application Packaging project
     - name: Build the Windows Application Packaging Project (wapproj) 
-      run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle 
+      run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform  /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle 
       env:
         AppxBundle: Never
         BuildMode: SideLoadOnly
-        Configuration: Debug
         TargetPlatform: ${{ matrix.targetplatform }}
     
       
