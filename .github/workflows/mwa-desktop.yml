@@ -54,8 +54,9 @@ jobs:
         configuration: [Debug, Release]
 
     runs-on: windows-latest
-  env: 
-  Actions_Allow_Unsecure_Commands: true
+    
+    env:  
+     Actions_Allow_Unsecure_Commands: true
 
 
     steps:
