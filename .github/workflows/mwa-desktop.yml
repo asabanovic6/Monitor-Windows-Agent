@@ -87,7 +87,7 @@ jobs:
           
     # Publish
     - name: Publishing
-      run: dotnet publish --configuration Release  --output ./publishMWA --self-contained true  -p:PublishTrimmed=true
+      run: dotnet publish --configuration Release  --output ./publishMWA   
       
 
    
