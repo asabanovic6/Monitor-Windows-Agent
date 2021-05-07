@@ -1,4 +1,5 @@
 # Monitor-Windows-Agent
+Build status: ![example workflow](https://github.com/asabanovic6/Monitor-Windows-Agent/actions/workflows/mwa-desktop.yml/badge.svg)
 MWA je Windows aplikacija koja se na IWM-u izvršava u dva načina rada:
   -   	kao windows service, pod ograničenim userom koji nema Admin prava
   -   	kao desktop aplikacija, pod ograničenim userom koji nema Admin prava
