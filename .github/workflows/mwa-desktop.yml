@@ -54,7 +54,6 @@ jobs:
 
     env:
       App_Packages_Directory: AppPackages
-      SigningCertificate: GitHubActionsDemo.pfx
       Solution_Path: Monitor-Windows-Agent.sln
       Test_Project_Path: UnitTestProject\UnitTestProject.csproj
       Wpf_Project_Path: Monitor-Windows-Agent\Monitor-Windows-Agent.csproj
@@ -95,14 +94,6 @@ jobs:
         Configuration: Debug
         RuntimeIdentifier: win-${{ matrix.targetplatform }}
 
-    # Decode the Base64 encoded Pfx
-    - name: Decode the Pfx
-      run: |
-        $pfx_cert_byte = [System.Convert]::FromBase64String("${{ secrets.Base64_Encoded_Pfx }}")
-        $currentDirectory = Get-Location
-        $certificatePath = Join-Path -Path $currentDirectory -ChildPath $env:Wap_Project_Directory -AdditionalChildPath $env:SigningCertificate
-        [IO.File]::WriteAllBytes("$certificatePath", $pfx_cert_byte)
-
     # Build the Windows Application Packaging project
     - name: Build the Windows Application Packaging Project (wapproj) 
       run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle /p:PackageCertificateKeyFile=$env:SigningCertificate /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
@@ -112,9 +103,6 @@ jobs:
         Configuration: Debug
         TargetPlatform: ${{ matrix.targetplatform }}
     
-    # Remove the .pfx
-    - name: Remove the .pfx
-      run: Remove-Item -path $env:Wap_Project_Directory\$env:SigningCertificate
       
    # Upload the MSIX package: https://github.com/marketplace/actions/upload-artifact
     - name: Upload build artifacts
