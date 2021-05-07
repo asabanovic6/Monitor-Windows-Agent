@@ -100,7 +100,7 @@ jobs:
       env:
         AppxBundle: Never
         BuildMode: SideLoadOnly
-        Configuration: Debug
+        Configuration: Release
         TargetPlatform: ${{ matrix.targetplatform }}
     
       
