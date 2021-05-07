@@ -68,6 +68,7 @@ jobs:
       Wpf_Project_Name: Monitor-Windows-Agent.csproj
       Wap_Project_Directory: Monitor-Windows-Agent.Package
       Wap_Project_Name: Monitor-Windows-Agent.Package.wapproj
+      Actions_Allow_Unsecure_Commands: true
 
     steps:
     - name: Checkout
