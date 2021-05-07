@@ -55,8 +55,8 @@ jobs:
     env:
       App_Packages_Directory: AppPackages
       Solution_Path: Monitor-Windows-Agent.sln
-      Test_Project_Path: UnitTestProject\UnitTestProject.csproj
-      Wpf_Project_Path: Monitor-Windows-Agent\Monitor-Windows-Agent.csproj
+      Test_Project_Path: UnitTestProject
+      Wpf_Project_Path: Monitor-Windows-Agent
       Wap_Project_Directory: Monitor-Windows-Agent.Package
       Wap_Project_Name: Monitor-Windows-Agent.Package.wapproj    
       Actions_Allow_Unsecure_Commands: true # Allows AddPAth and SetEnv commands
@@ -100,7 +100,7 @@ jobs:
       env:
         AppxBundle: Never
         BuildMode: SideLoadOnly
-        Configuration: Release
+        Configuration: Debug
         TargetPlatform: ${{ matrix.targetplatform }}
     
       
