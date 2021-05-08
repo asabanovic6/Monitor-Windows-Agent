@@ -86,7 +86,7 @@ jobs:
 
     # Test
     - name: Running tests
-      run: dotnet test
+      run: dotnet test --no-restore
       working-directory: UnitTestProject
       
   deploy:
@@ -95,8 +95,7 @@ jobs:
     steps:
     # Publish
     - name: Publishing
-      run: dotnet publish Monitor-Windows-Agent --configuration Release  --output ../publishMWA   
-      working-directory: Monitor-Windows-Agent
+      run: dotnet publish ~/Monitor-Windows-Agent/Monitor-Windows-Agent.csproj
       
 
    
