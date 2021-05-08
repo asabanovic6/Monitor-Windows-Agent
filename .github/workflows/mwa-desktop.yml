@@ -79,23 +79,18 @@ jobs:
         
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: Monitor-Windows-Agent
       
     - name: Build app
       run: dotnet build Monitor-Windows-Agent.sln --no-restore
 
     # Test
     - name: Running tests
-      run: dotnet test --no-restore
+      run: dotnet test 
       working-directory: UnitTestProject
       
-  deploy:
-    needs: build
-    runs-on: windows-latest
-    steps:
     # Publish
     - name: Publishing
-      run: dotnet publish ../Monitor-Windows-Agent/Monitor-Windows-Agent.csproj
+      run: dotnet publish --framework netcoreapp3.1 --output ../publishMWA
       
 
    
