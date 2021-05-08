@@ -88,9 +88,15 @@ jobs:
       run: dotnet test 
       working-directory: UnitTestProject
       
+  deploy:
+    needs: build
+    runs-on: windows-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
     # Publish
     - name: Publishing
-      run: dotnet publish --framework netcoreapp3.1 --output ../publishMWA
+      run: dotnet publish Monitor-Windows-Agent.sln --framework netcoreapp3.1 --output ./publishMWA
       
 
    
