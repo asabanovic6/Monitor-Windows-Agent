@@ -87,11 +87,15 @@ jobs:
     # Test
     - name: Running tests
       run: dotnet test
-      working-directory: Monitor-Windows-Agent/UnitTestProject
-          
+      working-directory: UnitTestProject
+      
+  deploy:
+    needs: build
+    runs-on: windows-latest
+    steps:
     # Publish
     - name: Publishing
-      run: dotnet publish --configuration Debug  --output ./publishMWA   
+      run: dotnet publish --configuration Release  --output ./publishMWA   
       
 
    
