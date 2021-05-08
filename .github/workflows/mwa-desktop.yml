@@ -76,18 +76,22 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      working-directory: Monitor-Windows-Agent
       
     - name: Build app
-      run: dotnet build Monitor-Windows-Agent.sln --configuration Release
+      run: dotnet build Monitor-Windows-Agent.sln --no-restore
 
     # Test
     - name: Running tests
       run: dotnet test
-      working-directory: UnitTestProject
+      working-directory: Monitor-Windows-Agent/UnitTestProject
           
     # Publish
     - name: Publishing
-      run: dotnet publish --configuration Release  --output ./publishMWA   
+      run: dotnet publish --configuration Debug  --output ./publishMWA   
       
 
    
