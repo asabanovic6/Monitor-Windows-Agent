@@ -95,7 +95,7 @@ jobs:
     steps:
     # Publish
     - name: Publishing
-      run: dotnet publish --configuration Release  --output ./publishMWA   
+      run: dotnet publish Monitor-Windows-Agent.sln --configuration Release  --output ./publishMWA   
       
 
    
