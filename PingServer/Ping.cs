@@ -20,6 +20,7 @@ namespace PingServer
     {
 
 
+        #region[Attributes]
 
         private string uri { get; set; }
         private static  string uriFile { get; set; }
@@ -42,6 +43,9 @@ namespace PingServer
             this.tim = 0;
             create = new CreateJSON(path);
         }
+        #endregion
+
+        #region[PostConfigInfo]
 
         public void PostJsonAndKeepAlive()
         {
@@ -73,6 +77,10 @@ namespace PingServer
                 throw new ApplicationException(message);
             }
         }
+        #endregion
+
+        #region[PostError]
+
         public void PostError()
         {
 
@@ -92,6 +100,9 @@ namespace PingServer
                 throw new ApplicationException(message);
             }
         }
+        #endregion
+
+        #region[PostFiles]
 
         private static bool IsDirectory(string path)
         {
@@ -189,5 +200,6 @@ namespace PingServer
              //  timer.Change(0, Convert.ToInt32(keepAlive) * 60000);
             
         }
+        #endregion
     }
 }

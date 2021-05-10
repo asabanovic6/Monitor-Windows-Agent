@@ -8,10 +8,13 @@ namespace JASONParser
 {
     public class FileLocations
     {
+        #region[Attributes]
+
         public File File1 { get; set; }
         public File File2 { get; set; }
         public File File3 { get; set; }
         public File File4 { get; set; }
         public File File5 { get; set; }
+        #endregion
     }
 }

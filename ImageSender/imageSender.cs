@@ -22,7 +22,7 @@ namespace ImageSender
     
     public class imageSender
     {
-
+        #region[Attributes]
         private int connected = 0;
          WebSocket ws;
         private  ComputerInfo comp { get; set; }
@@ -32,7 +32,7 @@ namespace ImageSender
         static System.Windows.Forms.Timer connTimer = new System.Windows.Forms.Timer();
         private bool timer = false;
         private PingServer.Ping p = new PingServer.Ping((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json");
-       
+      
         public imageSender (String path)
         {
             Parser pars = new Parser(path);
@@ -40,7 +40,8 @@ namespace ImageSender
             comp = pars.ConfigParser();
             pathConfig = path;
         }
-
+        #endregion
+        #region[Methods]
         public bool conn()
         {
            
@@ -301,6 +302,6 @@ namespace ImageSender
                 return 0;
             }
         }
-       
+        #endregion
     }
 }

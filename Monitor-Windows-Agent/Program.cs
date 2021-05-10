@@ -36,8 +36,7 @@ namespace Monitor_Windows_Agent
                 
                 Application.Run(new Form1());
             }
-          else if (File.Exists((Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)) + "\\config.json"))
-            {
+            else { 
                 
                 Application.Run(new Form2());
             }

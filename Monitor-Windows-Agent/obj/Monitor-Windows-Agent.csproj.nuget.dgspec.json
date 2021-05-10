@@ -70,6 +70,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.CodeCoverage": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"

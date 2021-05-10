@@ -5,6 +5,7 @@ namespace JASONParser
 {
     public class ComputerInfo
     {
+        #region[Attributes]
         public String name { get; set; }
         public String location { get; set; }
          public String deviceUid { get; set; }
@@ -19,6 +20,6 @@ namespace JASONParser
         public String path { get; set; }
         public FileLocations fileLocations { get; set; }
 
-
+        #endregion
     }
 }

@@ -10,15 +10,18 @@ namespace Monitor_Windows_Agent
 {
     public class CreateJSON
     {
-
+        #region[Attributes]
         private static ComputerInfo computer;
         private static ComputerDataJSON dataJSON = new ComputerDataJSON();
+
         public CreateJSON (String path )
         {
                 Parser parser = new Parser(path);
      computer = parser.ConfigParser();
     }
-    public  String getJSON ()
+        #endregion
+        #region[Methods]
+        public String getJSON ()
         {
             dataJSON.deviceUid = computer.deviceUid;
             dataJSON.timeStamp = DateTime.Now;
@@ -30,6 +33,7 @@ namespace Monitor_Windows_Agent
             String result = JsonConvert.SerializeObject(dataJSON);
             return result;
         }
+        #endregion
     }
-    }
+}
 

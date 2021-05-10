@@ -366,7 +366,6 @@ C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\ne
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Terminal.pdb
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.dll
 C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.Shell.dll
-C:\Users\Amina\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\obj\Debug\netcoreapp3.1\Monitor-Windows-Agent.csproj.CoreCompileInputs.cache
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.dll
 C:\Users\LENOVO\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Microsoft.WindowsAPICodePack.Shell.dll
 C:\Users\amelp\OneDrive\Desktop\Monitor-Windows-Agent\Monitor-Windows-Agent\bin\Debug\netcoreapp3.1\Monitor-Windows-Agent.exe

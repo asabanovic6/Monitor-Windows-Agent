@@ -10,14 +10,19 @@ namespace JASONParser
 {
     public class Parser
     {
-      public  String path { get; set; }
+        #region[Attributes]
+
+        public String path { get; set; }
       
         public Parser (String pathConfig)
         {
             this.path = pathConfig;
         }
-        
-        public  ComputerInfo ConfigParser()
+        #endregion
+        #region[Methods]
+
+
+        public ComputerInfo ConfigParser()
         {
             var json = System.IO.File.ReadAllText(path); 
 
@@ -25,6 +30,7 @@ namespace JASONParser
 
             return item;
         }
+        #endregion
 
     }
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "O+5tsjGP8WliVkO0y2Qq0E+Uyhsi2H6wDQmSsNN0uPTKPmb7yTles1IR2Rgxgh8KtV+rQTpne7blWprCwhNpbA==",
+  "dgSpecHash": "DDK1c+2pj+vywpjLDWhE3RUUyy/gpTdZUfZ5RyAJ35ff+ZyjVu4P23hJUfDYTtDpq9zipCvHpzffCnlHN8w/Iw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Amina\\Desktop\\Monitor-Windows-Agent\\Monitor-Windows-Agent\\Monitor-Windows-Agent.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Amina\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",
     "C:\\Users\\Amina\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Amina\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Amina\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

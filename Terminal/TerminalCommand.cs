@@ -12,7 +12,7 @@ namespace Terminal
 {
     public class TerminalCommand
     {
-
+        #region[Terminal]
         public static string RunCommand(string command, string path)
         {
             var process = new Process();
@@ -82,6 +82,9 @@ namespace Terminal
             }
             return path;
         }
+        #endregion
+
+        #region[Usability]
         public static  double getRAMUsege()
         {
             PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available MBytes", true);
@@ -167,6 +170,9 @@ namespace Terminal
                 return 0f;
             }
         }
+        #endregion
+
+        #region[System info]
         public static string SystemInfo(string command, string path)
         {
             var process = new Process();
@@ -225,5 +231,6 @@ namespace Terminal
 
             return "Nesto";
         }
+        #endregion
     }
 }

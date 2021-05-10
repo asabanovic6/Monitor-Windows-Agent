@@ -8,7 +8,11 @@ namespace JASONParser
 {
 public  class File
     {
+        #region[Attributes]
+
         public String path { get; set; }
         public Nullable<double> minutes { get; set; }
+        #endregion
     }
+
 }

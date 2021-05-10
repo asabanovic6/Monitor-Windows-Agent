@@ -10,6 +10,7 @@ namespace EventLogger
 {
     public class Logger
     {
+        #region[Attributes]
         string source;
         static string log = "MWA";
         string command;
@@ -19,23 +20,19 @@ namespace EventLogger
             this.source = source;
             this.command = command;
         }
-
-        // ova funkcija bi se trebala izvrsiti samo jednom na računaru
+        #endregion
+        #region[Methods]
+  
         static public void Registry_Write(RegistryKey rg)
         {
             RegistryKey RegKey = rg;
-            //RegistryKey subKey = RegKey.OpenSubKey("SYSTEM",true).OpenSubKey("CurrentControlSet",true).OpenSubKey("Services",true).OpenSubKey("Eventlog",true);
             RegistryKey subKey = RegKey.OpenSubKey("SYSTEM", true).OpenSubKey("CurrentControlSet", true).OpenSubKey("Services", true).OpenSubKey("Eventlog", true);
-
-            //subKey = subKey.CreateSubKey("MWA", true);
             subKey = subKey.CreateSubKey(Logger.log, true);
 
         }
 
         public void createLog()
         {
-            //EventLog.CreateEventSource("Izvor.com", "MWA");
-            //EventLog.CreateEventSource(this.source, "MWA");
             EventLog.CreateEventSource(this.source, Logger.log);
         }
 
@@ -47,7 +44,6 @@ namespace EventLogger
         public void readLog()
         {
             EventLog eventLog = new EventLog();
-            //eventLog.Log = "MWA";
             eventLog.Log = Logger.log;
             foreach (EventLogEntry log in eventLog.Entries)
             {
@@ -68,31 +64,21 @@ namespace EventLogger
 
         public void writeLog()
         {
-            //if (!EventLog.SourceExists("Izvor.com"))
-            //    EventLog.CreateEventSource("Izvor.com", "MWA");
             if (!EventLog.SourceExists(this.source)) EventLog.CreateEventSource(source, Logger.log);
-            //EventLog.CreateEventSource(source, "MWA");
+          
 
 
             using (EventLog eventLog = new EventLog())
             {
-                //eventLog.Source = "Izvor.com";
                 eventLog.Source = this.source;
-                //eventLog.Log = "MWA";
                 eventLog.Log = Logger.log;
-                //eventLog.Source = "Izvor.com";
                 eventLog.Source = this.source;
-                //eventLog.WriteEntry("proba2", EventLogEntryType.Information);
                 string poruka = createMessage();
 
                 eventLog.WriteEntry(poruka, EventLogEntryType.Information);
             }
-            /*if (EventLog.SourceExists("Izvor"))
-            {
-                EventLog log = new EventLog("ImeAplikacije");
-                log.Source = "Izvor";
-                log.WriteEntry("poruka", EventLogEntryType.Information);
-            }*/
+          
         }
+        #endregion
     }
 }
